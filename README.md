@@ -4,5 +4,5 @@ A web app which will help the car dealers to get the details about their leads a
 Explanation 
 > https://youtu.be/qOutMoNvV1E
 
-Expected 
+Expected Figma
 > https://www.figma.com/file/uknSLWHP3NA1iNFeOUbWMZ/Auto-Equity-HUB?t=FeFo8YTG60BxYFvL-0
