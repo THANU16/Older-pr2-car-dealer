@@ -7,7 +7,7 @@
 }
 
 .bg_nav_left {
-    height: 100vh;
+    height: 200vh;
     background: #FFFFFF;
     position: absolute;
 }
@@ -95,7 +95,6 @@
 
 
 
-
 @media screen and (max-width: 1200px) {
     .diIMG {
         width: 200%;
@@ -128,6 +127,14 @@
 
     .leftbox {
         width: 100%;
+    }
+    .poti_fix{
+        position: fixed;
+    } .poti_fix{
+        position: fixed;
+    }
+    .set_mar_navbar{
+        margin-left: 0px;
     }
 
     .diIMG {

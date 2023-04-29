@@ -1,6 +1,7 @@
 import "./Heder.css";
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import { Link } from "react-router-dom";
 
 export default function Heder() {
   const profiledetile = {
@@ -280,8 +281,8 @@ export default function Heder() {
   };
 
   return (
-    <div className="row">
-      <div className="leftbox bg_nav_left">
+    <div className="row set_mar_navbar">
+      <div className="leftbox bg_nav_left poti_fix">
         <div className="row">
           <div className="col-12">
             <div className="row cPoin hednameRow">
@@ -297,7 +298,7 @@ export default function Heder() {
                 <img className="diIMG" src="./images/icon.png" alt="" />
               </div>
               <div className="col-7">
-                <h6>Dashboard</h6>
+              <Link to="/"><h6>Dashboard</h6></Link>
               </div>
               <div className="col-2"></div>
             </div>
@@ -326,7 +327,7 @@ export default function Heder() {
                 />
               </div>
               <div className="col-10">
-                <h6 className="ms-5">Available</h6>
+              <Link to="/Leads_avalible"><h6 className="ms-5">Available</h6></Link>
               </div>
             </div>
             <div onClick={d3} className="mt-2 row cPoin d3">
@@ -338,7 +339,7 @@ export default function Heder() {
                 />
               </div>
               <div className="col-10">
-                <h6 className="ms-5">Success</h6>
+              <Link to="/Leads_success"><h6 className="ms-5">Success</h6></Link>
               </div>
             </div>
             <div onClick={d4} className="mt-2 row cPoin d4">
@@ -350,7 +351,7 @@ export default function Heder() {
                 />
               </div>
               <div className="col-10">
-                <h6 className="ms-5">Rejected</h6>
+              <h6 className="ms-5">Rejected</h6>
               </div>
             </div>
           </div>
@@ -451,7 +452,7 @@ export default function Heder() {
         </div>
       </div>
 
-      <div className="col-12">
+      <div className="col-12 poti_fix">
         <div className="row bg_hed">
           <div className="col-6 indexp">
             <img
