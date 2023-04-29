@@ -1,4 +1,0 @@
-This folder has all frontend works
-
-Frist install react scripts
-> npm install react-scripts
