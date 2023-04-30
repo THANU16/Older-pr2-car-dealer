@@ -5,11 +5,14 @@
 * {
     padding: 0;
 }
-
+.text_font{
+    font-size: 14px;
+}
 .bg_nav_left {
-    height: 200vh;
+    height: 100vh;
     background: #FFFFFF;
     position: absolute;
+    position: fixed;
 }
 
 .bg_hed {

@@ -182,7 +182,7 @@ export default function Leads_avalible() {
             <Heder />
             <div className='setbody'>
                 <div className='mt-4 row ms-5'>
-                    <h2>Our Leads</h2>
+                    <h2>Our Leads - Avalible</h2>
                 </div>
                 <div className='mt-5 row ms-5 me-5'>
                     <div className='col-10 col-md-6 searchBox'>
@@ -231,7 +231,7 @@ export default function Leads_avalible() {
                         </div>
                     </div>
                 </div>
-                <div className='mt-4 row tblleboxmargin'>
+                <div className='mt-4 mb-4 row tblleboxmargin'>
                     <div className='col-12 tableBox'>
 
                         <div className='mt-4 row row_width ms-2 me-2'>

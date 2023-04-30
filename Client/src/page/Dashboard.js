@@ -474,7 +474,7 @@ export default function Dashboard() {
                     </div>
                 </div>
                 
-                <div className='mt-5 row tblleboxmargin'>
+                <div className='mt-5 mb-5 row tblleboxmargin'>
                     <div className='col-12 tableBox'>
 
                         <div className='mt-4 row row_width ms-2 me-2'>
@@ -532,7 +532,7 @@ export default function Dashboard() {
                             <div>
                                 <div className='row ms-3 me-3'>
 
-                                    <Table bordered hover className='with_table'>
+                                    <Table bordered hover className='table with_table'>
                                         <thead>
                                             <tr>
                                                 <th></th>

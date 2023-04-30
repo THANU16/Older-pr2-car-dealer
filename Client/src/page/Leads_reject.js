@@ -1,4 +1,4 @@
-import './Leads_success.css';
+import './Leads_reject.css';
 import React from 'react'
 import Heder from "../components/Heder";
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
 
 
-export default function Leads_success() {
+export default function Leads_reject() {
     const filter = [
         {
             filtername: "Sale Price",
@@ -85,7 +85,7 @@ export default function Leads_success() {
             id: "19",
         },
     ];
-    const table_success = [
+    const Leads_reject = [
         {
             id: "1",
             f_name: "Ann Culhane",
@@ -182,7 +182,7 @@ export default function Leads_success() {
             <Heder />
             <div className='setbody'>
                 <div className='mt-4 row ms-5'>
-                    <h2>Our Leads - Success</h2>
+                    <h2>Our Leads - Reject</h2>
                 </div>
                 <div className='mt-5 row ms-5 me-5'>
                     <div className='col-10 col-md-6 searchBox'>
@@ -280,19 +280,19 @@ export default function Leads_success() {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {table_success.map((table_success) => (
+                                            {Leads_reject.map((Leads_reject) => (
                                                 <tr>
-                                                    <td>{table_success.id}</td>
-                                                    <td>{table_success.f_name}</td>
-                                                    <td>{table_success.L_name}</td>
-                                                    <td>{table_success.Make}</td>
-                                                    <td>{table_success.Model}</td>
-                                                    <td>{table_success.reg_Number}</td>
-                                                    <td>{table_success.muleage}</td>
-                                                    <td>{table_success.Colour}</td>
-                                                    <td>{table_success.Price}</td>
-                                                    <td>{table_success.m_payment}</td>
-                                                    <td>{table_success.equity}</td>
+                                                    <td>{Leads_reject.id}</td>
+                                                    <td>{Leads_reject.f_name}</td>
+                                                    <td>{Leads_reject.L_name}</td>
+                                                    <td>{Leads_reject.Make}</td>
+                                                    <td>{Leads_reject.Model}</td>
+                                                    <td>{Leads_reject.reg_Number}</td>
+                                                    <td>{Leads_reject.muleage}</td>
+                                                    <td>{Leads_reject.Colour}</td>
+                                                    <td>{Leads_reject.Price}</td>
+                                                    <td>{Leads_reject.m_payment}</td>
+                                                    <td>{Leads_reject.equity}</td>
                                                 </tr>
                                             ))}
                                         </tbody>

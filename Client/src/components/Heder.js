@@ -291,26 +291,26 @@ export default function Heder() {
           </div>
         </div>
 
-        <div onClick={d1} className="row d1">
+        <Link to="/"><div onClick={d1} className="row d1">
           <div className="col-12">
             <div className="mt-3 row cPoin settop centeraligtn ms-2 me-2">
               <div className="col-3">
                 <img className="diIMG" src="./images/icon.png" alt="" />
               </div>
               <div className="col-7">
-              <Link to="/"><h6>Dashboard</h6></Link>
+              <h6 className="text_font">Dashboard</h6>
               </div>
               <div className="col-2"></div>
             </div>
           </div>
-        </div>
+        </div></Link>
 
         <div onClick={lead} className="mt-3 row cPoin centeraligtn ms-2 me-2">
           <div className="col-3 end">
             <img className="diIMG" src="./images/d1.png" alt="" />
           </div>
           <div className="col-7">
-            <h6>Leads</h6>
+            <h6 className="text_font">Leads</h6>
           </div>
           <div className="mt-2 col-2">
             <img className="arrorIMG" src="./images/arror.png" alt="" />
@@ -318,7 +318,7 @@ export default function Heder() {
         </div>
         <div className="row hiddnbox">
           <div className="mt-2 mb-2 marginsetlef">
-            <div onClick={d2} className="mt-2 row cPoin d2">
+          <div onClick={d2} className="mt-2 row cPoin d2">
               <div className="col-2">
                 <img
                   className="mt-2 leftarrorIMG ms-5"
@@ -327,10 +327,10 @@ export default function Heder() {
                 />
               </div>
               <div className="col-10">
-              <Link to="/Leads_avalible"><h6 className="ms-5">Available</h6></Link>
+              <Link to="/Leads_avalible"><h6 className="ms-5 text_font">Available</h6></Link>
               </div>
             </div>
-            <div onClick={d3} className="mt-2 row cPoin d3">
+          <div onClick={d3} className="mt-2 row cPoin d3">
               <div className="col-2">
                 <img
                   className="mt-2 leftarrorIMG ms-5"
@@ -339,7 +339,7 @@ export default function Heder() {
                 />
               </div>
               <div className="col-10">
-              <Link to="/Leads_success"><h6 className="ms-5">Success</h6></Link>
+              <Link to="/Leads_success"><h6 className="ms-5 text_font">Success</h6></Link>
               </div>
             </div>
             <div onClick={d4} className="mt-2 row cPoin d4">
@@ -350,39 +350,39 @@ export default function Heder() {
                   alt=""
                 />
               </div>
-              <div className="col-10">
-              <h6 className="ms-5">Rejected</h6>
+              <div className="col-10">        
+              <Link to="/Leads_reject"><h6 className="ms-5 text_font">Rejected</h6></Link>
               </div>
             </div>
           </div>
         </div>
 
-        <div onClick={d5} className="row d5">
+        <Link to="/Stock"><div onClick={d5} className="row d5">
           <div className="col-12">
             <div className="mt-3 row cPoin centeraligtn ms-2 me-2">
               <div className="col-3 end">
                 <img className="diIMG" src="./images/d2.png" alt="" />
               </div>
               <div className="col-9">
-                <h6>Current Stock</h6>
+                <h6 className="text_font">Current Stock</h6>
               </div>
             </div>
           </div>
-        </div>
+        </div></Link>
 
-        <div onClick={d6} className="row d6">
+        <Link to="/Report"><div onClick={d6} className="row d6">
           <div className="col-12">
             <div className="mt-3 row cPoin centeraligtn ms-2 me-2">
               <div className="col-3 end">
                 <img className="diIMG" src="./images/d3.png" alt="" />
               </div>
               <div className="col-7">
-                <h6>Reports</h6>
+                <h6 className="text_font">Reports</h6>
               </div>
               <div className="col-2"></div>
             </div>
           </div>
-        </div>
+        </div></Link>
 
         <div
           onClick={setting}
@@ -392,7 +392,7 @@ export default function Heder() {
             <img className="diIMG" src="./images/d4.png" alt="" />
           </div>
           <div className="col-7">
-            <h6>Settings</h6>
+            <h6 className="text_font">Settings</h6>
           </div>
           <div className="col-2">
             <img className="mt-2 arrorIMG" src="./images/arror.png" alt="" />
@@ -421,7 +421,7 @@ export default function Heder() {
                 />
               </div>
               <div className="col-10">
-                <h6 className="ms-5">Customer</h6>
+                <h6 className="ms-5 text_font">Customer</h6>
               </div>
             </div>
             <div onClick={d9} className="mt-2 row cPoin d9">
@@ -433,7 +433,7 @@ export default function Heder() {
                 />
               </div>
               <div className="col-10">
-                <h6 className="ms-5">Stocks</h6>
+                <h6 className="ms-5 text_font">Stocks</h6>
               </div>
             </div>
             <div onClick={d10} className="mt-2 row cPoin d10">
@@ -445,7 +445,7 @@ export default function Heder() {
                 />
               </div>
               <div className="col-10">
-                <h6 className="ms-5">Links</h6>
+                <h6 className="ms-5 text_font">Links</h6>
               </div>
             </div>
           </div>
