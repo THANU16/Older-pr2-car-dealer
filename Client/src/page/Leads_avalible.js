@@ -4,6 +4,7 @@ import Heder from "../components/Heder";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
+import { Link } from "react-router-dom";
 
 
 export default function Leads_avalible() {
@@ -263,6 +264,7 @@ export default function Leads_avalible() {
                             <div>
                                 <div className='row ms-3 me-3'>
 
+                                <Link to="/Leads_avalible_open">
                                     <Table bordered hover>
                                         <thead>
                                             <tr>
@@ -297,6 +299,7 @@ export default function Leads_avalible() {
                                             ))}
                                         </tbody>
                                     </Table>
+                                </Link>
 
                                 </div>
                             </div>

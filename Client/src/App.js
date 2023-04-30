@@ -21,6 +21,8 @@ function App() {
       <Route path='/Leads_reject' element={<Leads_reject/>} />
       <Route path='/Stock' element={<Stock/>} />
       <Route path='/Report' element={<Report/>} />
+      <Route path='/Leads_avalible_open' element={<Leads_avalible_open/>} />
+      <Route path='/Stock_open' element={<Stock_open/>} />
       </Routes>
     </BrowserRouter>
   );

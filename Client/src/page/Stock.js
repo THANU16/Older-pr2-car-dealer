@@ -1,9 +1,10 @@
 import "./Stock.css";
 import React from "react";
 import Heder from "../components/Heder";
-import Dropdown from "react-bootstrap/Dropdown";
-import Form from "react-bootstrap/Form";
+// import Dropdown from "react-bootstrap/Dropdown";
+// import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
+import { Link } from "react-router-dom";
 
 export default function Stock() {
   
@@ -64,6 +65,7 @@ export default function Stock() {
             <div className="mt-4 row">
               <div>
                 <div className="row ms-3 me-3">
+                <Link to="/Stock_open">
                   <Table bordered hover>
                     <thead>
                       <tr>
@@ -90,6 +92,7 @@ export default function Stock() {
                       ))}
                     </tbody>
                   </Table>
+                  </Link>
                 </div>
               </div>
             </div>
