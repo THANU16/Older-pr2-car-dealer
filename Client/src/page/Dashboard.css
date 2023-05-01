@@ -1,6 +1,7 @@
 .bg {
     background-color: #F1F1F1;
     height: fit-content;
+    overflow-x: hidden;
 }
 
 .searchBox {
@@ -163,5 +164,8 @@ table thead{
     }
     .margin_upset{
         margin-top: 100px !important;
+    }
+    .phone_center{
+        margin-left: 2.4%;
     }
 }

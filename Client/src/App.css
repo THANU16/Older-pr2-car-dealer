@@ -3,6 +3,29 @@
   background-color: #F1F1F1;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #96F3C1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #37C578; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
 /* .App {
   text-align: center;
 }

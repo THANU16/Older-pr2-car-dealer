@@ -6,7 +6,7 @@
     padding: 0;
 }
 .text_font{
-    font-size: 14px;
+    font-size: 15px;
 }
 .bg_nav_left {
     height: 100vh;
@@ -82,6 +82,11 @@
     color: white;
     background: #067237;
 }
+.hover:hover{
+    background-color: #067237;
+    color: white !important;
+    background: #067237; 
+}
 .deactive{
     background-color: #FFFFFF;
     color: black;
@@ -123,6 +128,7 @@
         margin-left: 3%;
         z-index: 300 !important;
         pointer-events: visible;
+        
     }
     .indexp{
         z-index: 100 !important;
@@ -131,11 +137,17 @@
     .leftbox {
         width: 100%;
     }
+
+    
+    .poti_fix22{
+        position: fixed;
+        z-index: 30 !important;
+    }
     .poti_fix{
         position: fixed;
-    } .poti_fix{
-        position: fixed;
+        z-index: 40 !important;
     }
+
     .set_mar_navbar{
         margin-left: 0px;
     }

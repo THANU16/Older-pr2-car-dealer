@@ -181,8 +181,8 @@ export default function Leads_success() {
         <div className='bg'>
             <Heder />
             <div className='setbody'>
-                <div className='mt-4 row ms-5'>
-                    <h2>Our Leads - Success</h2>
+                <div className='mt-5 row ms-5'>
+                    <h2 className='mt-4'>Our Leads - Success</h2>
                 </div>
                 <div className='mt-5 row ms-5 me-5'>
                     <div className='col-10 col-md-6 searchBox'>

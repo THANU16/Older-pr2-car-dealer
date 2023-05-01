@@ -1,6 +1,8 @@
 .bg {
     background-color: #F1F1F1;
     height: fit-content;
+    overflow-x: hidden;
+
 }
 
 .searchBox {

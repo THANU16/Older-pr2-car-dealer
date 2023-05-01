@@ -317,7 +317,7 @@ export default function Dashboard() {
                 <div className='mt-5 mb-5 row'>
                     <div className='width_set_dash'>
                         <div className='row margin_du'>
-                            <div className='mt-1 col-12 col-md-4'>
+                            <div className='mt-1 col-12 col-md-4 phone_center'>
                                 <div className='row bg_white me-1'>
                                     <div className='mb-4 m col-12'>
                                         <div className='row'>
@@ -336,7 +336,7 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='mt-1 col-12 col-md-4'>
+                            <div className='mt-1 col-12 phone_center col-md-4'>
                                 <div className='row bg_white me-1'>
                                     <div className='mb-4 m col-12'>
                                         <div className='row'>
@@ -355,7 +355,7 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='mt-1 col-12 col-md-4'>
+                            <div className='mt-1 phone_center col-12 col-md-4'>
                                 <div className='row bg_white me-1'>
                                     <div className='mb-4 m col-12'>
                                         <div className='row'>

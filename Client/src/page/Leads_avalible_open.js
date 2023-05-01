@@ -26,6 +26,9 @@ export default function Leads_avalible_open() {
         Estimated_Value: "18500",
         Settlement_Figur: "599",
         Equity: "16965.06",
+
+        p_number:"733242334",
+        email:"abc@gmail.com",
     };
     const table_Avalible_op = [
         {
@@ -66,7 +69,7 @@ export default function Leads_avalible_open() {
     return (
         <div className='bg'>
             <Heder />
-            <div className='setbody'>
+            <div className='mt-5 setbody'>
                 <div className='mt-4 row ms-5'>
                     <h2>Specific lead page</h2>
                 </div>
@@ -148,6 +151,23 @@ export default function Leads_avalible_open() {
                                             </div>
                                             <div className='col-6'>
                                                 <h3 className='listionname2'>: {main_details.Months_Agreement}</h3>
+                                            </div>
+                                        </div>
+
+                                        <div className='mt-5 row'>
+                                            <div className='col-6'>
+                                                <h3 className='listionname'>• Phone Number</h3>
+                                            </div>
+                                            <div className='col-6'>
+                                                <h3 className='listionname2'>: {main_details.p_number}</h3>
+                                            </div>
+                                        </div>
+                                        <div className='row'>
+                                            <div className='col-6'>
+                                                <h3 className='listionname'>• Email</h3>
+                                            </div>
+                                            <div className='col-6'>
+                                                <h3 className='listionname2'>: {main_details.email}</h3>
                                             </div>
                                         </div>
                                     </div>
