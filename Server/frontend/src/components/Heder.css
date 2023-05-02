@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+}
+.text_font{
+    font-size: 15px;
+}
+.bg_nav_left {
+    height: 100vh;
+    background: #FFFFFF;
+    position: absolute;
+    position: fixed;
+}
+
+.bg_hed {
+    background-color: #067237;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.hednameRow {
+    height: 60px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_manu {
+    width: 30px;
+    margin-left: 36.66667%;
+    pointer-events: none;
+}
+
+.endSET {
+    display: flex;
+    justify-content: end;
+}
+
+.profileIMG {
+    width: 30px;
+    border-radius: 100%;
+}
+
+.centeraligtn {
+    display: flex;
+    justify-content: center;
+}
+
+.diIMG {
+    width: 90%;
+    margin-top: 5px;
+}
+
+.arrorIMG {
+    width: 150%;
+}
+
+.leftarrorIMG {
+    width: 50%;
+    margin-left: 105%;
+}
+
+.leftbox {
+    width: 16%;
+}
+.hiddnbox{
+    display: none;
+}
+.hiddnbox2{
+    display: none;
+}
+.cPoin{
+    cursor: pointer;
+}
+.active{
+    background-color: #067237;
+    color: white;
+    background: #067237;
+}
+.hover:hover{
+    background-color: #067237;
+    color: white !important;
+    background: #067237; 
+}
+.deactive{
+    background-color: #FFFFFF;
+    color: black;
+}
+.rowler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .diIMG {
+        width: 200%;
+    }
+
+    .arrorIMG {
+        width: 250%;
+    }
+
+    .leftarrorIMG {
+        width: 150%;
+        margin-left: 105%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .bg_nav_left {
+        display: none;
+    }
+
+    .img_manu {
+        margin-left: 3%;
+        z-index: 300 !important;
+        pointer-events: visible;
+        
+    }
+    .indexp{
+        z-index: 100 !important;
+    }
+
+    .leftbox {
+        width: 100%;
+    }
+
+    
+    .poti_fix22{
+        position: fixed;
+        z-index: 30 !important;
+    }
+    .poti_fix{
+        position: fixed;
+        z-index: 40 !important;
+    }
+
+    .set_mar_navbar{
+        margin-left: 0px;
+    }
+
+    .diIMG {
+        width: 20%;
+        margin-left: 80%;
+    }
+
+    .arrorIMG {
+        width: 30%;
+        margin-left: -380% !important;
+    }
+
+    .leftarrorIMG {
+        width: 15%;
+
+    }
+
+    .logo {
+        width: 45%;
+        margin-top: 60px;
+    }
+
+    .settop {
+        margin-top: 80px !important;
+    }
+    .marginsetlef{
+        margin-left: 20% !important;
+    }
+    .hednameRow {
+        background-color: green;
+    }
+}
