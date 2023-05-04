@@ -82,8 +82,12 @@ export default function Stock_open() {
   const continu02 = () => {
     if (visi === 1) {
       const box3 = document.getElementsByClassName("BOXHidde3");
+      const box4 = document.getElementsByClassName("box_table");
       box3[0].style.position = "relative";
       box3[0].style.visibility = "visible";
+      box4[0].style.position = "relative";
+      box4[0].style.visibility = "visible";
+      box4[0].style.display = "block";
     }
   };
   const back = () => {
@@ -130,8 +134,218 @@ export default function Stock_open() {
     Rate_of_Interest: "8.88% Fixed",
   };
 
+  const filter = [
+    {
+      filtername: "Sale Price",
+      id: "1",
+    },
+    {
+      filtername: "deposit",
+      id: "2",
+    },
+    {
+      filtername: "balance to finance(£)",
+      id: "3",
+    },
+    {
+      filtername: "total amount payable(£)",
+      id: "4",
+    },
+    {
+      filtername: "baloon payment(£)",
+      id: "5",
+    },
+    {
+      filtername: "monthly payment(£)",
+      id: "6",
+    },
+    {
+      filtername: "rate",
+      id: "7",
+    },
+    {
+      filtername: "start date",
+      id: "8",
+    },
+    {
+      filtername: "month of payment(£)",
+      id: "9",
+    },
+    {
+      filtername: "settlement figure",
+      id: "10",
+    },
+    {
+      filtername: "length of agreement",
+      id: "11",
+    },
+    {
+      filtername: "interest rebate",
+      id: "12",
+    },
+    {
+      filtername: "valueation",
+      id: "13",
+    },
+    {
+      filtername: "equity",
+      id: "14",
+    },
+    {
+      filtername: "mileage at start",
+      id: "15",
+    },
+    {
+      filtername: "mileage now",
+      id: "16",
+    },
+    {
+      filtername: "phone number",
+      id: "17",
+    },
+    {
+      filtername: "email",
+      id: "18",
+    },
+    {
+      filtername: "post code",
+      id: "19",
+    },
+  ];
+  const month_list = [
+    {
+      name: "January",
+    },
+    {
+      name: "February	",
+    },
+    {
+      name: "March",
+    },
+    {
+      name: "April",
+    },
+    {
+      name: "May",
+    },
+    {
+      name: "June",
+    },
+    {
+      name: "July",
+    },
+  ];
 
-
+  const table_dashbord2 = [
+    {
+      id: "1",
+      f_name: "Ann Culhane",
+      L_name: "Ann Culhane",
+      Make: "Audi",
+      Model: "A1",
+      reg_Number: "5684236526",
+      Sa_price: "2995",
+      deposit: "0",
+      ba_finance: "2995",
+      t_amount: "3444.25",
+      Blaoo_payment: "1048.25",
+      m_payment: "10000",
+      rate: "1.15",
+      sta_date: "22 Jan 2021",
+      m_of_payment: "27",
+      figure: "600",
+      ageement: "36",
+      bebate: "36",
+      valueation: "18500",
+      equity: "15534.94",
+      Milege_start: "1534.94",
+      Milege_now: "46575",
+      phone: "07237758578",
+      email: "ann@gmail.com",
+      p_code: "HG1 5HR",
+    },
+    {
+      id: "2",
+      f_name: "Ann Culhane",
+      L_name: "Ann Culhane",
+      Make: "Audi",
+      Model: "A1",
+      reg_Number: "5684236526",
+      Sa_price: "2995",
+      deposit: "0",
+      ba_finance: "2995",
+      t_amount: "3444.25",
+      Blaoo_payment: "1048.25",
+      m_payment: "10000",
+      rate: "1.15",
+      sta_date: "22 Jan 2021",
+      m_of_payment: "27",
+      figure: "600",
+      ageement: "36",
+      bebate: "36",
+      valueation: "18500",
+      equity: "15534.94",
+      Milege_start: "1534.94",
+      Milege_now: "46575",
+      phone: "07237758578",
+      email: "ann@gmail.com",
+      p_code: "HG1 5HR",
+    },
+    {
+      id: "3",
+      f_name: "Ann Culhane",
+      L_name: "Ann Culhane",
+      Make: "Audi",
+      Model: "A1",
+      reg_Number: "5684236526",
+      Sa_price: "2995",
+      deposit: "0",
+      ba_finance: "2995",
+      t_amount: "3444.25",
+      Blaoo_payment: "1048.25",
+      m_payment: "10000",
+      rate: "1.15",
+      sta_date: "22 Jan 2021",
+      m_of_payment: "27",
+      figure: "600",
+      ageement: "36",
+      bebate: "36",
+      valueation: "18500",
+      equity: "15534.94",
+      Milege_start: "1534.94",
+      Milege_now: "46575",
+      phone: "07237758578",
+      email: "ann@gmail.com",
+      p_code: "HG1 5HR",
+    },
+    {
+      id: "4",
+      f_name: "Ann Culhane",
+      L_name: "Ann Culhane",
+      Make: "Audi",
+      Model: "A1",
+      reg_Number: "5684236526",
+      Sa_price: "2995",
+      deposit: "0",
+      ba_finance: "2995",
+      t_amount: "3444.25",
+      Blaoo_payment: "1048.25",
+      m_payment: "10000",
+      rate: "1.15",
+      sta_date: "22 Jan 2021",
+      m_of_payment: "27",
+      figure: "600",
+      ageement: "36",
+      bebate: "36",
+      valueation: "18500",
+      equity: "15534.94",
+      Milege_start: "1534.94",
+      Milege_now: "46575",
+      phone: "07237758578",
+      email: "ann@gmail.com",
+      p_code: "HG1 5HR",
+    },
+  ];
 
 
   return (
@@ -162,7 +376,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Brand</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Brand}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Brand}</h5>
                       </div>
                     </div>
                     <div className="mt-2 ms-2 me-2 row">
@@ -170,7 +384,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Model</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Model}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Model}</h5>
                       </div>
                     </div>
                     <div className="mt-2 ms-2 me-2 row">
@@ -178,7 +392,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Trim / Edition</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Edition}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Edition}</h5>
                       </div>
                     </div>
                     <div className="mt-2 ms-2 me-2 row">
@@ -186,7 +400,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Year of Manufacture</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Manufacture}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Manufacture}</h5>
                       </div>
                     </div>
                     <div className="mt-2 ms-2 me-2 row">
@@ -194,7 +408,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Condition</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Condition}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Condition}</h5>
                       </div>
                     </div>
                     <div className="mt-2 ms-2 me-2 row">
@@ -202,7 +416,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Transmission</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Transmission}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Transmission}</h5>
                       </div>
                     </div>
                     <div className="mt-2 ms-2 me-2 row">
@@ -210,7 +424,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Body type</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Body_type}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Body_type}</h5>
                       </div>
                     </div>
                     <div className="mt-2 ms-2 me-2 row">
@@ -218,7 +432,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Fuel type</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Fuel_type}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Fuel_type}</h5>
                       </div>
                     </div>
                     <div className="mt-2 ms-2 me-2 row">
@@ -226,7 +440,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Engine capacity</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Engine_capacity}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Engine_capacity}</h5>
                       </div>
                     </div>
                     <div className="mt-2 mb-4 ms-2 me-2 row">
@@ -234,7 +448,7 @@ export default function Stock_open() {
                         <h5 className='div_box_txt'>Mileage</h5>
                       </div>
                       <div className="col-6">
-                        <h5>: {Stock_detail.Mileage}</h5>
+                        <h5 className="tx_bold">: {Stock_detail.Mileage}</h5>
                       </div>
                     </div>
 
@@ -337,8 +551,9 @@ export default function Stock_open() {
                     <div className="mt-2 row ms-2 me-2">
                       <div className="col-6">
                         <label className='mb-2' htmlFor="">Vehicle price</label>
-                        <InputGroup className="mb-3">
+                        <InputGroup className="mb-3 ">
                           <Form.Control
+                          className="border_input"
                             id="ve_price"
                             placeholder="0"
                             aria-label="0"
@@ -351,6 +566,7 @@ export default function Stock_open() {
                         <label className='mb-2' htmlFor="">Deposit amount</label>
                         <InputGroup className="mb-3">
                           <Form.Control
+                           className="border_input"
                             id="de_amount"
                             placeholder="0"
                             aria-label="0"
@@ -366,6 +582,7 @@ export default function Stock_open() {
                         <label className='mb-2' htmlFor="">Finance amount</label>
                         <InputGroup className="mb-3">
                           <Form.Control
+                           className="border_input"
                             id="fi_amount"
                             placeholder="0"
                             aria-label="0"
@@ -661,6 +878,141 @@ export default function Stock_open() {
               </div>
             </div>
 
+          </div>
+        </div>
+
+        
+        <div className="mt-5 mb-2 box_table row tblleboxmargin">
+          <div className="col-12 ">
+            <div className="mt-4 set_end row row_width ms-2 me-2">
+              <div className="col-4 col-md-8">
+                <h5 className="tx_bold">Best matching cars</h5>
+              </div>
+              <div className="col-4 col-md-3 rowell set_end">
+                <h6 className="tx_bold">Month</h6>
+                <Form.Select
+                  aria-label="Default select example"
+                  className="size_select fondsixw ms-2"
+                >
+                  <option>Select Month</option>
+                  {month_list.map((month_list) => (
+                    <option value={month_list.name}>{month_list.name}</option>
+                  ))}
+                </Form.Select>
+              </div>
+              <div className="justify-start col-4 col-md-1 d-flex">
+                <div className="row margin_set_dash_fil">
+                  <Dropdown className="me-4">
+                    <Dropdown.Toggle
+                      variant=""
+                      id="dropdown-basic"
+                      className="filterbox ms-4"
+                    >
+                      <img
+                        className="mt-2 mar_le"
+                        src="./images/filter.png"
+                        alt=""
+                      />
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu className="drofdownBox22">
+                      <div className="row">
+                        <div className="col-8"></div>
+                        <div className="col-4 alignCenter">
+                          <h6 className="me-3">Show</h6>
+                        </div>
+                      </div>
+
+                      {filter.map((filter) => (
+                        <Dropdown.Item href="#/action-1">
+                          <div className="row">
+                            <div className="col-8">
+                              <h6 className="color_blu">{filter.filtername}</h6>
+                            </div>
+                            <div className="col-4 alignCenter">
+                              <Form.Check
+                                className='me-2' // prettier-ignore
+                                type="checkbox"
+                                id={filter.id}
+                              />
+                            </div>
+                          </div>
+                        </Dropdown.Item>
+                      ))}
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-4 row tableBox">
+              <div>
+                <div className="row ms-3 me-3">
+                  <Table bordered hover className="table with_table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>First_Name</th>
+                        <th>Last_Name</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Reg_Number</th>
+                        <th>Sale_Price</th>
+                        <th>Deposit</th>
+                        <th>Balance_to_Finance(£)</th>
+                        <th>Total_amount_Payable(£)</th>
+                        <th>Baloon_Payment(£)</th>
+                        <th>Monthly_Payment</th>
+                        <th>Rate</th>
+                        <th>Start_Date</th>
+                        <th>Month_of_Payment(£)</th>
+                        <th>Settlement_Figure</th>
+                        <th>Length_of_Agreement</th>
+                        <th>Interest_Rebate</th>
+                        <th>Valueation</th>
+                        <th>Equity</th>
+                        <th>Mileage_at_Start</th>
+                        <th>Mileage_Now</th>
+                        <th>Phone_Number</th>
+                        <th>Email</th>
+                        <th>Post_Code</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {table_dashbord2.map((table_dashbord2) => (
+                        <tr>
+                          <td className="tx_bold">{table_dashbord2.id}</td>
+                          <td className="tx_bold">{table_dashbord2.f_name}</td>
+                          <td className="tx_bold">{table_dashbord2.L_name}</td>
+                          <td className="tx_bold">{table_dashbord2.Make}</td>
+                          <td>{table_dashbord2.Model}</td>
+                          <td>{table_dashbord2.reg_Number}</td>
+                          <td>{table_dashbord2.Sa_price}</td>
+                          <td>{table_dashbord2.deposit}</td>
+                          <td>{table_dashbord2.ba_finance}</td>
+                          <td>{table_dashbord2.t_amount}</td>
+                          <td>{table_dashbord2.Blaoo_payment}</td>
+                          <td>{table_dashbord2.m_payment}</td>
+                          <td>{table_dashbord2.rate}</td>
+                          <td>{table_dashbord2.sta_date}</td>
+                          <td>{table_dashbord2.m_of_payment}</td>
+                          <td>{table_dashbord2.figure}</td>
+                          <td>{table_dashbord2.ageement}</td>
+                          <td>{table_dashbord2.bebate}</td>
+                          <td>{table_dashbord2.valueation}</td>
+                          <td>{table_dashbord2.equity}</td>
+                          <td>{table_dashbord2.Milege_start}</td>
+                          <td>{table_dashbord2.Milege_now}</td>
+                          <td>{table_dashbord2.phone}</td>
+                          <td>{table_dashbord2.email}</td>
+                          <td>{table_dashbord2.p_code}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

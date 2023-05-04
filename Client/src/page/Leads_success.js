@@ -182,15 +182,15 @@ export default function Leads_success() {
             <Heder />
             <div className='setbody'>
                 <div className='mt-5 row ms-5'>
-                    <h2 className='mt-4'>Our Leads - Success</h2>
+                    <h2 className='mt-4'>Our Leads / <span className='small_font'>Success</span></h2>
                 </div>
                 <div className='mt-5 row ms-5 me-5'>
                     <div className='col-10 col-md-6 searchBox'>
                         <div className='row'>
-                            <div className='mt-1 col-10 alignCenter2'>
+                            <div className='mt-2 col-10 alignCenter2'>
                                 <input className='inputSearch' type="text" placeholder=' Search here' />
                             </div>
-                            <div className='mt-1 col-2 alignCenter'>
+                            <div className='mt-2 col-2 alignCenter'>
                                 <img src="./images/search.png" alt="" />
                             </div>
                         </div>
@@ -198,7 +198,7 @@ export default function Leads_success() {
                     <div className='col-2 col-md-6'>
                         <div className='row'>
                             <Dropdown className='me-4'>
-                                <Dropdown.Toggle variant="success" id="dropdown-basic" className="filterbox ms-4">
+                                <Dropdown.Toggle variant="" id="dropdown-basic" className="filterbox ms-4">
                                     <img className='mt-2 mar_le' src="./images/filter.png" alt="" />
                                 </Dropdown.Toggle>
 
@@ -231,15 +231,15 @@ export default function Leads_success() {
                         </div>
                     </div>
                 </div>
-                <div className='mt-4 mb-4 row tblleboxmargin'>
-                    <div className='col-12 tableBox'>
+                <div className='mt-5 mb-4 row tblleboxmargin'>
+                    <div className='col-12 '>
 
                         <div className='mt-4 row row_width ms-2 me-2'>
                             <div className='col-4 col-md-6'>
-                                <h6>Select one and view more</h6>
+                                <h6 className="tx_bold">Select one and view more</h6>
                             </div>
                             <div className='col-4 col-md-3 rowell'>
-                                <h6>Month</h6>
+                                <h6 className="tx_bold">Month</h6>
                                 <Form.Select aria-label="Default select example" className='size_select fondsixw ms-2'>
                                     <option>Select Month</option>
                                     {month_list.map((month_list) => (
@@ -249,7 +249,7 @@ export default function Leads_success() {
                                 </Form.Select>
                             </div>
                             <div className='col-4 col-md-3 rowell'>
-                                <h6>Price_Range</h6>
+                                <h6 className="tx_bold">Price_Range</h6>
                                 <Form.Select aria-label="Default select example" className='size_select fondsixw ms-2'>
                                     <option>Price Range</option>
                                     {price_range.map((price_range) => (
@@ -259,7 +259,7 @@ export default function Leads_success() {
                             </div>
                         </div>
 
-                        <div className='mt-4 row'>
+                        <div className='mt-4 row tableBox'>
                             <div>
                                 <div className='row ms-3 me-3'>
 
@@ -267,25 +267,25 @@ export default function Leads_success() {
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
+                                                <th>First_Name</th>
+                                                <th>Last_Name</th>
                                                 <th>Make</th>
                                                 <th>Model</th>
-                                                <th>Reg Number</th>
+                                                <th>Reg_Number</th>
                                                 <th>muleage</th>
                                                 <th>Colour</th>
                                                 <th>Price(£)</th>
-                                                <th>monthly payment</th>
-                                                <th>camount of equity</th>
+                                                <th>monthly_payment</th>
+                                                <th>camount_of_equity</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {table_success.map((table_success) => (
                                                 <tr>
-                                                    <td>{table_success.id}</td>
-                                                    <td>{table_success.f_name}</td>
-                                                    <td>{table_success.L_name}</td>
-                                                    <td>{table_success.Make}</td>
+                                                    <td className="tx_bold">{table_success.id}</td>
+                                                    <td className="tx_bold">{table_success.f_name}</td>
+                                                    <td className="tx_bold">{table_success.L_name}</td>
+                                                    <td className="tx_bold">{table_success.Make}</td>
                                                     <td>{table_success.Model}</td>
                                                     <td>{table_success.reg_Number}</td>
                                                     <td>{table_success.muleage}</td>

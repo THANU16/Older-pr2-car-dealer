@@ -98,6 +98,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Username</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                  className="bg_cool"
                     id="username"
                     placeholder="Annculhane@gmail.com"
                     aria-label="0"
@@ -111,6 +112,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Email</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="email"
                     placeholder="annculhane@gmail.com"
                     aria-label="0"
@@ -124,6 +126,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Role</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="Role"
                     placeholder="Manager"
                     aria-label="0"
@@ -137,6 +140,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Password</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="Password"
                     placeholder="*****"
                     aria-label="0"
@@ -150,6 +154,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Confirm Password</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="conf_Password"
                     placeholder="*****"
                     aria-label="0"
@@ -184,6 +189,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Username</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="username_edit"
                     placeholder="Annculhane@gmail.com"
                     aria-label="0"
@@ -197,6 +203,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Email</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="email_edit"
                     placeholder="annculhane@gmail.com"
                     aria-label="0"
@@ -210,6 +217,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Role</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="Role_edit"
                     placeholder="Manager"
                     aria-label="0"
@@ -223,6 +231,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Password</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="Password_edit"
                     placeholder="*****"
                     aria-label="0"
@@ -236,6 +245,7 @@ export default function Setting_profile() {
                 <label className='mb-2' htmlFor="">Confirm Password</label>
                 <InputGroup className="mb-3">
                   <Form.Control
+                   className="bg_cool"
                     id="conf_Password_edit"
                     placeholder="*****"
                     aria-label="0"
@@ -264,11 +274,11 @@ export default function Setting_profile() {
 
       <div className="setbody">
         <div className="mt-5 row ms-5">
-          <h2 className="mt-4 mb-4">Settings / Profile</h2>
+          <h2 className="mt-4 mb-4">Settings / <span className='small_font'>Profile</span></h2>
         </div>
 
         <div className="mt-4 mb-5 row tblleboxmargin">
-          <div className="col-12 tableBox">
+          <div className="col-12 ">
             <div className="mt-4 row ms-2 me-2">
               <div className="col-12">
                 <div className="margin_set_add row">
@@ -279,7 +289,7 @@ export default function Setting_profile() {
               </div>
             </div>
 
-            <div className="mt-4 row">
+            <div className="mt-4 row tableBox3">
               <div>
                 <div className="row ms-3 me-3">
 
@@ -296,8 +306,8 @@ export default function Setting_profile() {
                     <tbody>
                       {profile_detail.map((profile_detail) => (
                         <tr>
-                          <td>{profile_detail.id}</td>
-                          <td>{profile_detail.name}</td>
+                          <td className="tx_bold">{profile_detail.id}</td>
+                          <td className="tx_bold">{profile_detail.name}</td>
                           <td>{profile_detail.email}</td>
                           <td>{profile_detail.user_role}</td>
                           <td>

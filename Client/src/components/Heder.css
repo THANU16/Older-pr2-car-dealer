@@ -6,11 +6,12 @@
     padding: 0;
 }
 .text_font{
-    font-size: 15px;
+    font-size: 17px;
+    color: white;
 }
 .bg_nav_left {
     height: 100vh;
-    background: #FFFFFF;
+    background: #067237;
     position: absolute;
     position: fixed;
 }
@@ -24,7 +25,7 @@
 
 .hednameRow {
     height: 60px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    /* border-bottom: 2px solid #FFFFFF; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +52,13 @@
     justify-content: center;
 }
 
-.diIMG {
+.diIMG1 {
+    display: none;
+    width: 90%;
+    margin-top: 5px;
+}
+.diIMG2 {
+    display: block;
     width: 90%;
     margin-top: 5px;
 }
@@ -60,7 +67,13 @@
     width: 150%;
 }
 
-.leftarrorIMG {
+.leftarrorIMG1 {
+    display: none;
+    width: 50%;
+    margin-left: 105%;
+}
+.leftarrorIMG2 {
+    display: block;
     width: 50%;
     margin-left: 105%;
 }
@@ -83,10 +96,28 @@
     background: #067237;
 }
 .hover:hover{
-    background-color: #067237;
-    color: white !important;
-    background: #067237; 
+    background-color: #FFFFFF;
+    color: #067237 !important;
+    /* font-weight: bold; */
+    /* margin-top: 5%; */
+    height: 10%;
 }
+.hover:hover .text_font{
+    color: #067237 !important;
+    font: bold;
+}
+.hover:hover .diIMG1{
+   display: block;
+}
+.hover:hover .diIMG2{
+   display: none;
+}
+.hover:hover .leftarrorIMG1{
+    display: block;
+ }
+ .hover:hover .leftarrorIMG2{
+    display: none;
+ }
 .deactive{
     background-color: #FFFFFF;
     color: black;
@@ -104,18 +135,31 @@
 
 
 @media screen and (max-width: 1200px) {
-    .diIMG {
+    .diIMG1 {
+        width: 200%;
+        display: none;
+    }
+    .diIMG2 {
+        display: block;
         width: 200%;
     }
+
 
     .arrorIMG {
         width: 250%;
     }
 
-    .leftarrorIMG {
+    .leftarrorIMG1 {
+        display: none;
         width: 150%;
         margin-left: 105%;
     }
+    .leftarrorIMG2 {
+        display: block;
+        width: 150%;
+        margin-left: 105%;
+    }
+
 
 }
 
@@ -152,8 +196,14 @@
         margin-left: 0px;
     }
 
-    .diIMG {
-        width: 20%;
+    .diIMG1 {
+        display: none;
+        width: 30%;
+        margin-left: 80%;
+    }
+    .diIMG2 {
+        display: block;
+        width: 30%;
         margin-left: 80%;
     }
 
@@ -162,7 +212,13 @@
         margin-left: -380% !important;
     }
 
-    .leftarrorIMG {
+    .leftarrorIMG1 {
+        display: none;
+        width: 15%;
+
+    }
+    .leftarrorIMG2 {
+        display: block;
         width: 15%;
 
     }

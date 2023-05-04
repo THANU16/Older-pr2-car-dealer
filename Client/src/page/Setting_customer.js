@@ -186,6 +186,8 @@ export default function Setting_customer() {
     const btn02 = document.getElementsByClassName("button02");
     const table01 = document.getElementsByClassName("table01");
     const table02 = document.getElementsByClassName("table02");
+    const f1 = document.getElementsByClassName("f1");
+    const f2 = document.getElementsByClassName("f2");
     btn01[0].style.visibility = "hidden";
     btn01[0].style.position = "absolute";
     btn02[0].style.visibility = "visible";
@@ -196,12 +198,18 @@ export default function Setting_customer() {
     table02[0].style.visibility = "visible";
     table02[0].style.position = "relative";
     table02[0].style.display = "block";
+    f1[0].style.position = "absolute";
+    f1[0].style.display = "none";
+    f2[0].style.position = "relative";
+    f2[0].style.display = "block";
   };
   const save = () => {
     const btn01 = document.getElementsByClassName("button01");
     const btn02 = document.getElementsByClassName("button02");
     const table01 = document.getElementsByClassName("table01");
     const table02 = document.getElementsByClassName("table02");
+    const f1 = document.getElementsByClassName("f1");
+    const f2 = document.getElementsByClassName("f2");
     btn01[0].style.visibility = "visible";
     btn01[0].style.position = "relative";
     btn02[0].style.visibility = "hidden";
@@ -212,6 +220,10 @@ export default function Setting_customer() {
     table02[0].style.visibility = "hidden";
     table02[0].style.position = "absolute";
     table02[0].style.display = "none";
+    f2[0].style.position = "absolute";
+    f2[0].style.display = "none";
+    f1[0].style.position = "relative";
+    f1[0].style.display = "block";
   };
 
   const neww = () => {
@@ -223,9 +235,9 @@ export default function Setting_customer() {
     const M_box3 = document.getElementsByClassName("massege_box_stock");
     M_box3[0].style.visibility = "hidden";
   };
-  const add_stock = () => {};
+  const add_stock = () => { };
 
-  const chane_detail = () => {};
+  const chane_detail = () => { };
 
   return (
     <div className="bg">
@@ -241,23 +253,46 @@ export default function Setting_customer() {
           <div className="col-12">
             <div className="mt-2 row">
               <div>
-                <label className="mb-3 font_bold" htmlFor="">
+                <label className="mb-4 font_bold" htmlFor="">
                   Upload excel file
                 </label>
                 <br />
-                <input type="file" />
+
+
+                <label for="file">
+                  <div className="uplad_btn poti_ab">
+                    <div className="row set_margin_new">
+                      <div className="justify-end col-3 d-flex">
+                        <img className="up_logo" src="./images/upload.png" alt="" />
+                      </div>
+                      <div className="col-9">
+                        <div className="row">
+                          <h6 className="color_blue">Upload File</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className=" poti_ab ms-5" >
+                    <input className="mt-1 ms-4" type="file" id="file" name="file"/>
+                  </div>
+                </label>
+                
               </div>
             </div>
 
-            <div className="mt-4 mb-4 row">
-              <div className="justify-end col-6 d-flex">
-                <div onClick={cancel_box} className="BTN_01 all_center">
-                  <h2 className="btn_text">Cancle</h2>
-                </div>
-              </div>
-              <div className="justify-start col-6 d-flex">
-                <div onClick={add_stock} className="BTN_02 all_center">
-                  <h2 className="btn_text">Add Stocks</h2>
+            <div className="mt-5 mb-4 row">
+              <div>
+                <div className="mt-3 row">
+                  <div className="justify-end col-6 d-flex">
+                    <div onClick={cancel_box} className="BTN_01 all_center">
+                      <h2 className="btn_text">Cancle</h2>
+                    </div>
+                  </div>
+                  <div className="justify-start col-6 d-flex">
+                    <div onClick={add_stock} className="BTN_02 all_center">
+                      <h2 className="btn_text">Add Stocks</h2>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -267,20 +302,20 @@ export default function Setting_customer() {
 
       <div className="setbody">
         <div className="mt-5 row ms-5">
-          <h2 className="mt-4 mb-4">Settings / Customer</h2>
+          <h2 className="mt-4 mb-4">Settings / <span className='small_font'>Customer</span></h2>
         </div>
 
         <div className="mt-4 mb-4 row ms-5 me-5">
           <div className="col-10 col-md-6 searchBox">
             <div className="row">
-              <div className="mt-1 col-10 alignCenter2">
+              <div className="mt-2 col-10 alignCenter2">
                 <input
                   className="inputSearch"
                   type="text"
                   placeholder=" Search here"
                 />
               </div>
-              <div className="mt-1 col-2 alignCenter">
+              <div className="mt-2 col-2 alignCenter">
                 <img src="./images/search.png" alt="" />
               </div>
             </div>
@@ -289,7 +324,7 @@ export default function Setting_customer() {
             <div className="row">
               <Dropdown className="me-4">
                 <Dropdown.Toggle
-                  variant="success"
+                  variant=""
                   id="dropdown-basic"
                   className="filterbox ms-4"
                 >
@@ -331,13 +366,14 @@ export default function Setting_customer() {
         </div>
 
         <div className="mt-5 mb-5 row tblleboxmargin">
-          <div className="col-12 tableBox">
+          <div className="col-12 ">
             <div className="mt-4 row ms-2 me-2">
-              <div className="mt-1 mb-1 col-6 col-md-2">
-                <h6 className="font_bold">Fresh Leads</h6>
+              <div className="mt-3 mb-1 col-6 col-md-2">
+                <h6 className="mt-1 font_bold f1">Fresh Leads</h6>
+                <h6 className="mt-1 font_bold f2">Update</h6>
               </div>
               <div className="mt-1 mb-1 col-12 col-md-3 solidex">
-                <h6>Month</h6>
+                <h6 className="tx_bold">Month</h6>
                 <Form.Select
                   aria-label="Default select example"
                   className="size_select fondsixw ms-2"
@@ -349,7 +385,7 @@ export default function Setting_customer() {
                 </Form.Select>
               </div>
               <div className="mt-1 mb-1 col-12 col-md-3 solidex">
-                <h6>Price_Range</h6>
+                <h6 className="tx_bold">Price_Range</h6>
                 <Form.Select
                   aria-label="Default select example"
                   className="size_select fondsixw ms-2"
@@ -387,32 +423,32 @@ export default function Setting_customer() {
               </div>
             </div>
 
-            <div className="mt-4 row">
+            <div className="mt-4 row tableBox">
               <div className="col-12">
                 <div className="row ms-3 me-3 table01">
                   <Table bordered hover>
                     <thead>
                       <tr>
                         <th></th>
-                        <th>FIRST NAME</th>
-                        <th>LAST NAME</th>
+                        <th>First_Name</th>
+                        <th>Last_Name</th>
                         <th>Make</th>
                         <th>Model</th>
-                        <th>Reg Number</th>
+                        <th>Reg_Number</th>
                         <th>Muleage</th>
                         <th>Colour</th>
                         <th>Price(£)</th>
-                        <th>Monthly payment</th>
-                        <th>Camount of equity</th>
+                        <th>Monthly_payment</th>
+                        <th>Camount_of_equity</th>
                       </tr>
                     </thead>
                     <tbody>
                       {costomer_seti_detail.map((costomer_seti_detail) => (
                         <tr>
-                          <td>{costomer_seti_detail.id}</td>
-                          <td>{costomer_seti_detail.FIRST_NAME}</td>
-                          <td>{costomer_seti_detail.LAST_NAME}</td>
-                          <td>{costomer_seti_detail.Make}</td>
+                          <td className="tx_bold">{costomer_seti_detail.id}</td>
+                          <td className="tx_bold">{costomer_seti_detail.FIRST_NAME}</td>
+                          <td className="tx_bold">{costomer_seti_detail.LAST_NAME}</td>
+                          <td className="tx_bold">{costomer_seti_detail.Make}</td>
                           <td>{costomer_seti_detail.Model}</td>
                           <td>{costomer_seti_detail.Reg_Number}</td>
                           <td>{costomer_seti_detail.Muleage}</td>
@@ -430,16 +466,16 @@ export default function Setting_customer() {
                     <thead>
                       <tr>
                         <th></th>
-                        <th>FIRST NAME</th>
-                        <th>LAST NAME</th>
+                        <th>First_Name</th>
+                        <th>Last_Name</th>
                         <th>Make</th>
                         <th>Model</th>
-                        <th>Reg Number</th>
+                        <th>Reg_Number</th>
                         <th>Muleage</th>
                         <th>Colour</th>
                         <th>Price(£)</th>
-                        <th>Monthly payment</th>
-                        <th>Camount of equity</th>
+                        <th>Monthly_payment</th>
+                        <th>Camount_of_equity</th>
                         <th className="">
                           <h3 className="with_th_hidden">status_H</h3>
                         </th>
@@ -448,10 +484,10 @@ export default function Setting_customer() {
                     <tbody>
                       {costomer_seti_detail.map((costomer_seti_detail) => (
                         <tr>
-                          <td>{costomer_seti_detail.id}</td>
-                          <td>{costomer_seti_detail.FIRST_NAME}</td>
-                          <td>{costomer_seti_detail.LAST_NAME}</td>
-                          <td>{costomer_seti_detail.Make}</td>
+                          <td className="tx_bold">{costomer_seti_detail.id}</td>
+                          <td className="tx_bold">{costomer_seti_detail.FIRST_NAME}</td>
+                          <td className="tx_bold">{costomer_seti_detail.LAST_NAME}</td>
+                          <td className="tx_bold">{costomer_seti_detail.Make}</td>
                           <td>{costomer_seti_detail.Model}</td>
                           <td>{costomer_seti_detail.Reg_Number}</td>
                           <td>{costomer_seti_detail.Muleage}</td>

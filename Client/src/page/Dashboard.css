@@ -1,12 +1,15 @@
 .bg {
-    background-color: #F1F1F1;
+    background-color: #FFFFFF;
     height: fit-content;
     overflow-x: hidden;
 }
-
+.heder_txt{
+    font-size: 25px;
+    font-weight: bold;
+}
 .searchBox {
-    height: 32px;
-    background: #FFFFFF;
+    height: 40px;
+    background: #F7F9FD;
     border-radius: 52px;
 }
 
@@ -28,14 +31,15 @@
 }
 
 .filterbox {
-    width: 40px;
-    height: 40px;
-    background: #FAF7F7;
+    width: 50px;
+    height: 50px;
     border-radius: 52px;
+    background: #F4F7FC;
 }
 
 .mar_le {
     margin-left: 0px;
+    width: 50px;
 }
 
 .color_blu {
@@ -58,6 +62,10 @@
     border-radius: 8px;
     overflow: scroll;
 }
+.set_end{
+    display: flex;
+    justify-content: end;
+}
 
 .setbody {
     width: 83.33333%;
@@ -78,11 +86,14 @@
 .size_select{
     width: 150px !important;
     height: 30px !important;
-    background-color: rgb(215, 215, 215) !important;
+    background-color: #F4F7FC !important;
+    border: none;
 }
 .fondsixw{
     font-size: 13px !important;
     font-weight: 500;
+    background-color: #F4F7FC;
+
 }
 .setbody h2{
     font-weight: bold;
@@ -94,7 +105,7 @@
 
 }
 .color_ger{
-    color: rgb(7, 225, 7);
+    color: #37C578;
     /* position: absolute; */
     margin-left: -10px;
 }
@@ -108,9 +119,21 @@
 }
 .bg_white{
 height: fit-content;
-background: #FFFFFF;
+background: #F4F7FC;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
 border-radius: 8px;
+}
+.logo_dash{
+    width: 60%;
+}
+.end_line{
+    display: flex;
+    align-items: center;
+}
+.fond_num_size{
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A4545;
 }
 .width_set_dash{
     width: 88%;
@@ -128,21 +151,11 @@ border-radius: 8px;
 .margin_set_dash_fil{
     margin-left: -50px;
 }
-table thead{
-    background-color: rgba(244, 247, 252, 0.75);
-    /* border: none !important; */
-}
-/* .table thead tr th,
-.table tbody tr td,
 
-.table tbody tr{
-    border: none !important;
-}
-.table tbody tr td{
-    border: none !important;
-} */
+
+
 .with_table{
-    min-width: 1200px;
+    min-width: 1300px;
 }
 
 

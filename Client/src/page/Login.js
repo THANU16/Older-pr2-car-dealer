@@ -1,12 +1,77 @@
-import React from 'react'
+import { React, useEffect, useState } from 'react';
 import "./Login.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function Login() {
+
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('');
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+
+        var login = sessionStorage.getItem("login");
+
+
+        if (login===true) {
+
+            alert("automatic login!");
+            sessionStorage.setItem("pageView", "Dashboard");
+            navigate("/Dashboard");
+
+        }
+        else {
+            sessionStorage.setItem("pageView", "");
+            navigate("/");
+        }
+
+    }, [])
+
+    const login = () => {
+        if (email == "" || password == "") {
+            
+            alert("Fill the form");
+        }
+        else {
+
+            sessionStorage.setItem("login", true);
+
+            navigate("/Dashboard");
+            sessionStorage.setItem("pageView", "Dashboard");
+            var check = false;
+
+        
+
+            // for(let i=0;i<data.length;i++){
+
+            //     if(data[i].email==email && data[i].password==password){
+            //         alert("login sucess");
+            //         check=false
+            //         navigate("/Dashboard");
+            //         break
+            //     }
+            //     else{
+
+            //         check=true;
+
+            //     }
+
+            // }
+            // if(check){
+            //     alert("login unscess");
+            // }
+
+
+        }
+    }
+
+
     return (
         <div className='hid'>
             <div className='row'>
@@ -34,7 +99,18 @@ export default function Login() {
                                     <div class="col-9 mt-4 ms-3">
                                         <div class="textOnInput">
                                             <label for="inputText">Email</label>
-                                            <input id='Email' class="form-control" type="text" />
+                                            <input
+
+                                                id='Email'
+                                                class="form-control"
+                                                name="email"
+                                                type="email"
+                                                autoComplete="email"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                                required
+
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +118,18 @@ export default function Login() {
                                     <div class="col-9 mt-4 ms-3">
                                         <div class="textOnInput">
                                             <label for="inputText">Password</label>
-                                            <input id='Password' class="form-control" type="text" />
+                                            <input
+
+                                                id='Password'
+                                                class="form-control"
+                                                name="password"
+                                                type="password"
+                                                autoComplete="current-password"
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
+                                                required
+
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -54,18 +141,18 @@ export default function Login() {
 
                                 <div className='justify-end mt-4 row d-flex'>
                                     <div class="col-12 mt-1 d-flex justify-center">
-                                        <Link to="/Dashboard"><div className='boxBtn_login all_center'>
+                                        <div onClick={login} className='boxBtn_login all_center'>
                                             <h2 className='font_white'>Login</h2>
-                                        </div></Link>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div className='justify-end mt-4 row d-flex'>
                                     <div class="col-6 mt-1 d-flex justify-end">
-                                        <img className='loginBTNlogo' src="./images/Google.png" alt="" />
+                                        <img className='loginBTNlogo' src="./images/Google.webp" alt="" />
                                     </div>
                                     <div class="col-6 mt-1 d-flex justify-start">
-                                        <img className='loginBTNlogo' src="./images/Facebook.png" alt="" />
+                                        <img className='loginBTNlogo2' src="./images/Facebook.png" alt="" />
                                     </div>
                                 </div>
 

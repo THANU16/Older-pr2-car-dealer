@@ -126,16 +126,16 @@ export default function Report() {
         </div>
 
         <div className="mt-4 mb-4 row tblleboxmargin">
-          <div className="col-12 tableBox">
+          <div className="col-12 ">
             <div className="mt-4 row row_width ms-2 me-2">
               <div className="col-4 col-md-6">
-                <h6>Profit</h6>
+                <h6 className="tx_blod">Profit</h6>
               </div>
               <div className="col-4 col-md-3 rowell"></div>
               <div className="col-4 col-md-3 rowell"></div>
             </div>
 
-            <div className="mt-4 row">
+            <div className="mt-4 row tableBox">
               <div>
                 <div className="row ms-3 me-3">
                   <Table bordered hover>
@@ -151,8 +151,8 @@ export default function Report() {
                     <tbody>
                       {Profit.map((Profit) => (
                         <tr>
-                          <td>{Profit.Month}</td>
-                          <td>{Profit.Lead_name}</td>
+                          <td className="tx_bold">{Profit.Month}</td>
+                          <td className="tx_bold">{Profit.Lead_name}</td>
                           <td>{Profit.Make}</td>
                           <td>{Profit.Model}</td>
                           <td className="profit_txt">{Profit.Profit}</td>
@@ -167,16 +167,16 @@ export default function Report() {
         </div>
 
         <div className="mt-4 mb-4 row tblleboxmargin">
-          <div className="col-12 tableBox">
+          <div className="col-12 ">
             <div className="mt-4 row row_width ms-2 me-2">
               <div className="col-4 col-md-6">
-                <h6>Success</h6>
+                <h6  className="tx_blod">Success</h6>
               </div>
               <div className="col-4 col-md-3 rowell"></div>
               <div className="col-4 col-md-3 rowell"></div>
             </div>
 
-            <div className="mt-4 row">
+            <div className="mt-4 row tableBox">
               <div>
                 <div className="row ms-3 me-3">
                   <Table bordered hover>
@@ -192,8 +192,8 @@ export default function Report() {
                     <tbody>
                       {Success.map((Success) => (
                         <tr>
-                          <td>{Success.l_name}</td>
-                          <td>{Success.Lead_name}</td>
+                          <td className="tx_bold">{Success.l_name}</td>
+                          <td className="tx_bold">{Success.Lead_name}</td>
                           <td>{Success.Make}</td>
                           <td>{Success.Model}</td>
                           <td>{Success.Reg_Number}</td>
@@ -208,16 +208,16 @@ export default function Report() {
         </div>
 
         <div className="mt-4 mb-4 row tblleboxmargin">
-          <div className="col-12 tableBox">
+          <div className="col-12 ">
             <div className="mt-4 row row_width ms-2 me-2">
               <div className="col-4 col-md-6">
-                <h6>Rejected</h6>
+                <h6 className="tx_blod">Rejected</h6>
               </div>
               <div className="col-4 col-md-3 rowell"></div>
               <div className="col-4 col-md-3 rowell"></div>
             </div>
 
-            <div className="mt-4 row">
+            <div className="mt-4 row tableBox">
               <div>
                 <div className="row ms-3 me-3">
                   <Table bordered hover>
@@ -233,8 +233,8 @@ export default function Report() {
                     <tbody>
                       {Rejected.map((Rejected) => (
                         <tr>
-                          <td>{Rejected.l_name}</td>
-                          <td>{Rejected.Lead_name}</td>
+                          <td className="tx_bold">{Rejected.l_name}</td>
+                          <td className="tx_bold">{Rejected.Lead_name}</td>
                           <td>{Rejected.Make}</td>
                           <td>{Rejected.Model}</td>
                           <td>{Rejected.Reg_Number}</td>

@@ -1,13 +1,13 @@
 .bg {
-    background-color: #F1F1F1;
+    background-color: #FFFFFF;
     height: fit-content;
     overflow-x: hidden;
 
 }
 
 .searchBox {
-    height: 32px;
-    background: #FFFFFF;
+    height: 40px;
+    background: #F7F9FD;
     border-radius: 52px;
 }
 
@@ -29,9 +29,8 @@
 }
 
 .filterbox {
-    width: 40px;
-    height: 40px;
-    background: #FAF7F7;
+    width: 50px;
+    height: 50px;
     border-radius: 52px;
 }
 
@@ -79,7 +78,7 @@
 .size_select {
     width: 150px !important;
     height: 30px !important;
-    background-color: rgb(215, 215, 215) !important;
+    background-color: #F4F7FC !important;
 }
 
 .fondsixw {
@@ -97,14 +96,24 @@
     width: 88%;
     margin-left: 6%;
     margin-right: 6%;
-    background: #FFFFFF;
+    background: #F7F9FD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
 }
 
+.f1 {
+    position: absolute;
+    display: block;
+}
+
+.f2 {
+    position: absolute;
+    display: none;
+}
+
 .listionname {
     margin-top: 15px;
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -116,7 +125,7 @@
 
 .listionname2 {
     margin-top: 13px;
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -209,6 +218,7 @@
     display: flex;
     justify-content: end;
 }
+
 .massege_box_stock {
     box-sizing: border-box;
     position: absolute;
@@ -292,25 +302,52 @@
     position: absolute;
 
 }
-.table01{
+
+.table01 {
     visibility: visible;
     position: relative;
     display: block;
 }
-.table02{
+
+.table02 {
     visibility: hidden;
-    position: absolute; 
+    position: absolute;
     display: none;
 }
-.add_colomn{
+
+.add_colomn {
     width: 30%;
     margin-left: 0%;
 }
-.hidden_heder_css{
+
+.hidden_heder_css {
     position: absolute;
     visibility: hidden;
 }
 
+.uplad_btn {
+    width: 172px;
+    height: 38px;
+    background: #F1F1F1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
+.up_logo{
+    width: 100px;
+}
+.set_margin_new{
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.color_blue{
+    color: #1F58C9;
+}
+.poti_ab{
+    position: absolute !important;
+}
 
 
 
@@ -346,23 +383,27 @@
     .massege_box {
         margin-top: 120px !important;
     }
-    .add_colomn{
+
+    .add_colomn {
         width: 40%;
         margin-left: 0%;
     }
-    .solidex{
+
+    .solidex {
         display: flex;
         justify-content: start;
         align-items: center;
     }
+
     .massege_box_stock {
         margin-top: 30% !important;
     }
-    
+
 
 }
+
 @media screen and (max-width: 500px) {
-    .add_colomn{
+    .add_colomn {
         width: 50%;
         margin-left: -2%;
     }
