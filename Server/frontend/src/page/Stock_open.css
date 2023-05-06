@@ -1,15 +1,16 @@
 .bg {
-    background-color: #F1F1F1;
+    background-color: #FFFFFF;
     height: fit-content;
     overflow-x: hidden;
 
 }
 
 .searchBox {
-    height: 32px;
-    background: #FFFFFF;
+    height: 40px;
+    background: #F7F9FD;
     border-radius: 52px;
 }
+
 
 .inputSearch {
     width: 100%;
@@ -29,9 +30,8 @@
 }
 
 .filterbox {
-    width: 40px;
-    height: 40px;
-    background: #FAF7F7;
+    width: 50px;
+    height: 50px;
     border-radius: 52px;
 }
 
@@ -75,10 +75,10 @@
     align-items: center;
 }
 
-.size_select {
+.size_select{
     width: 150px !important;
     height: 30px !important;
-    background-color: rgb(215, 215, 215) !important;
+    background-color: #F4F7FC !important;
 }
 
 .fondsixw {
@@ -96,14 +96,14 @@
     width: 88%;
     margin-left: 6%;
     margin-right: 6%;
-    background: #FFFFFF;
+    background: #F7F9FD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
 }
 
 .listionname {
     margin-top: 15px;
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -115,7 +115,7 @@
 
 .listionname2 {
     margin-top: 13px;
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -124,6 +124,9 @@
     align-items: center;
     letter-spacing: 0.04em;
     color: #464F60;
+}
+.border_input{
+    border: 1px solid rgb(212, 212, 212) !important;
 }
 
 .btn_mail {
@@ -182,7 +185,7 @@
 
 .witeboxstok {
     height: fit-content;
-    background: #FFFFFF;
+    background: #F7F9FD;
     box-shadow: 0px 12.6698px 22.5241px rgba(208, 210, 218, 0.15);
     border-radius: 14.0776px;
     /* z-index: 1; */
@@ -203,6 +206,14 @@
 .blach_bolt_txt2 {
     font-weight: bold;
     color: #464F60;
+}
+.box_table{
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+.bg_coll{
+    background: #F0FBF5 !important;
 }
 
 .inputbox {

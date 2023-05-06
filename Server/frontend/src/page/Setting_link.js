@@ -93,7 +93,7 @@ export default function Setting_link() {
 
       <div className="setbody">
         <div className="mt-5 row ms-5">
-          <h2 className="mt-4 mb-4">Settings / Link</h2>
+          <h2 className="mt-4 mb-4">Settings / <span className='small_font'>Link</span></h2>
         </div>
 
         <div className="mt-5 mb-1 row tblleboxmargin">
@@ -102,7 +102,7 @@ export default function Setting_link() {
             <div className="mt-4 row ms-2 me-2">
               <div className="col-12">
                 <div className="mt-2 mb-5 row">
-                  <h5>Hosting Account</h5>
+                  <h5 className="tx_bold">Hosting Account</h5>
                 </div>
                 <div className="mt-5 mb-5 row heitset_biox">
                   <div className="col-4 col-md-2 all_center">

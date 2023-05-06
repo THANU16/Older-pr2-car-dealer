@@ -7,6 +7,9 @@ import Table from 'react-bootstrap/Table';
 
 
 export default function Leads_avalible_open() {
+
+    
+
     const main_details = {
         Name: "Daniel",
         Make: "Chevrolet",
@@ -27,8 +30,8 @@ export default function Leads_avalible_open() {
         Settlement_Figur: "599",
         Equity: "16965.06",
 
-        p_number:"733242334",
-        email:"abc@gmail.com",
+        p_number: "733242334",
+        email: "abc@gmail.com",
     };
     const table_Avalible_op = [
         {
@@ -249,11 +252,11 @@ export default function Leads_avalible_open() {
                 </div>
 
                 <div className='mt-4 mb-4 row tblleboxmargin'>
-                    <div className='col-12 tableBox'>
+                    <div className='col-12 '>
 
                         <div className='mt-4 row row_width ms-2 me-2'>
                             <div className='col-4 col-md-6'>
-                                <h6>Available cars</h6>
+                                <h6 className="tx_bold">Available cars</h6>
                             </div>
                             <div className='col-4 col-md-3 rowell'>
 
@@ -264,7 +267,7 @@ export default function Leads_avalible_open() {
                         </div>
 
 
-                        <div className='mt-4 row'>
+                        <div className='mt-4 row tableBox'>
                             <div>
                                 <div className='row ms-3 me-3'>
 
@@ -303,6 +306,20 @@ export default function Leads_avalible_open() {
                             </div>
                         </div>
 
+                    </div>
+                </div>
+
+                <div className='mt-4 row'>
+                    <div className='mt-5 mb-5 center_a_box'>
+                        <div className='mt-3 mb-3 row ms-3'>
+                            <h5 className="tx_bold">Add Note</h5>
+                        </div>
+                        <textarea className='textAria' name="" id="" cols="30" rows="10" placeholder='      Type here.....'></textarea>
+                        <div className='justify-end mt-3 mb-3 row d-flex me-3'>
+                            <div className='add_btn'>
+                                <h5 className='tx_white'>Add</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

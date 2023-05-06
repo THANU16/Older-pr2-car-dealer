@@ -41,6 +41,70 @@ export default function Stock() {
       price: "60000",
       photo: "./images/car.png",
     },
+    {
+      Make: "Audi",
+      Model: "A1",
+      reg_number: "5684236526",
+      mileage: "5684236526",
+      price: "60000",
+      photo: "./images/car.png",
+    },
+    {
+      Make: "Audi",
+      Model: "A1",
+      reg_number: "5684236526",
+      mileage: "5684236526",
+      price: "60000",
+      photo: "./images/car.png",
+    },
+    {
+      Make: "Audi",
+      Model: "A1",
+      reg_number: "5684236526",
+      mileage: "5684236526",
+      price: "60000",
+      photo: "./images/car.png",
+    },
+    {
+      Make: "Audi",
+      Model: "A1",
+      reg_number: "5684236526",
+      mileage: "5684236526",
+      price: "60000",
+      photo: "./images/car.png",
+    },
+    {
+      Make: "Audi",
+      Model: "A1",
+      reg_number: "5684236526",
+      mileage: "5684236526",
+      price: "60000",
+      photo: "./images/car.png",
+    },
+    {
+      Make: "Audi",
+      Model: "A1",
+      reg_number: "5684236526",
+      mileage: "5684236526",
+      price: "60000",
+      photo: "./images/car.png",
+    },
+    {
+      Make: "Audi",
+      Model: "A1",
+      reg_number: "5684236526",
+      mileage: "5684236526",
+      price: "60000",
+      photo: "./images/car.png",
+    },
+    {
+      Make: "Audi",
+      Model: "A1",
+      reg_number: "5684236526",
+      mileage: "5684236526",
+      price: "60000",
+      photo: "./images/car.png",
+    },
   ];
  
 
@@ -53,16 +117,16 @@ export default function Stock() {
         </div>
 
         <div className="mt-4 mb-5 row tblleboxmargin">
-          <div className="col-12 tableBox">
+          <div className="col-12 ">
             <div className="mt-4 row row_width ms-2 me-2">
               <div className="col-4 col-md-6">
-                <h6>Stock</h6>
+                <h6 className="tx_bold">Stock</h6>
               </div>
               <div className="col-4 col-md-3 rowell"></div>
               <div className="col-4 col-md-3 rowell"></div>
             </div>
 
-            <div className="mt-4 row">
+            <div className="mt-4 row tableBox5">
               <div>
                 <div className="row ms-3 me-3">
                 <Link to="/Stock_open">
@@ -80,7 +144,7 @@ export default function Stock() {
                     <tbody>
                       {Stock_detail.map((Stock_detail) => (
                         <tr>
-                          <td>{Stock_detail.Make}</td>
+                          <td className="tx_bold">{Stock_detail.Make}</td>
                           <td>{Stock_detail.Model}</td>
                           <td>{Stock_detail.reg_number}</td>
                           <td>{Stock_detail.mileage}</td>

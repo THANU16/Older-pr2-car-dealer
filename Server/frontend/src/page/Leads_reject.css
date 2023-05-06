@@ -1,13 +1,13 @@
 .bg {
-    background-color: #F1F1F1;
+    background-color: #FFFFFF;
     height: fit-content;
     overflow-x: hidden;
 
 }
 
 .searchBox {
-    height: 32px;
-    background: #FFFFFF;
+    height: 40px;
+    background: #F7F9FD;
     border-radius: 52px;
 }
 
@@ -29,9 +29,8 @@
 }
 
 .filterbox {
-    width: 40px;
-    height: 40px;
-    background: #FAF7F7;
+    width: 50px;
+    height: 50px;
     border-radius: 52px;
 }
 
@@ -76,7 +75,7 @@
 .size_select{
     width: 150px !important;
     height: 30px !important;
-    background-color: rgb(215, 215, 215) !important;
+    background-color: #F4F7FC !important;
 }
 .fondsixw{
     font-size: 13px !important;

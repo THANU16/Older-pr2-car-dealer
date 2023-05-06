@@ -1,13 +1,13 @@
 .bg {
-    background-color: #F1F1F1;
+    background-color: #FFFFFF;
     height: fit-content;
     overflow-x: hidden;
 
 }
 
 .searchBox {
-    height: 32px;
-    background: #FFFFFF;
+    height: 40px;
+    background: #F7F9FD;
     border-radius: 52px;
 }
 
@@ -29,14 +29,14 @@
 }
 
 .filterbox {
-    width: 40px;
-    height: 40px;
-    background: #FAF7F7;
+    width: 50px;
+    height: 50px;
     border-radius: 52px;
 }
 
 .mar_le {
     margin-left: 0px;
+    width: 50px;
 }
 
 .color_blu {
@@ -51,6 +51,15 @@
 
 .tableBox {
     height: 353px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: scroll;
+}
+.tableBox5 {
+    height: 600px;
     left: 0px;
     top: 0px;
     background: #FFFFFF;
@@ -75,10 +84,10 @@
     align-items: center;
 }
 
-.size_select {
+.size_select{
     width: 150px !important;
     height: 30px !important;
-    background-color: rgb(215, 215, 215) !important;
+    background-color: #F4F7FC !important;
 }
 
 .fondsixw {
@@ -90,20 +99,18 @@
     font-weight: bold;
     font-size: 20px;
 }
-
 .center_a_box {
     height: fit-content;
     width: 88%;
     margin-left: 6%;
     margin-right: 6%;
-    background: #FFFFFF;
+    background: #F7F9FD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
 }
-
 .listionname {
     margin-top: 15px;
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -115,7 +122,7 @@
 
 .listionname2 {
     margin-top: 13px;
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

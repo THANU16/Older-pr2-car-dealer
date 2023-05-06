@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 
 
 export default function Leads_avalible() {
+
+    const [search, setSearch] = React.useState('');
+    const [table_Avalible, settable_Avalible] = React.useState([]);
+
     const filter = [
         {
             filtername: "Sale Price",
@@ -86,7 +90,7 @@ export default function Leads_avalible() {
             id: "19",
         },
     ];
-    const table_Avalible = [
+    const defult_table_Avalible = [
         {
             id: "1",
             f_name: "Ann Culhane",
@@ -178,28 +182,54 @@ export default function Leads_avalible() {
         },
     ];
 
+    const handleSearch = (event) => {
+
+        setSearch(event.target.value);
+        if (search !== "") {
+            serach_Table();
+        }
+
+
+
+    };
+
+    const serach_Table = () => {
+
+        const data = {
+            nodes: defult_table_Avalible.filter((item) =>
+                item.Make.toLowerCase().includes(search.toLowerCase())
+            ),
+        };
+
+        settable_Avalible(data.nodes);
+    };
+
+    React.useEffect(() => {
+        settable_Avalible(defult_table_Avalible);
+    }, [])
+
     return (
         <div className='bg'>
             <Heder />
             <div className='setbody'>
                 <div className='mt-5 row ms-5'>
-                    <h2 className='mt-4'>Our Leads - Avalible</h2>
+                    <h2 className='mt-4'>Our Leads / <span className='small_font'>Avalible</span></h2>
                 </div>
                 <div className='mt-5 row ms-5 me-5'>
                     <div className='col-10 col-md-6 searchBox'>
                         <div className='row'>
-                            <div className='mt-1 col-10 alignCenter2'>
-                                <input className='inputSearch' type="text" placeholder=' Search here' />
+                            <div className='mt-2 col-10 alignCenter2'>
+                                <input className='inputSearch' onChange={handleSearch} type="text" placeholder=' Search here' />
                             </div>
-                            <div className='mt-1 col-2 alignCenter'>
-                                <img src="./images/search.png" alt="" />
+                            <div className='mt-2 col-2 alignCenter'>
+                                <img onClick={serach_Table} src="./images/search.png" alt="" />
                             </div>
                         </div>
                     </div>
                     <div className='col-2 col-md-6'>
                         <div className='row'>
                             <Dropdown className='me-4'>
-                                <Dropdown.Toggle variant="success" id="dropdown-basic" className="filterbox ms-4">
+                                <Dropdown.Toggle variant="" id="dropdown-basic" className="filterbox ms-4">
                                     <img className='mt-2 mar_le' src="./images/filter.png" alt="" />
                                 </Dropdown.Toggle>
 
@@ -233,14 +263,14 @@ export default function Leads_avalible() {
                     </div>
                 </div>
                 <div className='mt-4 mb-4 row tblleboxmargin'>
-                    <div className='col-12 tableBox'>
+                    <div className='col-12 '>
 
                         <div className='mt-4 row row_width ms-2 me-2'>
                             <div className='col-4 col-md-6'>
-                                <h6>Fresh Leads</h6>
+                                <h6 className="tx_bold">Fresh Leads</h6>
                             </div>
                             <div className='col-4 col-md-3 rowell'>
-                                <h6>Month</h6>
+                                <h6 className="tx_bold">Month</h6>
                                 <Form.Select aria-label="Default select example" className='size_select fondsixw ms-2'>
                                     <option>Select Month</option>
                                     {month_list.map((month_list) => (
@@ -250,7 +280,7 @@ export default function Leads_avalible() {
                                 </Form.Select>
                             </div>
                             <div className='col-4 col-md-3 rowell'>
-                                <h6>Price_Range</h6>
+                                <h6 className="tx_bold">Price_Range</h6>
                                 <Form.Select aria-label="Default select example" className='size_select fondsixw ms-2'>
                                     <option>Price Range</option>
                                     {price_range.map((price_range) => (
@@ -260,46 +290,46 @@ export default function Leads_avalible() {
                             </div>
                         </div>
 
-                        <div className='mt-4 row'>
+                        <div className='mt-4 row tableBox'>
                             <div>
                                 <div className='row ms-3 me-3'>
 
-                                <Link to="/Leads_avalible_open">
-                                    <Table bordered hover>
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Make</th>
-                                                <th>Model</th>
-                                                <th>Reg Number</th>
-                                                <th>muleage</th>
-                                                <th>Colour</th>
-                                                <th>Price(£)</th>
-                                                <th>monthly payment</th>
-                                                <th>camount of equity</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {table_Avalible.map((table_Avalible) => (
+                                    <Link to="/Leads_avalible_open">
+                                        <Table bordered hover>
+                                            <thead>
                                                 <tr>
-                                                    <td>{table_Avalible.id}</td>
-                                                    <td>{table_Avalible.f_name}</td>
-                                                    <td>{table_Avalible.L_name}</td>
-                                                    <td>{table_Avalible.Make}</td>
-                                                    <td>{table_Avalible.Model}</td>
-                                                    <td>{table_Avalible.reg_Number}</td>
-                                                    <td>{table_Avalible.muleage}</td>
-                                                    <td>{table_Avalible.Colour}</td>
-                                                    <td>{table_Avalible.Price}</td>
-                                                    <td>{table_Avalible.m_payment}</td>
-                                                    <td>{table_Avalible.equity}</td>
+                                                    <th></th>
+                                                    <th>First_Name</th>
+                                                    <th>Last_Name</th>
+                                                    <th>Make</th>
+                                                    <th>Model</th>
+                                                    <th>Reg_Number</th>
+                                                    <th>muleage</th>
+                                                    <th>Colour</th>
+                                                    <th>Price(£)</th>
+                                                    <th>monthly_payment</th>
+                                                    <th>camount_of_equity</th>
                                                 </tr>
-                                            ))}
-                                        </tbody>
-                                    </Table>
-                                </Link>
+                                            </thead>
+                                            <tbody>
+                                                {table_Avalible.map((table_Avalible) => (
+                                                    <tr>
+                                                        <td className="tx_bold">{table_Avalible.id}</td>
+                                                        <td className="tx_bold">{table_Avalible.f_name}</td>
+                                                        <td className="tx_bold">{table_Avalible.L_name}</td>
+                                                        <td className="tx_bold">{table_Avalible.Make}</td>
+                                                        <td>{table_Avalible.Model}</td>
+                                                        <td>{table_Avalible.reg_Number}</td>
+                                                        <td>{table_Avalible.muleage}</td>
+                                                        <td>{table_Avalible.Colour}</td>
+                                                        <td>{table_Avalible.Price}</td>
+                                                        <td>{table_Avalible.m_payment}</td>
+                                                        <td>{table_Avalible.equity}</td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </Table>
+                                    </Link>
 
                                 </div>
                             </div>

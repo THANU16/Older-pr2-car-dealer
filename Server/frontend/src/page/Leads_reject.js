@@ -7,6 +7,10 @@ import Table from 'react-bootstrap/Table';
 
 
 export default function Leads_reject() {
+
+    const [search, setSearch] = React.useState('');
+    const [Leads_reject, setLeads_reject] = React.useState([]);
+
     const filter = [
         {
             filtername: "Sale Price",
@@ -85,7 +89,7 @@ export default function Leads_reject() {
             id: "19",
         },
     ];
-    const Leads_reject = [
+    const defult_Leads_reject = [
         {
             id: "1",
             f_name: "Ann Culhane",
@@ -177,28 +181,55 @@ export default function Leads_reject() {
         },
     ];
 
+    const handleSearch = (event) => {
+
+        setSearch(event.target.value);
+        if (search !== "") {
+            serach_Table();
+        }
+
+
+
+    };
+
+    const serach_Table = () => {
+
+        const data = {
+            nodes: defult_Leads_reject.filter((item) =>
+                item.Make.toLowerCase().includes(search.toLowerCase())
+            ),
+        };
+
+        setLeads_reject(data.nodes);
+    };
+
+    React.useEffect(() => {
+        setLeads_reject(defult_Leads_reject);
+    }, [])
+
+
     return (
         <div className='bg'>
             <Heder />
             <div className='setbody'>
                 <div className='mt-5 row ms-5'>
-                    <h2 className='mt-4'>Our Leads - Reject</h2>
+                    <h2 className='mt-4'>Our Leads / <span className='small_font'>Rejected</span></h2>
                 </div>
                 <div className='mt-5 row ms-5 me-5'>
                     <div className='col-10 col-md-6 searchBox'>
                         <div className='row'>
-                            <div className='mt-1 col-10 alignCenter2'>
-                                <input className='inputSearch' type="text" placeholder=' Search here' />
+                            <div className='mt-2 col-10 alignCenter2'>
+                                <input className='inputSearch' type="text" onChange={handleSearch} placeholder=' Search here' />
                             </div>
-                            <div className='mt-1 col-2 alignCenter'>
-                                <img src="./images/search.png" alt="" />
+                            <div className='mt-2 col-2 alignCenter'>
+                                <img onClick={serach_Table} src="./images/search.png" alt="" />
                             </div>
                         </div>
                     </div>
                     <div className='col-2 col-md-6'>
                         <div className='row'>
                             <Dropdown className='me-4'>
-                                <Dropdown.Toggle variant="success" id="dropdown-basic" className="filterbox ms-4">
+                                <Dropdown.Toggle variant="" id="dropdown-basic" className="filterbox ms-4">
                                     <img className='mt-2 mar_le' src="./images/filter.png" alt="" />
                                 </Dropdown.Toggle>
 
@@ -231,15 +262,15 @@ export default function Leads_reject() {
                         </div>
                     </div>
                 </div>
-                <div className='mt-4 mb-4 row tblleboxmargin'>
-                    <div className='col-12 tableBox'>
+                <div className='mt-5 mb-4 row tblleboxmargin'>
+                    <div className='col-12 '>
 
                         <div className='mt-4 row row_width ms-2 me-2'>
                             <div className='col-4 col-md-6'>
-                                <h6>Select one and view more</h6>
+                                <h6 className="tx_bold">Select one and view more</h6>
                             </div>
                             <div className='col-4 col-md-3 rowell'>
-                                <h6>Month</h6>
+                                <h6 className="tx_bold">Month</h6>
                                 <Form.Select aria-label="Default select example" className='size_select fondsixw ms-2'>
                                     <option>Select Month</option>
                                     {month_list.map((month_list) => (
@@ -249,7 +280,7 @@ export default function Leads_reject() {
                                 </Form.Select>
                             </div>
                             <div className='col-4 col-md-3 rowell'>
-                                <h6>Price_Range</h6>
+                                <h6 className="tx_bold">Price_Range</h6>
                                 <Form.Select aria-label="Default select example" className='size_select fondsixw ms-2'>
                                     <option>Price Range</option>
                                     {price_range.map((price_range) => (
@@ -259,7 +290,7 @@ export default function Leads_reject() {
                             </div>
                         </div>
 
-                        <div className='mt-4 row'>
+                        <div className='mt-4 row tableBox'>
                             <div>
                                 <div className='row ms-3 me-3'>
 
@@ -267,25 +298,25 @@ export default function Leads_reject() {
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
+                                                <th>First_Name</th>
+                                                <th>Last_Name</th>
                                                 <th>Make</th>
                                                 <th>Model</th>
-                                                <th>Reg Number</th>
+                                                <th>Reg_Number</th>
                                                 <th>muleage</th>
                                                 <th>Colour</th>
                                                 <th>Price(£)</th>
-                                                <th>monthly payment</th>
-                                                <th>camount of equity</th>
+                                                <th>monthly_payment</th>
+                                                <th>camount_of_equity</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {Leads_reject.map((Leads_reject) => (
                                                 <tr>
-                                                    <td>{Leads_reject.id}</td>
-                                                    <td>{Leads_reject.f_name}</td>
-                                                    <td>{Leads_reject.L_name}</td>
-                                                    <td>{Leads_reject.Make}</td>
+                                                    <td className="tx_bold">{Leads_reject.id}</td>
+                                                    <td className="tx_bold">{Leads_reject.f_name}</td>
+                                                    <td className="tx_bold">{Leads_reject.L_name}</td>
+                                                    <td className="tx_bold">{Leads_reject.Make}</td>
                                                     <td>{Leads_reject.Model}</td>
                                                     <td>{Leads_reject.reg_Number}</td>
                                                     <td>{Leads_reject.muleage}</td>

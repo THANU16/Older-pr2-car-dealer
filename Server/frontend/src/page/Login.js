@@ -12,44 +12,61 @@ export default function Login() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
-    const [data,setData] = useState([]);
+    const [data, setData] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        fetch("http://localhost:8081/users")
-        .then(res => res.json())
-        .then(data => setData(data))
-        .catch(err => alert(err))
+        var login = sessionStorage.getItem("login");
 
-    },[])
 
-    const login = () =>{
-        if(email=="" || password==""){
+        if (login===true) {
+
+            alert("automatic login!");
+            sessionStorage.setItem("pageView", "Dashboard");
+            navigate("/Dashboard");
+
+        }
+        else {
+            sessionStorage.setItem("pageView", "");
+            navigate("/");
+        }
+
+    }, [])
+
+    const login = () => {
+        if (email == "" || password == "") {
+            
             alert("Fill the form");
         }
-        else{
+        else {
 
-            var check=false;
+            sessionStorage.setItem("login", true);
 
-            for(let i=0;i<data.length;i++){
+            navigate("/Dashboard");
+            sessionStorage.setItem("pageView", "Dashboard");
+            var check = false;
 
-                if(data[i].email==email && data[i].password==password){
-                    alert("login sucess");
-                    check=false
-                    navigate("/Dashboard");
-                    break
-                }
-                else{
+        
 
-                    check=true;
+            // for(let i=0;i<data.length;i++){
 
-                }
+            //     if(data[i].email==email && data[i].password==password){
+            //         alert("login sucess");
+            //         check=false
+            //         navigate("/Dashboard");
+            //         break
+            //     }
+            //     else{
 
-            }
-            if(check){
-                alert("login unscess");
-            }
-            
+            //         check=true;
+
+            //     }
+
+            // }
+            // if(check){
+            //     alert("login unscess");
+            // }
+
 
         }
     }
@@ -82,16 +99,16 @@ export default function Login() {
                                     <div class="col-9 mt-4 ms-3">
                                         <div class="textOnInput">
                                             <label for="inputText">Email</label>
-                                            <input 
+                                            <input
 
-                                            id='Email'
-                                            class="form-control" 
-                                            name="email"
-                                            type="email"
-                                            autoComplete="email"
-                                            value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
-                                            required
+                                                id='Email'
+                                                class="form-control"
+                                                name="email"
+                                                type="email"
+                                                autoComplete="email"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                                required
 
                                             />
                                         </div>
@@ -101,16 +118,16 @@ export default function Login() {
                                     <div class="col-9 mt-4 ms-3">
                                         <div class="textOnInput">
                                             <label for="inputText">Password</label>
-                                            <input 
+                                            <input
 
-                                            id='Password' 
-                                            class="form-control" 
-                                            name="password"
-                                            type="password"
-                                            autoComplete="current-password"
-                                            value={password}
-                                            onChange={(e) => setPassword(e.target.value)}
-                                            required
+                                                id='Password'
+                                                class="form-control"
+                                                name="password"
+                                                type="password"
+                                                autoComplete="current-password"
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
+                                                required
 
                                             />
                                         </div>
@@ -132,10 +149,10 @@ export default function Login() {
 
                                 <div className='justify-end mt-4 row d-flex'>
                                     <div class="col-6 mt-1 d-flex justify-end">
-                                        <img className='loginBTNlogo' src="./images/Google.png" alt="" />
+                                        <img className='loginBTNlogo' src="./images/Google.webp" alt="" />
                                     </div>
                                     <div class="col-6 mt-1 d-flex justify-start">
-                                        <img className='loginBTNlogo' src="./images/Facebook.png" alt="" />
+                                        <img className='loginBTNlogo2' src="./images/Facebook.png" alt="" />
                                     </div>
                                 </div>
 

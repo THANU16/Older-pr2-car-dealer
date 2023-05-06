@@ -103,24 +103,42 @@ export default function Setting_stock() {
                   Upload excel file
                 </label>
                 <br />
-                <input type="file" />
+               
+                <label for="file">
+                  <div className="uplad_btn poti_ab">
+                    <div className="row set_margin_new">
+                      <div className="justify-end col-3 d-flex">
+                        <img className="up_logo" src="./images/upload.png" alt="" />
+                      </div>
+                      <div className="col-9">
+                        <div className="row">
+                          <h6 className="color_blue">Upload File</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className=" poti_ab ms-5" >
+                    <input className="mt-1 ms-4" type="file" id="file" name="file"/>
+                  </div>
+                </label>
 
               </div>
             </div>
 
-            <div className="mt-3 mb-3 row">
+            <div className="mt-5 mb-3 row">
               <div className="justify-center col-12 d-flex">
                 <h3 className='font_bold'>or</h3>
               </div>
             </div>
 
-            <div className="mt-4 row">
+            <div className="mt-4 row ">
               <div>
                 <label className="mb-2" htmlFor="">
                   1st Column name
                 </label>
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-3 bg_coll">
                   <Form.Control
+                  className="bg_coll"
                     id="column01"
                     placeholder="1st Column name"
                     aria-label="0"
@@ -137,6 +155,7 @@ export default function Setting_stock() {
                 <InputGroup className="mb-3">
                   <Form.Control
                     id="column02"
+                    className="bg_coll"
                     placeholder="2st Column name"
                     aria-label="0"
                     aria-describedby="basic-addon2"
@@ -152,6 +171,7 @@ export default function Setting_stock() {
                 <InputGroup className="mb-3">
                   <Form.Control
                     id="column03"
+                    className="bg_coll"
                     placeholder="3st Column name"
                     aria-label="0"
                     aria-describedby="basic-addon2"
@@ -167,6 +187,7 @@ export default function Setting_stock() {
                 <InputGroup className="mb-3">
                   <Form.Control
                     id="column04"
+                    className="bg_coll"
                     placeholder="4st Column name"
                     aria-label="0"
                     aria-describedby="basic-addon2"
@@ -201,11 +222,11 @@ export default function Setting_stock() {
 
       <div className="setbody">
         <div className="mt-5 row ms-5">
-          <h2 className="mt-4 mb-4">Settings / Stocks</h2>
+          <h2 className="mt-4 mb-4">Settings / <span className='small_font'>Stocks</span></h2>
         </div>
 
         <div className="mt-4 mb-5 row tblleboxmargin">
-          <div className="col-12 tableBox">
+          <div className="col-12 ">
             <div className="mt-4 row ms-2 me-2">
               <div className="col-6">
                 <h3 className='mt-2 font_bold text01'>Available cars </h3>
@@ -238,7 +259,7 @@ export default function Setting_stock() {
               </div>
             </div>
 
-            <div className="mt-4 row">
+            <div className="mt-4 row tableBox">
               <div>
                 <div className="row ms-3 me-3 table011">
                   <Table bordered hover>
@@ -253,7 +274,7 @@ export default function Setting_stock() {
                     <tbody>
                       {stock_seti_detail.map((stock_seti_detail) => (
                         <tr>
-                          <td>{stock_seti_detail.Lead_name}</td>
+                          <td className="tx_bold">{stock_seti_detail.Lead_name}</td>
                           <td>{stock_seti_detail.address}</td>
                           <td>{stock_seti_detail.model}</td>
                           <td>{stock_seti_detail.Reg_Number}</td>
@@ -278,7 +299,7 @@ export default function Setting_stock() {
                     <tbody>
                       {stock_seti_detail.map((stock_seti_detail) => (
                         <tr>
-                          <td>{stock_seti_detail.Lead_name}</td>
+                          <td className="tx_bold">{stock_seti_detail.Lead_name}</td>
                           <td>{stock_seti_detail.address}</td>
                           <td>{stock_seti_detail.model}</td>
                           <td>{stock_seti_detail.Reg_Number}</td>
