@@ -5,36 +5,47 @@
 * {
     padding: 0;
 }
-.text_font{
+
+.text_font {
     font-size: 17px;
-    color: white;
+    color: black;
+}
+.ac{
+    font-weight: 500;
 }
 .bg_nav_left {
     height: 100vh;
-    background: #067237;
+    background: #F7F7F7;
     position: absolute;
     position: fixed;
 }
 
 .bg_hed {
-    background-color: #067237;
+    background-color: #6B7B8C;
     height: 60px;
     display: flex;
     align-items: center;
+    margin-right: -20px !important;
 }
-
+.logo_new{
+    width: 200px;
+}
 .hednameRow {
+    /* position: absolute; */
+    background-color: #6B7B8C;
     height: 60px;
     /* border-bottom: 2px solid #FFFFFF; */
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 300 !important;
 }
 
 .img_manu {
     width: 30px;
     margin-left: 36.66667%;
     pointer-events: none;
+    display: none;
 }
 
 .endSET {
@@ -57,6 +68,7 @@
     width: 90%;
     margin-top: 5px;
 }
+
 .diIMG2 {
     display: block;
     width: 90%;
@@ -72,6 +84,7 @@
     width: 50%;
     margin-left: 105%;
 }
+
 .leftarrorIMG2 {
     display: block;
     width: 50%;
@@ -81,54 +94,61 @@
 .leftbox {
     width: 16%;
 }
-.hiddnbox{
+
+.hiddnbox {
     display: none;
 }
-.hiddnbox2{
+
+.hiddnbox2 {
     display: none;
 }
-.cPoin{
+
+.cPoin {
     cursor: pointer;
 }
-.active{
-    background-color: #067237;
-    color: white;
-    background: #067237;
-}
-.hover:hover{
-    background-color: #FFFFFF;
-    color: #067237 !important;
+
+
+
+.hover:hover {
+    background-color: #6B7B8C;;
+    color: #FFFFFFFF !important;
     /* font-weight: bold; */
     /* margin-top: 5%; */
     height: 10%;
 }
-.hover:hover .text_font{
-    color: #067237 !important;
+
+.hover:hover .text_font {
+    color: #FFFFFFFF !important;
     font: bold;
 }
-.hover:hover .diIMG1{
-   display: block;
-}
-.hover:hover .diIMG2{
-   display: none;
-}
-.hover:hover .leftarrorIMG1{
+
+.hover:hover .diIMG1 {
     display: block;
- }
- .hover:hover .leftarrorIMG2{
-    display: none;
- }
-.deactive{
-    background-color: #FFFFFF;
-    color: black;
 }
-.rowler{
+
+.hover:hover .diIMG2 {
+    display: none;
+}
+
+.hover:hover .leftarrorIMG1 {
+    display: block;
+}
+
+.hover:hover .leftarrorIMG2 {
+    display: none;
+}
+
+
+.rowler {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #dadada;
 }
 
+.poti_fix_new {
+    position: fixed;
+}
 
 
 
@@ -139,6 +159,7 @@
         width: 200%;
         display: none;
     }
+
     .diIMG2 {
         display: block;
         width: 200%;
@@ -154,6 +175,7 @@
         width: 150%;
         margin-left: 105%;
     }
+
     .leftarrorIMG2 {
         display: block;
         width: 150%;
@@ -167,14 +189,22 @@
     .bg_nav_left {
         display: none;
     }
+    .logo_new{
+        display: none;
+        position: absolute;
+        visibility: hidden;
+        z-index: -10;
+    }
 
     .img_manu {
         margin-left: 3%;
-        z-index: 300 !important;
+        z-index: 400 !important;
         pointer-events: visible;
-        
+        display: block !important;
+
     }
-    .indexp{
+
+    .indexp {
         z-index: 100 !important;
     }
 
@@ -182,17 +212,18 @@
         width: 100%;
     }
 
-    
-    .poti_fix22{
+
+    .poti_fix22 {
         position: fixed;
         z-index: 30 !important;
     }
-    .poti_fix{
+
+    .poti_fix {
         position: fixed;
         z-index: 40 !important;
     }
 
-    .set_mar_navbar{
+    .set_mar_navbar {
         margin-left: 0px;
     }
 
@@ -201,6 +232,7 @@
         width: 30%;
         margin-left: 80%;
     }
+
     .diIMG2 {
         display: block;
         width: 30%;
@@ -217,6 +249,7 @@
         width: 15%;
 
     }
+
     .leftarrorIMG2 {
         display: block;
         width: 15%;
@@ -224,17 +257,41 @@
     }
 
     .logo {
-        width: 45%;
+        width: 60%;
         margin-top: 60px;
     }
 
     .settop {
-        margin-top: 80px !important;
+        margin-bottom: 80px !important;
     }
-    .marginsetlef{
+
+    .marginsetlef {
         margin-left: 20% !important;
     }
+
     .hednameRow {
         background-color: green;
     }
+
+    .mobile_cen {
+       margin-left: 55px !important;
+    }
+    .diIMG1{
+        width: 20px;
+    }
+    .diIMG2{
+        width: 20px;
+    }
+ .phone_re_set{
+    margin-left: -75px !important;
+ }
+ .re_phone_mini{
+    margin-left: 85px;
+ }
+ .mr_top_al{
+    margin-top: 3px !important;
+ }
+ .bb{
+    margin-top: 10px !important;
+ }
 }

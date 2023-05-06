@@ -64,86 +64,85 @@ export default function Heder() {
     var SettingViwe = sessionStorage.getItem("SettingViwe");
 
     if (pageView === "Dashboard") {
-      hover_d1[0].style.background = "#FFFFFF";
+      hover_d1[0].style.background = "#6B7B8C";
       hover_d1[0].style.height = "10%";
-      text_font1[0].style.color = "#067237";
+      text_font1[0].style.color = "#FFFFFF";
       text_font1[0].style.font = "bold";
       diIMG1_d1[0].style.display = "block";
       diIMG2_d1[0].style.display = "none";
     } else if (pageView === "Leads_avalible") {
-      hover_d2[0].style.background = "#FFFFFF";
+      hover_d2[0].style.background = "#6B7B8C";
       hover_d2[0].style.height = "10%";
-      text_font2[0].style.color = "#067237";
+      text_font2[0].style.color = "#FFFFFF";
       text_font2[0].style.font = "bold";
       leftarrorIMG1_d1[0].style.display = "block";
       leftarrorIMG2_d1[0].style.display = "none";
     } else if (pageView === "Leads_success") {
-      hover_d3[0].style.background = "#FFFFFF";
+      hover_d3[0].style.background = "#6B7B8C";
       hover_d3[0].style.height = "10%";
-      text_font3[0].style.color = "#067237";
+      text_font3[0].style.color = "#FFFFFF";
       text_font3[0].style.font = "bold";
       leftarrorIMG1_d2[0].style.display = "block";
       leftarrorIMG2_d2[0].style.display = "none";
     } else if (pageView === "Leads_reject") {
-      hover_d4[0].style.background = "#FFFFFF";
+      hover_d4[0].style.background = "#6B7B8C";
       hover_d4[0].style.height = "10%";
-      text_font4[0].style.color = "#067237";
+      text_font4[0].style.color = "#FFFFFF";
       text_font4[0].style.font = "bold";
       leftarrorIMG1_d3[0].style.display = "block";
       leftarrorIMG2_d3[0].style.display = "none";
     } else if (pageView === "Stock") {
-      hover_d5[0].style.background = "#FFFFFF";
+      hover_d5[0].style.background = "#6B7B8C";
       hover_d5[0].style.height = "10%";
-      text_font5[0].style.color = "#067237";
+      text_font5[0].style.color = "#FFFFFF";
       text_font5[0].style.font = "bold";
       diIMG1_d2[0].style.display = "block";
       diIMG2_d2[0].style.display = "none";
     } else if (pageView === "Report") {
-      hover_d6[0].style.background = "#FFFFFF";
+      hover_d6[0].style.background = "#6B7B8C";
       hover_d6[0].style.height = "10%";
-      text_font6[0].style.color = "#067237";
+      text_font6[0].style.color = "#FFFFFF";
       text_font6[0].style.font = "bold";
       diIMG1_d3[0].style.display = "block";
       diIMG2_d3[0].style.display = "none";
     } else if (pageView === "Setting_profile") {
-      hover_d7[0].style.background = "#FFFFFF";
+      hover_d7[0].style.background = "#6B7B8C";
       hover_d7[0].style.height = "10%";
-      text_font7[0].style.color = "#067237";
+      text_font7[0].style.color = "#FFFFFF";
       text_font7[0].style.font = "bold";
       leftarrorIMG1_d4[0].style.display = "block";
       leftarrorIMG2_d4[0].style.display = "none";
     } else if (pageView === "Setting_customer") {
-      hover_d8[0].style.background = "#FFFFFF";
+      hover_d8[0].style.background = "#6B7B8C";
       hover_d8[0].style.height = "10%";
-      text_font8[0].style.color = "#067237";
+      text_font8[0].style.color = "#FFFFFF";
       text_font8[0].style.font = "bold";
       leftarrorIMG1_d5[0].style.display = "block";
       leftarrorIMG2_d5[0].style.display = "none";
     } else if (pageView === "Setting_stock") {
-      hover_d9[0].style.background = "#FFFFFF";
+      hover_d9[0].style.background = "#6B7B8C";
       hover_d9[0].style.height = "10%";
-      text_font9[0].style.color = "#067237";
+      text_font9[0].style.color = "#FFFFFF";
       text_font9[0].style.font = "bold";
       leftarrorIMG1_d6[0].style.display = "block";
       leftarrorIMG2_d6[0].style.display = "none";
     } else if (pageView === "Setting_link") {
-      hover_d10[0].style.background = "#FFFFFF";
+      hover_d10[0].style.background = "#6B7B8C";
       hover_d10[0].style.height = "10%";
-      text_font10[0].style.color = "#067237";
+      text_font10[0].style.color = "#FFFFFF";
       text_font10[0].style.font = "bold";
       leftarrorIMG1_d7[0].style.display = "block";
       leftarrorIMG2_d7[0].style.display = "none";
     }
-   
-    
+
     if (leadViwe === "Open") {
       const lead = document.getElementsByClassName("hiddnbox");
       lead[0].style.display = "block";
     } else if (leadViwe === "Close") {
       const lead = document.getElementsByClassName("hiddnbox");
       lead[0].style.display = "none";
-    } 
-    
+    }
+
     if (SettingViwe === "Open") {
       const setting = document.getElementsByClassName("hiddnbox2");
       setting[0].style.display = "block";
@@ -249,41 +248,43 @@ export default function Heder() {
     sessionStorage.setItem("pageView", "Setting_link");
     navigate("/Setting_link");
   };
-  const logout = () =>{
+  const logout = () => {
     alert("log out");
     sessionStorage.setItem("login", false);
     navigate("/");
-  }
+  };
 
   return (
     <div className="row set_mar_navbar">
       <div className="leftbox leftbox_new_page bg_nav_left poti_fix22 poti_fix">
-        <div className="row">
+        <div className="row settop">
           <div className="col-12">
             <div className="row cPoin hednameRow">
-              <img className="logo" src="./images/aeuimages.png" alt="" />
+              <img className="logo ms-2" src="./images/logo.png" alt="" />
             </div>
           </div>
         </div>
 
         <Link to="/Dashboard">
-          <div onClick={d1} className="row d1">
-            <div className="col-12 hover hover_d1">
-              <div className="mt-2 mb-2 row cPoin settop centeraligtn ms-2 me-2 ">
-                <div className="justify-center align-middle col-3 d-flex">
+          <div onClick={d1} className="row d1 ">
+            <div className="col-12 hover hover_d1 bg_phoneset">
+              <div className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen">
+                <div className="justify-center align-middle col-3 d-flex ">
                   <img
-                    className="diIMG1 diIMG1_d1"
+                    className="diIMG2 diIMG2_d1"
                     src="./images/dash.png"
                     alt=""
                   />
                   <img
-                    className=" diIMG2 diIMG2_d1"
+                    className=" diIMG1 diIMG1_d1"
                     src="./images/dash_white.png"
                     alt=""
                   />
                 </div>
                 <div className="justify-start align-middle col-9 d-flex">
-                  <h6 className="text_font text_font1">Dashboard</h6>
+                  <h6 className="mt-1 text_font text_font1 phoneset_text_font tx_bold">
+                    Dashboard
+                  </h6>
                 </div>
               </div>
             </div>
@@ -291,17 +292,17 @@ export default function Heder() {
         </Link>
 
         <div className="row">
-          <div className="col-12 hover hover_lead">
+          <div className="col-12 hover hover_lead bg_phoneset">
             <div
               onClick={lead}
-              className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 "
+              className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen"
             >
               <div className="col-3 end">
-                <img className="diIMG1" src="./images/d1.png" alt="" />
-                <img className="diIMG2" src="./images/d1_white.png" alt="" />
+                <img className="diIMG2" src="./images/d1.png" alt="" />
+                <img className="diIMG1" src="./images/d1_white.png" alt="" />
               </div>
               <div className="justify-start align-middle col-7 d-flex">
-                <h6 className="text_font">Leads</h6>
+                <h6 className="mt-1 text_font mr_top_al tx_bold">Leads</h6>
               </div>
               <div className="mt-2 col-2">
                 {/* <img className="mt-1 arrorIMG" src="./images/arror.png" alt="" /> */}
@@ -315,72 +316,87 @@ export default function Heder() {
           </div>
         </div>
 
-        <div className="row hiddnbox ">
+        <div className="row hiddnbox">
           <div className="mt-2 mb-2 marginsetlef">
             <div className="row">
-              <div className="col-12 hover hover_d2">
-                <div onClick={d2} className="mt-2 mb-2 row cPoin d2 ">
+              <div className="col-12 hover hover_d2 bg_phoneset phone_re_set">
+                <div
+                  onClick={d2}
+                  className="mt-2 mb-2 row cPoin d2 re_phone_mini"
+                >
                   <div className="col-2">
                     <img
-                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d1 ms-5"
+                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d1 ms-5"
                       src="./images/leftAroor.png"
                       alt=""
                     />
                     <img
-                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d1 ms-5"
+                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d1 ms-5"
                       src="./images/leftAroor_white.png"
                       alt=""
                     />
                   </div>
                   <div className="justify-start align-middle col-9 d-flex">
                     <Link to="/Leads_avalible">
-                      <h6 className="ms-5 text_font text_font2">Available</h6>
+                      <h6 className="ms-5 text_font ac text_font2 phoneset_text_font">
+                        Available
+                      </h6>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
-              <div className="col-12 hover hover_d3">
-                <div onClick={d3} className="mt-2 mb-2 row cPoin d3 ">
+              <div className="col-12 hover hover_d3 bg_phoneset phone_re_set">
+                <div
+                  onClick={d3}
+                  className="mt-2 mb-2 row cPoin d3 re_phone_mini"
+                >
                   <div className="col-2">
                     <img
-                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d2 ms-5"
+                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d2 ms-5"
                       src="./images/leftAroor.png"
                       alt=""
                     />
                     <img
-                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d2 ms-5"
+                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d2 ms-5"
                       src="./images/leftAroor_white.png"
                       alt=""
                     />
                   </div>
                   <div className="justify-start align-middle col-9 d-flex">
                     <Link to="/Leads_success">
-                      <h6 className="ms-5 text_font text_font3">Success</h6>
+                      <h6 className="ms-5 text_font ac text_font3 phoneset_text_font">
+                        Success
+                      </h6>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
-              <div className="col-12 hover hover_d4">
-                <div onClick={d4} className="mt-2 mb-2 row cPoin d4 ">
+              <div className="col-12 hover hover_d4 bg_phoneset phone_re_set">
+                <div
+                  onClick={d4}
+                  className="mt-2 mb-2 row cPoin d4 re_phone_mini"
+                >
                   <div className="col-2">
                     <img
-                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d3 ms-5"
+                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d3 ms-5"
                       src="./images/leftAroor.png"
                       alt=""
                     />
                     <img
-                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d3 ms-5"
+                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d3 ms-5"
                       src="./images/leftAroor_white.png"
                       alt=""
                     />
                   </div>
                   <div className="justify-start align-middle col-9 d-flex">
                     <Link to="/Leads_reject">
-                      <h6 className="ms-5 text_font text_font4">Rejected</h6>
+                      <h6 className="ms-5 text_font ac text_font4 phoneset_text_font mr_top_al">
+                        Rejected
+                      </h6>
                     </Link>
                   </div>
                 </div>
@@ -391,24 +407,26 @@ export default function Heder() {
 
         <Link to="/Stock">
           <div className="row">
-            <div className="col-12 hover hover_d5">
+            <div className="col-12 hover hover_d5 bg_phoneset">
               <div onClick={d5} className="mt-2 mb-2 row d5">
                 <div className=" col-12">
-                  <div className=" row cPoin centeraligtn ms-2 me-2">
+                  <div className=" row cPoin centeraligtn ms-2 me-2 mobile_cen">
                     <div className="col-3 end">
                       <img
-                        className="diIMG1 diIMG1_d2"
+                        className="diIMG2 diIMG2_d2"
                         src="./images/d2.png"
                         alt=""
                       />
                       <img
-                        className="diIMG2 diIMG2_d2"
+                        className="diIMG1 diIMG1_d2"
                         src="./images/d2_white.png"
                         alt=""
                       />
                     </div>
                     <div className="justify-start align-middle col-9 d-flex">
-                      <h6 className="text_font text_font5">Current Stock</h6>
+                      <h6 className="mt-1 text_font text_font5 phoneset_text_font mr_top_al tx_bold">
+                        Current Stock
+                      </h6>
                     </div>
                   </div>
                 </div>
@@ -419,24 +437,26 @@ export default function Heder() {
 
         <Link to="/Report">
           <div className="mt-1 row ">
-            <div className="col-12 hover hover_d6">
+            <div className="col-12 hover hover_d6 bg_phoneset">
               <div onClick={d6} className="mt-2 mb-2 row d6">
                 <div className=" col-12">
-                  <div className=" row cPoin centeraligtn ms-2 me-2">
+                  <div className=" row cPoin centeraligtn ms-2 me-2 mobile_cen">
                     <div className="col-3 end">
                       <img
-                        className="diIMG1 diIMG1_d3"
+                        className="diIMG2 diIMG2_d3"
                         src="./images/d3.png"
                         alt=""
                       />
                       <img
-                        className="diIMG2 diIMG2_d3"
+                        className="diIMG1 diIMG1_d3"
                         src="./images/d3_white.png"
                         alt=""
                       />
                     </div>
                     <div className="justify-start align-middle col-9 d-flex">
-                      <h6 className="text_font text_font6">Reports</h6>
+                      <h6 className="mt-1 text_font text_font6 phoneset_text_font mr_top_al tx_bold">
+                        Reports
+                      </h6>
                     </div>
                     <div className="col-2"></div>
                   </div>
@@ -447,22 +467,24 @@ export default function Heder() {
         </Link>
 
         <div className="row">
-          <div className="col-12 hover hover_seting">
+          <div className="col-12 hover hover_seting bg_phoneset">
             <div
               onClick={setting}
-              className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2"
+              className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen"
             >
               <div className="col-3 end">
-                <img className="diIMG1" src="./images/d4.png" alt="" />
-                <img className="diIMG2" src="./images/d4_white.png" alt="" />
+                <img className="diIMG2" src="./images/d4.png" alt="" />
+                <img className="diIMG1" src="./images/d4_white.png" alt="" />
               </div>
               <div className="justify-start align-middle col-7 d-flex">
-                <h6 className="text_font">Settings</h6>
+                <h6 className="mt-1 text_font phoneset_text_font mr_top_al tx_bold">
+                  Settings
+                </h6>
               </div>
               <div className="col-2">
                 {/* <img className="mt-2 arrorIMG" src="./images/arror.png" alt="" /> */}
                 <img
-                  className="mt-3 arrorIMG"
+                  className="mt-3 arrorIMG bb"
                   src="./images/arror_white.png"
                   alt=""
                 />
@@ -474,92 +496,112 @@ export default function Heder() {
         <div className="row hiddnbox2">
           <div className="mb-2 marginsetlef">
             <div className="row">
-              <div className="col-12 hover hover_d7">
-                <div onClick={d7} className="mt-2 mb-2 row cPoin d7">
+              <div className="col-12 hover hover_d7 bg_phoneset phone_re_set">
+                <div
+                  onClick={d7}
+                  className="mt-2 mb-2 row cPoin d7 re_phone_mini"
+                >
                   <div className="col-2">
                     <img
-                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d4 ms-5"
+                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d4 ms-5"
                       src="./images/leftAroor.png"
                       alt=""
                     />
                     <img
-                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d4 ms-5"
+                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d4 ms-5"
                       src="./images/leftAroor_white.png"
                       alt=""
                     />
                   </div>
                   <div className="col-10">
                     <Link to="/Setting_profile">
-                      <h6 className="ms-5 text_font text_font7">Profile</h6>
+                      <h6 className="ms-5 text_font ac text_font7 phoneset_text_font">
+                        Profile
+                      </h6>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
-              <div className="col-12 hover hover_d8">
-                <div onClick={d8} className="mt-2 mb-2 row cPoin d8">
+              <div className="col-12 hover hover_d8 bg_phoneset phone_re_set">
+                <div
+                  onClick={d8}
+                  className="mt-2 mb-2 row cPoin d8 re_phone_mini"
+                >
                   <div className="col-2">
                     <img
-                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d5 ms-5"
+                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d5 ms-5"
                       src="./images/leftAroor.png"
                       alt=""
                     />
                     <img
-                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d5 ms-5"
+                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d5 ms-5"
                       src="./images/leftAroor_white.png"
                       alt=""
                     />
                   </div>
                   <div className="col-10">
                     <Link to="/Setting_customer">
-                      <h6 className="ms-5 text_font8 text_font">Customer</h6>
+                      <h6 className="ms-5 text_font text_font8 ac ext_font phoneset_text_font">
+                        Customer
+                      </h6>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
-              <div className="col-12 hover hover_d9">
-                <div onClick={d9} className="mt-2 mb-2 row cPoin d9">
+              <div className="col-12 hover hover_d9 bg_phoneset phone_re_set">
+                <div
+                  onClick={d9}
+                  className="mt-2 mb-2 row cPoin d9 re_phone_mini"
+                >
                   <div className="col-2">
                     <img
-                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d6 ms-5"
+                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d6 ms-5"
                       src="./images/leftAroor.png"
                       alt=""
                     />
                     <img
-                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d6 ms-5"
+                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d6 ms-5"
                       src="./images/leftAroor_white.png"
                       alt=""
                     />
                   </div>
                   <div className="col-10">
                     <Link to="/Setting_stock">
-                      <h6 className="ms-5 text_font text_font9">Stocks</h6>
+                      <h6 className="ms-5 text_font ac text_font9 phoneset_text_font">
+                        Stocks
+                      </h6>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
-              <div className="col-12 hover hover_d10">
-                <div onClick={d10} className="mt-2 mb-2 row cPoin d10">
+              <div className="col-12 hover hover_d10 bg_phoneset phone_re_set">
+                <div
+                  onClick={d10}
+                  className="mt-2 mb-2 row cPoin d10 re_phone_mini"
+                >
                   <div className="col-2">
                     <img
-                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d7 ms-5"
+                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d7 ms-5"
                       src="./images/leftAroor.png"
                       alt=""
                     />
                     <img
-                      className="mt-2 leftarrorIMG2 leftarrorIMG2_d7 ms-5"
+                      className="mt-2 leftarrorIMG1 leftarrorIMG1_d7 ms-5"
                       src="./images/leftAroor_white.png"
                       alt=""
                     />
                   </div>
                   <div className="col-10">
                     <Link to="/Setting_link">
-                      <h6 className="ms-5 text_font text_font10">Links</h6>
+                      <h6 className="ms-5 text_font ac text_font10 phoneset_text_font">
+                        Links
+                      </h6>
                     </Link>
                   </div>
                 </div>
@@ -569,9 +611,11 @@ export default function Heder() {
         </div>
       </div>
 
-      <div className="col-12 poti_fix">
+      <div className="col-12 poti_fix poti_fix_new">
         <div className="row bg_hed">
+          
           <div className="col-6 indexp cPoin">
+          <img className="logo_new ms-2" src="./images/logo.png" alt="" />
             <img
               onClick={manu}
               className="mt-1 img_manu cPoin"

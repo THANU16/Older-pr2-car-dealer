@@ -144,7 +144,7 @@ export default function Stock() {
                     <tbody>
                       {Stock_detail.map((Stock_detail) => (
                         <tr>
-                          <td className="tx_bold">{Stock_detail.Make}</td>
+                          <td className="">{Stock_detail.Make}</td>
                           <td>{Stock_detail.Model}</td>
                           <td>{Stock_detail.reg_number}</td>
                           <td>{Stock_detail.mileage}</td>

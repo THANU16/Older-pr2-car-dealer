@@ -151,8 +151,8 @@ export default function Report() {
                     <tbody>
                       {Profit.map((Profit) => (
                         <tr>
-                          <td className="tx_bold">{Profit.Month}</td>
-                          <td className="tx_bold">{Profit.Lead_name}</td>
+                          <td className="">{Profit.Month}</td>
+                          <td className="">{Profit.Lead_name}</td>
                           <td>{Profit.Make}</td>
                           <td>{Profit.Model}</td>
                           <td className="profit_txt">{Profit.Profit}</td>
@@ -192,8 +192,8 @@ export default function Report() {
                     <tbody>
                       {Success.map((Success) => (
                         <tr>
-                          <td className="tx_bold">{Success.l_name}</td>
-                          <td className="tx_bold">{Success.Lead_name}</td>
+                          <td className="">{Success.l_name}</td>
+                          <td className="">{Success.Lead_name}</td>
                           <td>{Success.Make}</td>
                           <td>{Success.Model}</td>
                           <td>{Success.Reg_Number}</td>
@@ -233,8 +233,8 @@ export default function Report() {
                     <tbody>
                       {Rejected.map((Rejected) => (
                         <tr>
-                          <td className="tx_bold">{Rejected.l_name}</td>
-                          <td className="tx_bold">{Rejected.Lead_name}</td>
+                          <td className="">{Rejected.l_name}</td>
+                          <td className="">{Rejected.Lead_name}</td>
                           <td>{Rejected.Make}</td>
                           <td>{Rejected.Model}</td>
                           <td>{Rejected.Reg_Number}</td>

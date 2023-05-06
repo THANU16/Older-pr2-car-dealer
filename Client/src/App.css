@@ -1,9 +1,9 @@
-*{
-  /* font-family: 'Work Sans';
-  font-style: normal; */
-}
+/* *{
+  font-family: 'Montserrat';
+  font-style: normal;
+} */
 
-.body{
+.body {
   overflow-x: hidden;
   background-color: #F1F1F1;
 
@@ -20,29 +20,50 @@
   background: #96F3C1;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #37C578; 
+  background: #37C578;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
+.pointer.active.desc:after {
+  content: "▲";
+}
+.pointer.active.asc:after {
+  content: "▼";
+}
 
-table thead{
-  background: #F4F7FC;
+table thead {
+  background: #E6E6E6;
+  /* backdrop-filter: blur(2px); */
+  /* border-radius: 15px !important; */
   /* border: none !important; */
 }
-table thead tr th{
+
+table th:first-child {
+  border-radius: 15px 0 0 15px;
+}
+
+table th:last-child {
+  border-radius: 0 15px 15px 0;
+}
+
+table thead tr th {
+  white-space: nowrap;
+  width: 100px;
+
+}
+
+table tbody tr td {
   width: 100px;
 }
-table tbody tr td{
-  width: 100px;
-}
+
 /* .table thead tr th,
 .table tbody tr td,
 
@@ -58,29 +79,36 @@ table tbody tr td{
   width: 300px !important;
 } */
 
-table{
+table {
   border: hidden !important;
-  
+
 }
-table thead tr th{
+
+table thead tr th {
   border: hidden !important;
   color: #464F60;
 }
-table tbody tr td{
+
+table tbody tr td {
   border: hidden !important;
 }
-.small_font{
+
+.small_font {
   font-size: 16px;
 }
-.tx_bold{
-font-weight: bold;
+
+.tx_bold {
+  font-weight: bold;
 }
-.potion_over_flow{
- overflow: scroll;
+
+.potion_over_flow {
+  overflow: scroll;
 }
-.block_over_y{
-overflow-x: hidden !important;
+
+.block_over_y {
+  overflow-x: hidden !important;
 }
+
 /* .App {
   text-align: center;
 }

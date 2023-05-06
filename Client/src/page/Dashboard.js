@@ -1,11 +1,42 @@
 import "./Dashboard.css";
-import React from "react";
+import { React, useState, useEffect } from "react";
 import Heder from "../components/Heder";
 import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
+
+  const [table_title, settable_title] = useState([]);
+  const [table_dashbord2, settable_dashbord2] = useState([]);
+
+
+  const handleSelect = (data, id) => {
+
+    var checked = document.getElementById(id);
+    var coloumn = document.getElementsByClassName(data);
+
+    if (checked.checked === true) {
+      for (var i = 0; i < coloumn.length; i++) {
+        coloumn[i].style.display = "table-cell";
+      }
+      checked.defaultChecked = true;
+    }
+    else {
+      for (var i = 0; i < coloumn.length; i++) {
+        coloumn[i].style.display = "none";
+      }
+      checked.defaultChecked = false;
+    }
+
+  }
+
+  useEffect(() => {
+    settable_title(defult_table_title);
+    settable_dashbord2(defult_table_dashbord2);
+  }, [])
+
   const dash_detail = {
     lead_month: "125",
     lead_total: "150",
@@ -13,136 +44,243 @@ export default function Dashboard() {
   };
   const filter = [
     {
-      filtername: "Sale Price",
+      filtername: "First_Name",
       id: "1",
     },
     {
-      filtername: "deposit",
+      filtername: "Last_Name",
       id: "2",
     },
     {
-      filtername: "balance to finance(£)",
+      filtername: "Make",
       id: "3",
     },
     {
-      filtername: "total amount payable(£)",
+      filtername: "Model",
       id: "4",
     },
     {
-      filtername: "baloon payment(£)",
+      filtername: "Reg_Number",
       id: "5",
     },
     {
-      filtername: "monthly payment(£)",
+      filtername: "Sale_Price",
       id: "6",
     },
     {
-      filtername: "rate",
+      filtername: "Deposit",
       id: "7",
     },
     {
-      filtername: "start date",
+      filtername: "Balance_to_Finance(£)",
       id: "8",
     },
     {
-      filtername: "month of payment(£)",
+      filtername: "Total_amount_Payable(£)",
       id: "9",
     },
     {
-      filtername: "settlement figure",
+      filtername: "Baloon_Payment(£)",
       id: "10",
     },
     {
-      filtername: "length of agreement",
+      filtername: "Monthly_Payment",
       id: "11",
     },
     {
-      filtername: "interest rebate",
+      filtername: "Rate",
       id: "12",
     },
     {
-      filtername: "valueation",
+      filtername: "Start_Date",
       id: "13",
     },
     {
-      filtername: "equity",
+      filtername: "Month_of_Payment(£)",
       id: "14",
     },
     {
-      filtername: "mileage at start",
+      filtername: "Settlement_Figure",
       id: "15",
     },
     {
-      filtername: "mileage now",
+      filtername: "Length_of_Agreement",
       id: "16",
     },
     {
-      filtername: "phone number",
+      filtername: "Interest_Rebate",
       id: "17",
     },
     {
-      filtername: "email",
+      filtername: "Valueation",
       id: "18",
     },
     {
-      filtername: "post code",
+      filtername: "Equity",
       id: "19",
     },
-  ];
-  const table_dashbord = [
     {
-      id: "1",
-      f_name: "Ann Culhane",
-      L_name: "Ann Culhane",
-      Make: "Audi",
-      Model: "A1",
-      reg_Number: "5684236526",
-      muleage: "60000 KM",
-      Colour: "Red",
-      Price: "20000",
-      m_payment: "10000",
-      equity: "10000",
+      filtername: "Mileage_at_Start",
+      id: "20",
     },
     {
-      id: "2",
-      f_name: "Ann Culhane",
-      L_name: "Ann Culhane",
-      Make: "Audi",
-      Model: "A1",
-      reg_Number: "5684236526",
-      muleage: "70000 KM",
-      Colour: "Red",
-      Price: "40000",
-      m_payment: "20000",
-      equity: "20000",
+      filtername: "Mileage_Now",
+      id: "21",
     },
     {
-      id: "3",
-      f_name: "Ann Culhane",
-      L_name: "Ann Culhane",
-      Make: "Audi",
-      Model: "A1",
-      reg_Number: "5684236526",
-      muleage: "30000 KM",
-      Colour: "Red",
-      Price: "20000",
-      m_payment: "10000",
-      equity: "10000",
+      filtername: "Phone_Number",
+      id: "22",
     },
     {
-      id: "4",
-      f_name: "Ann Culhane",
-      L_name: "Ann Culhane",
-      Make: "Audi",
-      Model: "A1",
-      reg_Number: "5684236526",
-      muleage: "60000 KM",
-      Colour: "Red",
-      Price: "30000",
-      m_payment: "20000",
-      equity: "20000",
+      filtername: "Email",
+      id: "23",
+    },
+    {
+      filtername: "Post_Code",
+      id: "24",
     },
   ];
+
+  // const table_dashbord = [
+  //   {
+  //     id: "1",
+  //     f_name: "Ann Culhane",
+  //     L_name: "Ann Culhane",
+  //     Make: "Audi",
+  //     Model: "A1",
+  //     reg_Number: "5684236526",
+  //     muleage: "60000 KM",
+  //     Colour: "Red",
+  //     Price: "20000",
+  //     m_payment: "10000",
+  //     equity: "10000",
+  //   },
+  //   {
+  //     id: "2",
+  //     f_name: "Ann Culhane",
+  //     L_name: "Ann Culhane",
+  //     Make: "Audi",
+  //     Model: "A1",
+  //     reg_Number: "5684236526",
+  //     muleage: "70000 KM",
+  //     Colour: "Red",
+  //     Price: "40000",
+  //     m_payment: "20000",
+  //     equity: "20000",
+  //   },
+  //   {
+  //     id: "3",
+  //     f_name: "Ann Culhane",
+  //     L_name: "Ann Culhane",
+  //     Make: "Audi",
+  //     Model: "A1",
+  //     reg_Number: "5684236526",
+  //     muleage: "30000 KM",
+  //     Colour: "Red",
+  //     Price: "20000",
+  //     m_payment: "10000",
+  //     equity: "10000",
+  //   },
+  //   {
+  //     id: "4",
+  //     f_name: "Ann Culhane",
+  //     L_name: "Ann Culhane",
+  //     Make: "Audi",
+  //     Model: "A1",
+  //     reg_Number: "5684236526",
+  //     muleage: "60000 KM",
+  //     Colour: "Red",
+  //     Price: "30000",
+  //     m_payment: "20000",
+  //     equity: "20000",
+  //   },
+  // ];
+
+  const defult_table_title = [
+
+    {
+      title: "",
+    },
+
+    {
+      title: "First_Name",
+    },
+    {
+      title: "Last_Name",
+    },
+    {
+      title: "Make",
+    },
+    {
+      title: "Model",
+    },
+    {
+      title: "Reg_Number",
+    },
+
+    {
+      title: "Sale_Price",
+    },
+    {
+      title: "Deposit",
+    },
+    {
+      title: "Balance_to_Finance(£)",
+    },
+    {
+      title: "Total_amount_Payable(£)",
+    },
+    {
+      title: "Baloon_Payment(£)",
+    },
+
+    {
+      title: "Monthly_Payment",
+    },
+
+    {
+      title: "Rate",
+    },
+
+    {
+      title: "Start_Date",
+    },
+
+    {
+      title: "Month_of_Payment(£)",
+    },
+
+    {
+      title: "Settlement_Figure",
+    },
+    {
+      title: "Length_of_Agreement",
+    },
+    {
+      title: "Interest_Rebate",
+    },
+    {
+      title: "Valueation",
+    },
+    {
+      title: "Equity",
+    },
+    {
+      title: "Mileage_at_Start",
+    },
+    {
+      title: "Mileage_Now",
+    },
+    {
+      title: "Phone_Number",
+    },
+    {
+      title: "Email",
+    },
+    {
+      title: "Post_Code",
+    },
+  ]
   const month_list = [
     {
       name: "January",
@@ -166,21 +304,23 @@ export default function Dashboard() {
       name: "July",
     },
   ];
-  const price_range = [
-    {
-      name: "10000-20000",
-    },
-    {
-      name: "20000-30000	",
-    },
-    {
-      name: "30000-40000	",
-    },
-    {
-      name: "40000-50000	",
-    },
-  ];
-  const table_dashbord2 = [
+
+  // const price_range = [
+  //   {
+  //     name: "10000-20000",
+  //   },
+  //   {
+  //     name: "20000-30000	",
+  //   },
+  //   {
+  //     name: "30000-40000	",
+  //   },
+  //   {
+  //     name: "40000-50000	",
+  //   },
+  // ];
+
+  const defult_table_dashbord2 = [
     {
       id: "1",
       f_name: "Ann Culhane",
@@ -290,13 +430,15 @@ export default function Dashboard() {
       p_code: "HG1 5HR",
     },
   ];
+ 
 
+  
   return (
     <div className="bg">
       <Heder />
       <div className="setbody">
-        <div className="mt-4 row ms-5 margin_upset">
-          <h1 className="heder_txt">Dashboard</h1>
+        <div className="mt-5 row ms-5 margin_upset">
+          <h1 className="mt-4 heder_txt">Dashboard</h1>
           <div className="col-12">
             <div className="row center_justify">
               <div className="col-12">
@@ -313,18 +455,22 @@ export default function Dashboard() {
           </div>
         </div>
 
+        
         <div className="mt-5 mb-5 row">
           <div className="width_set_dash">
             <div className="row margin_du">
               <div className="mt-1 col-12 col-md-4 phone_center">
                 <div className="row bg_white me-1">
+                <Link to="/Leads_avalible">
                   <div className="mb-4 m col-12">
                     <div className="row">
-                      <div className="end_line col-6">
+
+                        <div className="end_line col-6">
                         <h1 className="ms-1 fond_num_size">
                           {dash_detail.lead_month}
                         </h1>
-                      </div>
+                        </div>
+                      
                       <div className="justify-end col-6 d-flex">
                         <img
                           className="mt-3 logo_dash"
@@ -339,8 +485,10 @@ export default function Dashboard() {
                       </div>
                     </div>
                   </div>
+                  </Link>
                 </div>
               </div>
+              
               <div className="mt-1 col-12 phone_center col-md-4">
                 <div className="row bg_white me-1">
                   <div className="mb-4 m col-12">
@@ -397,7 +545,7 @@ export default function Dashboard() {
 
         <div className="mt-5 mb-5 row tblleboxmargin">
           <div className="col-12 ">
-            <div className="mt-4 set_end row row_width ms-2 me-2 ">
+            <div className="mt-4 set_end row row_width ms-2 me-2 phone_mar">
               <div className="col-4 col-md-8">
                 <h6></h6>
               </div>
@@ -429,6 +577,7 @@ export default function Dashboard() {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu className="drofdownBox22">
+
                       <div className="row">
                         <div className="col-8"></div>
                         <div className="col-4 alignCenter">
@@ -447,6 +596,8 @@ export default function Dashboard() {
                                 className='me-2' // prettier-ignore
                                 type="checkbox"
                                 id={filter.id}
+                                onChange={() => handleSelect(filter.filtername, filter.id)}
+                                defaultChecked={true}
                               />
                             </div>
                           </div>
@@ -461,68 +612,51 @@ export default function Dashboard() {
             <div className="mt-4 row tableBox">
               <div>
                 <div className="row ms-3 me-3">
-                  <Table bordered hover className="table with_table">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>First_Name</th>
-                        <th>Last_Name</th>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Reg_Number</th>
-                        <th>Sale_Price</th>
-                        <th>Deposit</th>
-                        <th>Balance_to_Finance(£)</th>
-                        <th>Total_amount_Payable(£)</th>
-                        <th>Baloon_Payment(£)</th>
-                        <th>Monthly_Payment</th>
-                        <th>Rate</th>
-                        <th>Start_Date</th>
-                        <th>Month_of_Payment(£)</th>
-                        <th>Settlement_Figure</th>
-                        <th>Length_of_Agreement</th>
-                        <th>Interest_Rebate</th>
-                        <th>Valueation</th>
-                        <th>Equity</th>
-                        <th>Mileage_at_Start</th>
-                        <th>Mileage_Now</th>
-                        <th>Phone_Number</th>
-                        <th>Email</th>
-                        <th>Post_Code</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {table_dashbord2.map((table_dashbord2) => (
+                  <Link to="/Leads_avalible_open">
+                    <Table bordered hover className="table with_table">
+                      <thead>
+
                         <tr>
-                          <td className="tx_bold">{table_dashbord2.id}</td>
-                          <td className="tx_bold">{table_dashbord2.f_name}</td>
-                          <td className="tx_bold">{table_dashbord2.L_name}</td>
-                          <td className="tx_bold">{table_dashbord2.Make}</td>
-                          <td>{table_dashbord2.Model}</td>
-                          <td>{table_dashbord2.reg_Number}</td>
-                          <td>{table_dashbord2.Sa_price}</td>
-                          <td>{table_dashbord2.deposit}</td>
-                          <td>{table_dashbord2.ba_finance}</td>
-                          <td>{table_dashbord2.t_amount}</td>
-                          <td>{table_dashbord2.Blaoo_payment}</td>
-                          <td>{table_dashbord2.m_payment}</td>
-                          <td>{table_dashbord2.rate}</td>
-                          <td>{table_dashbord2.sta_date}</td>
-                          <td>{table_dashbord2.m_of_payment}</td>
-                          <td>{table_dashbord2.figure}</td>
-                          <td>{table_dashbord2.ageement}</td>
-                          <td>{table_dashbord2.bebate}</td>
-                          <td>{table_dashbord2.valueation}</td>
-                          <td>{table_dashbord2.equity}</td>
-                          <td>{table_dashbord2.Milege_start}</td>
-                          <td>{table_dashbord2.Milege_now}</td>
-                          <td>{table_dashbord2.phone}</td>
-                          <td>{table_dashbord2.email}</td>
-                          <td>{table_dashbord2.p_code}</td>
+                          {table_title.map((title) => (
+                            <th className={title.title}>{title.title}</th>
+                          ))}
                         </tr>
-                      ))}
-                    </tbody>
-                  </Table>
+
+                      </thead>
+
+                      <tbody>
+                        {table_dashbord2.map((table_dashbord2) => (
+                          <tr>
+                            <td >{table_dashbord2.id}</td>
+                            <td className="First_Name">{table_dashbord2.f_name}</td>
+                            <td className="Last_Name">{table_dashbord2.L_name}</td>
+                            <td className="Make">{table_dashbord2.Make}</td>
+                            <td className="Model">{table_dashbord2.Model}</td>
+                            <td className="Reg_Number">{table_dashbord2.reg_Number}</td>
+                            <td className="Sale_Price">{table_dashbord2.Sa_price}</td>
+                            <td className="Deposit">{table_dashbord2.deposit}</td>
+                            <td lassName="Balance_to_Finance(£)">{table_dashbord2.ba_finance}</td>
+                            <td className="Total_amount_Payable(£)">{table_dashbord2.t_amount}</td>
+                            <td className="Baloon_Payment(£)">{table_dashbord2.Blaoo_payment}</td>
+                            <td className="Monthly_Payment">{table_dashbord2.m_payment}</td>
+                            <td className="Rate">{table_dashbord2.rate}</td>
+                            <td className="Start_Date">{table_dashbord2.sta_date}</td>
+                            <td className="Month_of_Payment(£)">{table_dashbord2.m_of_payment}</td>
+                            <td className="Settlement_Figure">{table_dashbord2.figure}</td>
+                            <td className="Length_of_Agreement">{table_dashbord2.ageement}</td>
+                            <td className="Interest_Rebate">{table_dashbord2.bebate}</td>
+                            <td className="Valueation">{table_dashbord2.valueation}</td>
+                            <td className="Equity">{table_dashbord2.equity}</td>
+                            <td className="Mileage_at_Start">{table_dashbord2.Milege_start}</td>
+                            <td className="Mileage_Now">{table_dashbord2.Milege_now}</td>
+                            <td className="Phone_Number">{table_dashbord2.phone}</td>
+                            <td className="Email">{table_dashbord2.email}</td>
+                            <td className="Post_Code">{table_dashbord2.p_code}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </Table>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -981,10 +981,10 @@ export default function Stock_open() {
                     <tbody>
                       {table_dashbord2.map((table_dashbord2) => (
                         <tr>
-                          <td className="tx_bold">{table_dashbord2.id}</td>
-                          <td className="tx_bold">{table_dashbord2.f_name}</td>
-                          <td className="tx_bold">{table_dashbord2.L_name}</td>
-                          <td className="tx_bold">{table_dashbord2.Make}</td>
+                          <td className="">{table_dashbord2.id}</td>
+                          <td className="">{table_dashbord2.f_name}</td>
+                          <td className="">{table_dashbord2.L_name}</td>
+                          <td className="">{table_dashbord2.Make}</td>
                           <td>{table_dashbord2.Model}</td>
                           <td>{table_dashbord2.reg_Number}</td>
                           <td>{table_dashbord2.Sa_price}</td>

@@ -13,7 +13,7 @@
 }
 
 .box_coklor {
-    background: #067237;
+    background: #6B7B8C;
 }
 
 .right_loginbox {}
@@ -27,7 +27,7 @@
 }
 
 .login_logo {
-    width: 70%;
+    width: 40%;
 }
 
 .textOnInput {
@@ -70,7 +70,7 @@ label {
 .boxBtn_login {
     width: 304px;
     height: 40px;
-    background: #067237;
+    background: #6B7B8C;
     border-radius: 8px;
 }
 

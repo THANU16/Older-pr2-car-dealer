@@ -393,6 +393,10 @@
         display: flex;
         justify-content: start;
         align-items: center;
+        
+    }
+    .cc{
+        margin-top: 25px !important;
     }
 
     .massege_box_stock {

@@ -306,8 +306,8 @@ export default function Setting_profile() {
                     <tbody>
                       {profile_detail.map((profile_detail) => (
                         <tr>
-                          <td className="tx_bold">{profile_detail.id}</td>
-                          <td className="tx_bold">{profile_detail.name}</td>
+                          <td className="">{profile_detail.id}</td>
+                          <td className="">{profile_detail.name}</td>
                           <td>{profile_detail.email}</td>
                           <td>{profile_detail.user_role}</td>
                           <td>

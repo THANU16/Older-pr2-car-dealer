@@ -6,87 +6,94 @@ import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
 import { Link } from "react-router-dom";
 
+function myFunction() {
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+
 
 export default function Leads_avalible() {
+
+    const [search, setSearch] = React.useState('');
+    const [table_Avalible, settable_Avalible] = React.useState([]);
+
+    const handleSelect = (data, id) => {
+
+        var checked = document.getElementById(id);
+        var coloumn = document.getElementsByClassName(data);
+    
+        if (checked.checked === true) {
+          for (var i = 0; i < coloumn.length; i++) {
+            coloumn[i].style.display = "table-cell";
+          }
+          checked.defaultChecked = true;
+        }
+        else {
+          for (var i = 0; i < coloumn.length; i++) {
+            coloumn[i].style.display = "none";
+          }
+          checked.defaultChecked = false;
+        }
+    
+      }
+
     const filter = [
         {
-            filtername: "Sale Price",
+            filtername: "First_Name",
             id: "1",
         },
         {
-            filtername: "deposit",
+            filtername: "Last_Name",
             id: "2",
         },
         {
-            filtername: "balance to finance(£)",
+            filtername: "Make",
             id: "3",
         },
         {
-            filtername: "total amount payable(£)",
+            filtername: "Model",
             id: "4",
         },
         {
-            filtername: "baloon payment(£)",
+            filtername: "Reg_Number",
             id: "5",
         },
         {
-            filtername: "monthly payment(£)",
+            filtername: "Muleage",
             id: "6",
         },
         {
-            filtername: "rate",
+            filtername: "Colour",
             id: "7",
         },
         {
-            filtername: "start date",
+            filtername: "Price(£)",
             id: "8",
         },
         {
-            filtername: "month of payment(£)",
+            filtername: "Monthly_Payment",
             id: "9",
         },
         {
-            filtername: "settlement figure",
+            filtername: "Camount_of_Equity",
             id: "10",
         },
-        {
-            filtername: "length of agreement",
-            id: "11",
-        },
-        {
-            filtername: "interest rebate",
-            id: "12",
-        },
-        {
-            filtername: "valueation",
-            id: "13",
-        },
-        {
-            filtername: "equity",
-            id: "14",
-        },
-        {
-            filtername: "mileage at start",
-            id: "15",
-        },
-        {
-            filtername: "mileage now",
-            id: "16",
-        },
-        {
-            filtername: "phone number",
-            id: "17",
-        },
-        {
-            filtername: "email",
-            id: "18",
-        },
-        {
-            filtername: "post code",
-            id: "19",
-        },
+        
     ];
-    const table_Avalible = [
+    const defult_table_Avalible = [
         {
             id: "1",
             f_name: "Ann Culhane",
@@ -178,6 +185,37 @@ export default function Leads_avalible() {
         },
     ];
 
+    const handleSearch = (event) => {
+
+        setSearch(event.target.value);
+        if (search !== "") {
+            myFunction();
+        }
+        else{
+            settable_Avalible(defult_table_Avalible);
+        }
+
+
+
+    };
+
+
+
+    const serach_Table = () => {
+
+        const data = {
+            nodes: defult_table_Avalible.filter((item) =>
+                item.id.toLowerCase().includes(search.toLowerCase())
+            ),
+        };
+
+        settable_Avalible(data.nodes);
+    };
+
+    React.useEffect(() => {
+        settable_Avalible(defult_table_Avalible);
+    }, [])
+
     return (
         <div className='bg'>
             <Heder />
@@ -189,10 +227,10 @@ export default function Leads_avalible() {
                     <div className='col-10 col-md-6 searchBox'>
                         <div className='row'>
                             <div className='mt-2 col-10 alignCenter2'>
-                                <input className='inputSearch' type="text" placeholder=' Search here' />
+                                <input id="myInput" className='inputSearch' onChange={handleSearch} type="text" placeholder=' Search here' />
                             </div>
                             <div className='mt-2 col-2 alignCenter'>
-                                <img src="./images/search.png" alt="" />
+                                <img onClick={serach_Table} src="./images/search.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -221,6 +259,8 @@ export default function Leads_avalible() {
                                                     <Form.Check className='me-2' // prettier-ignore
                                                         type="checkbox"
                                                         id={filter.id}
+                                                        defaultChecked={true}
+                                                        onChange={() => handleSelect(filter.filtername, filter.id)}
                                                     />
                                                 </div>
                                             </div>
@@ -235,11 +275,11 @@ export default function Leads_avalible() {
                 <div className='mt-4 mb-4 row tblleboxmargin'>
                     <div className='col-12 '>
 
-                        <div className='mt-4 row row_width ms-2 me-2'>
-                            <div className='col-4 col-md-6'>
+                        <div className='mt-4 row row_width ms-2 me-2 '>
+                            <div className='col-12 col-md-6'>
                                 <h6 className="tx_bold">Fresh Leads</h6>
                             </div>
-                            <div className='col-4 col-md-3 rowell'>
+                            <div className='col-12 col-md-3 rowell '>
                                 <h6 className="tx_bold">Month</h6>
                                 <Form.Select aria-label="Default select example" className='size_select fondsixw ms-2'>
                                     <option>Select Month</option>
@@ -249,7 +289,7 @@ export default function Leads_avalible() {
 
                                 </Form.Select>
                             </div>
-                            <div className='col-4 col-md-3 rowell'>
+                            <div className='col-12 col-md-3 rowell'>
                                 <h6 className="tx_bold">Price_Range</h6>
                                 <Form.Select aria-label="Default select example" className='size_select fondsixw ms-2'>
                                     <option>Price Range</option>
@@ -264,42 +304,42 @@ export default function Leads_avalible() {
                             <div>
                                 <div className='row ms-3 me-3'>
 
-                                <Link to="/Leads_avalible_open">
-                                    <Table bordered hover>
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>First_Name</th>
-                                                <th>Last_Name</th>
-                                                <th>Make</th>
-                                                <th>Model</th>
-                                                <th>Reg_Number</th>
-                                                <th>muleage</th>
-                                                <th>Colour</th>
-                                                <th>Price(£)</th>
-                                                <th>monthly_payment</th>
-                                                <th>camount_of_equity</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {table_Avalible.map((table_Avalible) => (
+                                    <Link to="/Leads_avalible_open">
+                                        <Table id='myTable' bordered hover>
+                                            <thead>
                                                 <tr>
-                                                    <td className="tx_bold">{table_Avalible.id}</td>
-                                                    <td className="tx_bold">{table_Avalible.f_name}</td>
-                                                    <td className="tx_bold">{table_Avalible.L_name}</td>
-                                                    <td className="tx_bold">{table_Avalible.Make}</td>
-                                                    <td>{table_Avalible.Model}</td>
-                                                    <td>{table_Avalible.reg_Number}</td>
-                                                    <td>{table_Avalible.muleage}</td>
-                                                    <td>{table_Avalible.Colour}</td>
-                                                    <td>{table_Avalible.Price}</td>
-                                                    <td>{table_Avalible.m_payment}</td>
-                                                    <td>{table_Avalible.equity}</td>
+                                                    <th></th>
+                                                    <th className='First_Name'>First_Name</th>
+                                                    <th className='Last_Name'>Last_Name</th>
+                                                    <th className='Make'>Make</th>
+                                                    <th className='Model'>Model</th>
+                                                    <th className='Reg_Number'>Reg_Number</th>
+                                                    <th className='Muleage'>Muleage</th>
+                                                    <th className='Colour'>Colour</th>
+                                                    <th className='Price(£)'>Price(£)</th>
+                                                    <th className='Monthly_Payment'>Monthly_Payment</th>
+                                                    <th className='Camount_of_Equity'>Camount_of_Equity</th>
                                                 </tr>
-                                            ))}
-                                        </tbody>
-                                    </Table>
-                                </Link>
+                                            </thead>
+                                            <tbody>
+                                                {table_Avalible.map((table_Avalible) => (
+                                                    <tr>
+                                                        <td>{table_Avalible.id}</td>
+                                                        <td className='First_Name'>{table_Avalible.f_name}</td>
+                                                        <td className="Last_Name">{table_Avalible.L_name}</td>
+                                                        <td className="Make">{table_Avalible.Make}</td>
+                                                        <td className="Model">{table_Avalible.Model}</td>
+                                                        <td className="Reg_Number">{table_Avalible.reg_Number}</td>
+                                                        <td className="Muleage">{table_Avalible.muleage}</td>
+                                                        <td className="Colour">{table_Avalible.Colour}</td>
+                                                        <td className="Price(£)">{table_Avalible.Price}</td>
+                                                        <td className="Monthly_Payment">{table_Avalible.m_payment}</td>
+                                                        <td className="Camount_of_Equity">{table_Avalible.equity}</td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </Table>
+                                    </Link>
 
                                 </div>
                             </div>

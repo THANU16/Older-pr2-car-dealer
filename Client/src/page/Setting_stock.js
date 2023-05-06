@@ -274,7 +274,7 @@ export default function Setting_stock() {
                     <tbody>
                       {stock_seti_detail.map((stock_seti_detail) => (
                         <tr>
-                          <td className="tx_bold">{stock_seti_detail.Lead_name}</td>
+                          <td className="">{stock_seti_detail.Lead_name}</td>
                           <td>{stock_seti_detail.address}</td>
                           <td>{stock_seti_detail.model}</td>
                           <td>{stock_seti_detail.Reg_Number}</td>
@@ -299,7 +299,7 @@ export default function Setting_stock() {
                     <tbody>
                       {stock_seti_detail.map((stock_seti_detail) => (
                         <tr>
-                          <td className="tx_bold">{stock_seti_detail.Lead_name}</td>
+                          <td className="">{stock_seti_detail.Lead_name}</td>
                           <td>{stock_seti_detail.address}</td>
                           <td>{stock_seti_detail.model}</td>
                           <td>{stock_seti_detail.Reg_Number}</td>

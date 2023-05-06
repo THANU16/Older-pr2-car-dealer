@@ -3,6 +3,9 @@
     height: fit-content;
     overflow-x: hidden;
 }
+.d_in{
+    display: inline-flexbox;
+}
 .heder_txt{
     font-size: 25px;
     font-weight: bold;
@@ -180,5 +183,8 @@ border-radius: 8px;
     }
     .phone_center{
         margin-left: 2.4%;
+    }
+    .phone_mar{
+        margin-left: -45% !important;
     }
 }

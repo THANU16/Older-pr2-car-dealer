@@ -80,13 +80,13 @@ export default function Login() {
 
                         <div className='justify-end col-12 col-md-6 right_loginbox full_hight d-flex'>
                             <div className='col-6 box_coklor'></div>
-                            <img className='login_img' src="./images/right_image.png" alt="" />
+                            <img className='login_img' src="./images/logine_bg.png" alt="" />
                             <img className='poti_set' src="./images/Group_dots.png" alt="" />
                         </div>
 
                         <div className='col-12 col-md-6 left_loginbox'>
                             <div className='justify-center mt-5 row d-flex'>
-                                <img className='login_logo' src="./images/Rectangle.png" alt="" />
+                                <img className='mt-4 login_logo' src="./images/login_logo.png" alt="" />
                             </div>
                             <div className='justify-center mt-4 mb-4 row d-flex'>
                                 <div className='justify-center col-12 d-flex'>

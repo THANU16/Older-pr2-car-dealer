@@ -7,6 +7,9 @@ import Table from 'react-bootstrap/Table';
 
 
 export default function Leads_avalible_open() {
+
+    
+
     const main_details = {
         Name: "Daniel",
         Make: "Chevrolet",

@@ -8,85 +8,94 @@ import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 import InputGroup from "react-bootstrap/InputGroup";
 
+
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
 export default function Setting_customer() {
+
+  const [search, setSearch] = React.useState('');
+  const [costomer_seti_detail, setcostomer_seti_detail] = React.useState([]);
+
+  const handleSelect = (data, id) => {
+
+    var checked = document.getElementById(id);
+    var coloumn = document.getElementsByClassName(data);
+    // var coloumnid = document.getElementById(data);
+    // console(coloumn.length);
+
+    if (checked.checked === true) {
+        for (var i = 0; i < coloumn.length; i++) {
+            coloumn[i].style.display = "table-cell";
+        }
+        checked.defaultChecked = true;
+    }
+    else {
+        for (var i = 0; i < coloumn.length; i++) {
+            coloumn[i].style.display = "none";
+        }
+        checked.defaultChecked = false;
+    }
+
+}
 
   const filter = [
     {
-      filtername: "Sale Price",
+      filtername: "First_Name",
       id: "1",
     },
     {
-      filtername: "deposit",
+      filtername: "Last_Name",
       id: "2",
     },
     {
-      filtername: "balance to finance(£)",
+      filtername: "Make",
       id: "3",
     },
     {
-      filtername: "total amount payable(£)",
+      filtername: "Model",
       id: "4",
     },
     {
-      filtername: "baloon payment(£)",
+      filtername: "Reg_Number",
       id: "5",
     },
     {
-      filtername: "monthly payment(£)",
+      filtername: "Muleage",
       id: "6",
     },
     {
-      filtername: "rate",
+      filtername: "Colour",
       id: "7",
     },
     {
-      filtername: "start date",
+      filtername: "Price(£)",
       id: "8",
     },
     {
-      filtername: "month of payment(£)",
+      filtername: "Monthly_Payment",
       id: "9",
     },
     {
-      filtername: "settlement figure",
+      filtername: "Camount_of_Equity",
       id: "10",
     },
-    {
-      filtername: "length of agreement",
-      id: "11",
-    },
-    {
-      filtername: "interest rebate",
-      id: "12",
-    },
-    {
-      filtername: "valueation",
-      id: "13",
-    },
-    {
-      filtername: "equity",
-      id: "14",
-    },
-    {
-      filtername: "mileage at start",
-      id: "15",
-    },
-    {
-      filtername: "mileage now",
-      id: "16",
-    },
-    {
-      filtername: "phone number",
-      id: "17",
-    },
-    {
-      filtername: "email",
-      id: "18",
-    },
-    {
-      filtername: "post code",
-      id: "19",
-    },
+
   ];
   const month_list = [
     {
@@ -126,7 +135,7 @@ export default function Setting_customer() {
     },
   ];
 
-  const costomer_seti_detail = [
+  const defult_costomer_seti_detail = [
     {
       id: "1",
       FIRST_NAME: "Ann Culhane",
@@ -239,6 +248,35 @@ export default function Setting_customer() {
 
   const chane_detail = () => { };
 
+  const handleSearch = (event) => {
+
+    setSearch(event.target.value);
+    if (search !== "") {
+        myFunction();
+    }
+    else{
+      setcostomer_seti_detail(defult_costomer_seti_detail);
+    }
+
+
+
+  };
+
+  const serach_Table = () => {
+
+    const data = {
+      nodes: defult_costomer_seti_detail.filter((item) =>
+        item.id.toLowerCase().includes(search.toLowerCase())
+      ),
+    };
+
+    setcostomer_seti_detail(data.nodes);
+  };
+
+  React.useEffect(() => {
+    setcostomer_seti_detail(defult_costomer_seti_detail);
+  }, [])
+
   return (
     <div className="bg">
       <div className="hidden_heder_css leftbox_new_page"></div>
@@ -273,10 +311,10 @@ export default function Setting_customer() {
                     </div>
                   </div>
                   <div className=" poti_ab ms-5" >
-                    <input className="mt-1 ms-4" type="file" id="file" name="file"/>
+                    <input className="mt-1 ms-4" type="file" id="file" name="file" />
                   </div>
                 </label>
-                
+
               </div>
             </div>
 
@@ -313,10 +351,12 @@ export default function Setting_customer() {
                   className="inputSearch"
                   type="text"
                   placeholder=" Search here"
+                  onChange={handleSearch}
+                  id="myInput"
                 />
               </div>
               <div className="mt-2 col-2 alignCenter">
-                <img src="./images/search.png" alt="" />
+                <img onClick={serach_Table} src="./images/search.png" alt="" />
               </div>
             </div>
           </div>
@@ -354,6 +394,8 @@ export default function Setting_customer() {
                             className='me-2' // prettier-ignore
                             type="checkbox"
                             id={filter.id}
+                            defaultChecked={true}
+                            onChange={() => handleSelect(filter.filtername, filter.id)} 
                           />
                         </div>
                       </div>
@@ -372,7 +414,7 @@ export default function Setting_customer() {
                 <h6 className="mt-1 font_bold f1">Fresh Leads</h6>
                 <h6 className="mt-1 font_bold f2">Update</h6>
               </div>
-              <div className="mt-1 mb-1 col-12 col-md-3 solidex">
+              <div className="mt-1 mb-1 col-12 col-md-3 solidex cc">
                 <h6 className="tx_bold">Month</h6>
                 <Form.Select
                   aria-label="Default select example"
@@ -426,56 +468,57 @@ export default function Setting_customer() {
             <div className="mt-4 row tableBox">
               <div className="col-12">
                 <div className="row ms-3 me-3 table01">
-                  <Table bordered hover>
+                  <Table id="myTable" bordered hover>
                     <thead>
                       <tr>
                         <th></th>
-                        <th>First_Name</th>
-                        <th>Last_Name</th>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Reg_Number</th>
-                        <th>Muleage</th>
-                        <th>Colour</th>
-                        <th>Price(£)</th>
-                        <th>Monthly_payment</th>
-                        <th>Camount_of_equity</th>
+                        <th className='First_Name'>First_Name</th>
+                        <th className='Last_Name'>Last_Name</th>
+                        <th className='Make'>Make</th>
+                        <th className='Model'>Model</th>
+                        <th className='Reg_Number'>Reg_Number</th>
+                        <th className='Muleage'>Muleage</th>
+                        <th className='Colour'>Colour</th>
+                        <th className='Price(£)'>Price(£)</th>
+                        <th className='Monthly_Payment'>Monthly_Payment</th>
+                        <th className='Camount_of_Equity'>Camount_of_Equity</th>
                       </tr>
                     </thead>
                     <tbody>
                       {costomer_seti_detail.map((costomer_seti_detail) => (
                         <tr>
-                          <td className="tx_bold">{costomer_seti_detail.id}</td>
-                          <td className="tx_bold">{costomer_seti_detail.FIRST_NAME}</td>
-                          <td className="tx_bold">{costomer_seti_detail.LAST_NAME}</td>
-                          <td className="tx_bold">{costomer_seti_detail.Make}</td>
-                          <td>{costomer_seti_detail.Model}</td>
-                          <td>{costomer_seti_detail.Reg_Number}</td>
-                          <td>{costomer_seti_detail.Muleage}</td>
-                          <td>{costomer_seti_detail.Colour}</td>
-                          <td>{costomer_seti_detail.Price}</td>
-                          <td>{costomer_seti_detail.Monthly_payment}</td>
-                          <td>{costomer_seti_detail.Camount_equity}</td>
+                          <td>{costomer_seti_detail.id}</td>
+                          <td className="First_Name">{costomer_seti_detail.FIRST_NAME}</td>
+                          <td className="Last_Name">{costomer_seti_detail.LAST_NAME}</td>
+                          <td className="Make">{costomer_seti_detail.Make}</td>
+                          <td className="Model">{costomer_seti_detail.Model}</td>
+                          <td className="Reg_Number">{costomer_seti_detail.Reg_Number}</td>
+                          <td className="Muleage">{costomer_seti_detail.Muleage}</td>
+                          <td className="Colour">{costomer_seti_detail.Colour}</td>
+                          <td className="Price(£)">{costomer_seti_detail.Price}</td>
+                          <td className="Monthly_Payment">{costomer_seti_detail.Monthly_payment}</td>
+                          <td className="Camount_of_Equity">{costomer_seti_detail.Camount_equity}</td>
                         </tr>
                       ))}
                     </tbody>
                   </Table>
                 </div>
                 <div className="row ms-3 me-3 table02">
-                  <Table bordered hover>
+                  <Table  id="myTable" bordered hover>
                     <thead>
                       <tr>
                         <th></th>
-                        <th>First_Name</th>
-                        <th>Last_Name</th>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Reg_Number</th>
-                        <th>Muleage</th>
-                        <th>Colour</th>
-                        <th>Price(£)</th>
-                        <th>Monthly_payment</th>
-                        <th>Camount_of_equity</th>
+                        <th className='First_Name'>First_Name</th>
+                        <th className='Last_Name'>Last_Name</th>
+                        <th className='Make'>Make</th>
+                        <th className='Model'>Model</th>
+                        <th className='Reg_Number'>Reg_Number</th>
+                        <th className='Muleage'>Muleage</th>
+                        <th className='Colour'>Colour</th>
+                        <th className='Price(£)'>Price(£)</th>
+                        <th className='Monthly_Payment'>Monthly_Payment</th>
+                        <th className='Camount_of_Equity'>Camount_of_Equity</th>
+                        
                         <th className="">
                           <h3 className="with_th_hidden">status_H</h3>
                         </th>
@@ -484,17 +527,19 @@ export default function Setting_customer() {
                     <tbody>
                       {costomer_seti_detail.map((costomer_seti_detail) => (
                         <tr>
-                          <td className="tx_bold">{costomer_seti_detail.id}</td>
-                          <td className="tx_bold">{costomer_seti_detail.FIRST_NAME}</td>
-                          <td className="tx_bold">{costomer_seti_detail.LAST_NAME}</td>
-                          <td className="tx_bold">{costomer_seti_detail.Make}</td>
-                          <td>{costomer_seti_detail.Model}</td>
-                          <td>{costomer_seti_detail.Reg_Number}</td>
-                          <td>{costomer_seti_detail.Muleage}</td>
-                          <td>{costomer_seti_detail.Colour}</td>
-                          <td>{costomer_seti_detail.Price}</td>
-                          <td>{costomer_seti_detail.Monthly_payment}</td>
-                          <td>{costomer_seti_detail.Camount_equity}</td>
+
+                          <td>{costomer_seti_detail.id}</td>
+                          <td className="First_Name">{costomer_seti_detail.FIRST_NAME}</td>
+                          <td className="Last_Name">{costomer_seti_detail.LAST_NAME}</td>
+                          <td className="Make">{costomer_seti_detail.Make}</td>
+                          <td className="Model">{costomer_seti_detail.Model}</td>
+                          <td className="Reg_Number">{costomer_seti_detail.Reg_Number}</td>
+                          <td className="Muleage">{costomer_seti_detail.Muleage}</td>
+                          <td className="Colour">{costomer_seti_detail.Colour}</td>
+                          <td className="Price(£)">{costomer_seti_detail.Price}</td>
+                          <td className="Monthly_Payment">{costomer_seti_detail.Monthly_payment}</td>
+                          <td className="Camount_of_Equity">{costomer_seti_detail.Camount_equity}</td>
+                          
                           <td className="">
                             <div className="row all_center">
                               <img

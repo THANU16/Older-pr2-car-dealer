@@ -49,6 +49,7 @@
     overflow-x: hidden;
 }
 
+
 .tableBox {
     height: 353px;
     left: 0px;
@@ -112,5 +113,14 @@
     }
     .row_width{
         min-width:200%;
+    }
+    .ew_p{
+        margin-left: -25%;
+    }
+    .rowell{
+        display: flex;
+        justify-content: start !important;
+        align-items: center;
+        margin-top: 10px !important;
     }
 }
