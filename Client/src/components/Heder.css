@@ -12,20 +12,24 @@
 }
 .ac{
     font-weight: 500;
+    color: rgb(99, 99, 99);
+
 }
 .bg_nav_left {
     height: 100vh;
     background: #F7F7F7;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
     position: fixed;
 }
 
 .bg_hed {
     background-color: #6B7B8C;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     height: 60px;
     display: flex;
     align-items: center;
-    margin-right: -20px !important;
+    margin-right: -30px !important;
 }
 .logo_new{
     width: 200px;
@@ -76,7 +80,7 @@
 }
 
 .arrorIMG {
-    width: 150%;
+    width: 15px !important;
 }
 
 .leftarrorIMG1 {
@@ -89,6 +93,7 @@
     display: block;
     width: 50%;
     margin-left: 105%;
+  
 }
 
 .leftbox {
@@ -148,9 +153,12 @@
 
 .poti_fix_new {
     position: fixed;
+    z-index: 300 !important;
 }
 
-
+.bb{
+    margin-top: 10px !important;
+ }
 
 
 
@@ -241,7 +249,7 @@
 
     .arrorIMG {
         width: 30%;
-        margin-left: -380% !important;
+        margin-left: -100% !important;
     }
 
     .leftarrorIMG1 {

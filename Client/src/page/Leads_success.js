@@ -4,6 +4,8 @@ import Heder from "../components/Heder";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
+import { Link } from "react-router-dom";
+
 
 function myFunction() {
     var input, filter, table, tr, td, i;
@@ -302,7 +304,7 @@ export default function Leads_success() {
                         <div className='mt-4 row tableBox'>
                             <div>
                                 <div className='row ms-3 me-3'>
-
+                                <Link to="/Leads_avalible_open">
                                     <Table id="myTable" bordered hover>
                                         <thead>
                                             <tr>
@@ -337,7 +339,7 @@ export default function Leads_success() {
                                             ))}
                                         </tbody>
                                     </Table>
-
+                                    </Link>
                                 </div>
                             </div>
                         </div>

@@ -17,13 +17,13 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #96F3C1;
+  background:#a5a9ad;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #37C578;
+  background: #6B7B8C;
   border-radius: 10px;
 }
 
@@ -35,6 +35,7 @@
 .pointer.active.desc:after {
   content: "▲";
 }
+
 .pointer.active.asc:after {
   content: "▼";
 }

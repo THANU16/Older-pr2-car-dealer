@@ -13,6 +13,7 @@ import Setting_profile from "./page/Setting_profile";
 import Setting_link from "./page/Setting_link";
 import Setting_stock from "./page/Setting_stock";
 import Setting_customer from "./page/Setting_customer";
+import Leads from "./page/Leads";
 import Login from "./page/Login";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/Setting_link" element={<Setting_link />} />
         <Route path="/Setting_stock" element={<Setting_stock />} />
         <Route path="/Setting_customer" element={<Setting_customer />} />
+        <Route path="/Leads" element={<Leads />} />
       </Routes>
     </BrowserRouter>
   );

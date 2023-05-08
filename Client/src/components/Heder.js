@@ -34,6 +34,8 @@ export default function Heder() {
   const text_font8 = document.getElementsByClassName("text_font8");
   const text_font9 = document.getElementsByClassName("text_font9");
   const text_font10 = document.getElementsByClassName("text_font10");
+  const tx_lead = document.getElementsByClassName("tx_lead");
+  const tx_setting = document.getElementsByClassName("tx_setting");
 
   const diIMG1_d1 = document.getElementsByClassName("diIMG1_d1");
   const diIMG2_d1 = document.getElementsByClassName("diIMG2_d1");
@@ -41,6 +43,10 @@ export default function Heder() {
   const diIMG2_d2 = document.getElementsByClassName("diIMG2_d2");
   const diIMG1_d3 = document.getElementsByClassName("diIMG1_d3");
   const diIMG2_d3 = document.getElementsByClassName("diIMG2_d3");
+  const diIMG1_lead = document.getElementsByClassName("diIMG1_lead");
+  const diIMG2_lead = document.getElementsByClassName("diIMG2_lead");
+  const diIMG1_setting = document.getElementsByClassName("diIMG1_setting");
+  const diIMG2_setting = document.getElementsByClassName("diIMG2_setting");
 
   const leftarrorIMG1_d1 = document.getElementsByClassName("leftarrorIMG1_d1");
   const leftarrorIMG2_d1 = document.getElementsByClassName("leftarrorIMG2_d1");
@@ -71,26 +77,46 @@ export default function Heder() {
       diIMG1_d1[0].style.display = "block";
       diIMG2_d1[0].style.display = "none";
     } else if (pageView === "Leads_avalible") {
-      hover_d2[0].style.background = "#6B7B8C";
-      hover_d2[0].style.height = "10%";
-      text_font2[0].style.color = "#FFFFFF";
+      hover_lead[0].style.background = "#6B7B8C";
+      hover_lead[0].style.height = "10%";
+      tx_lead[0].style.color = "#FFFFFF";
+      tx_lead[0].style.font = "bold";
+      diIMG1_lead[0].style.display = "block";
+      diIMG2_lead[0].style.display = "none";
+      text_font2[0].style.color = "black";
+      text_font2[0].style.font = "bolder";
+      // hover_d2[0].style.background = "#6B7B8C";
+      // hover_d2[0].style.height = "10%";
+      text_font2[0].style.color = "black";
       text_font2[0].style.font = "bold";
-      leftarrorIMG1_d1[0].style.display = "block";
-      leftarrorIMG2_d1[0].style.display = "none";
+      // leftarrorIMG1_d1[0].style.display = "block";
+      // leftarrorIMG2_d1[0].style.display = "none";
     } else if (pageView === "Leads_success") {
-      hover_d3[0].style.background = "#6B7B8C";
-      hover_d3[0].style.height = "10%";
-      text_font3[0].style.color = "#FFFFFF";
+      hover_lead[0].style.background = "#6B7B8C";
+      hover_lead[0].style.height = "10%";
+      tx_lead[0].style.color = "#FFFFFF";
+      tx_lead[0].style.font = "bold";
+      diIMG1_lead[0].style.display = "block";
+      diIMG2_lead[0].style.display = "none";
+      // hover_d3[0].style.background = "#6B7B8C";
+      // hover_d3[0].style.height = "10%";
+      text_font3[0].style.color = "black";
       text_font3[0].style.font = "bold";
-      leftarrorIMG1_d2[0].style.display = "block";
-      leftarrorIMG2_d2[0].style.display = "none";
+      // leftarrorIMG1_d2[0].style.display = "block";
+      // leftarrorIMG2_d2[0].style.display = "none";
     } else if (pageView === "Leads_reject") {
-      hover_d4[0].style.background = "#6B7B8C";
-      hover_d4[0].style.height = "10%";
-      text_font4[0].style.color = "#FFFFFF";
+      hover_lead[0].style.background = "#6B7B8C";
+      hover_lead[0].style.height = "10%";
+      tx_lead[0].style.color = "#FFFFFF";
+      tx_lead[0].style.font = "bold";
+      diIMG1_lead[0].style.display = "block";
+      diIMG2_lead[0].style.display = "none";
+      // hover_d4[0].style.background = "#6B7B8C";
+      // hover_d4[0].style.height = "10%";
+      text_font4[0].style.color = "black";
       text_font4[0].style.font = "bold";
-      leftarrorIMG1_d3[0].style.display = "block";
-      leftarrorIMG2_d3[0].style.display = "none";
+      // leftarrorIMG1_d3[0].style.display = "block";
+      // leftarrorIMG2_d3[0].style.display = "none";
     } else if (pageView === "Stock") {
       hover_d5[0].style.background = "#6B7B8C";
       hover_d5[0].style.height = "10%";
@@ -106,34 +132,77 @@ export default function Heder() {
       diIMG1_d3[0].style.display = "block";
       diIMG2_d3[0].style.display = "none";
     } else if (pageView === "Setting_profile") {
-      hover_d7[0].style.background = "#6B7B8C";
-      hover_d7[0].style.height = "10%";
-      text_font7[0].style.color = "#FFFFFF";
+      hover_seting[0].style.background = "#6B7B8C";
+      hover_seting[0].style.height = "10%";
+      tx_setting[0].style.color = "#FFFFFF";
+      tx_setting[0].style.font = "bold";
+      diIMG1_setting[0].style.display = "block";
+      diIMG2_setting[0].style.display = "none";
+      // hover_d7[0].style.background = "#6B7B8C";
+      // hover_d7[0].style.height = "10%";
+      text_font7[0].style.color = "black";
       text_font7[0].style.font = "bold";
-      leftarrorIMG1_d4[0].style.display = "block";
-      leftarrorIMG2_d4[0].style.display = "none";
+      // leftarrorIMG1_d4[0].style.display = "block";
+      // leftarrorIMG2_d4[0].style.display = "none";
     } else if (pageView === "Setting_customer") {
-      hover_d8[0].style.background = "#6B7B8C";
-      hover_d8[0].style.height = "10%";
-      text_font8[0].style.color = "#FFFFFF";
+      hover_seting[0].style.background = "#6B7B8C";
+      hover_seting[0].style.height = "10%";
+      tx_setting[0].style.color = "#FFFFFF";
+      tx_setting[0].style.font = "bold";
+      diIMG1_setting[0].style.display = "block";
+      diIMG2_setting[0].style.display = "none";
+      // hover_d8[0].style.background = "#6B7B8C";
+      // hover_d8[0].style.height = "10%";
+      text_font8[0].style.color = "black";
       text_font8[0].style.font = "bold";
-      leftarrorIMG1_d5[0].style.display = "block";
-      leftarrorIMG2_d5[0].style.display = "none";
+      // leftarrorIMG1_d5[0].style.display = "block";
+      // leftarrorIMG2_d5[0].style.display = "none";
     } else if (pageView === "Setting_stock") {
-      hover_d9[0].style.background = "#6B7B8C";
-      hover_d9[0].style.height = "10%";
-      text_font9[0].style.color = "#FFFFFF";
+      hover_seting[0].style.background = "#6B7B8C";
+      hover_seting[0].style.height = "10%";
+      tx_setting[0].style.color = "#FFFFFF";
+      tx_setting[0].style.font = "bold";
+      diIMG1_setting[0].style.display = "block";
+      diIMG2_setting[0].style.display = "none";
+      // hover_d9[0].style.background = "#6B7B8C";
+      // hover_d9[0].style.height = "10%";
+      text_font9[0].style.color = "black";
       text_font9[0].style.font = "bold";
-      leftarrorIMG1_d6[0].style.display = "block";
-      leftarrorIMG2_d6[0].style.display = "none";
+      // leftarrorIMG1_d6[0].style.display = "block";
+      // leftarrorIMG2_d6[0].style.display = "none";
     } else if (pageView === "Setting_link") {
-      hover_d10[0].style.background = "#6B7B8C";
-      hover_d10[0].style.height = "10%";
-      text_font10[0].style.color = "#FFFFFF";
+      hover_seting[0].style.background = "#6B7B8C";
+      hover_seting[0].style.height = "10%";
+      tx_setting[0].style.color = "#FFFFFF";
+      tx_setting[0].style.font = "bold";
+      diIMG1_setting[0].style.display = "block";
+      diIMG2_setting[0].style.display = "none";
+      // hover_d10[0].style.background = "#6B7B8C";
+      // hover_d10[0].style.height = "10%";
+      text_font10[0].style.color = "black";
       text_font10[0].style.font = "bold";
-      leftarrorIMG1_d7[0].style.display = "block";
-      leftarrorIMG2_d7[0].style.display = "none";
+      // leftarrorIMG1_d7[0].style.display = "block";
+      // leftarrorIMG2_d7[0].style.display = "none";
     }
+   else if (pageView === "Leads") {
+    hover_lead[0].style.background = "#6B7B8C";
+    hover_lead[0].style.height = "10%";
+    tx_lead[0].style.color = "#FFFFFF";
+    tx_lead[0].style.font = "bold";
+    diIMG1_lead[0].style.display = "block";
+    diIMG2_lead[0].style.display = "none";
+
+  }
+  else if (pageView === "Setting") {
+    hover_seting[0].style.background = "#6B7B8C";
+    hover_seting[0].style.height = "10%";
+    tx_setting[0].style.color = "#FFFFFF";
+    tx_setting[0].style.font = "bold";
+    diIMG1_setting[0].style.display = "block";
+    diIMG2_setting[0].style.display = "none";
+    text_font7[0].style.color = "black";
+    text_font7[0].style.font = "bolder";
+  }
 
     if (leadViwe === "Open") {
       const lead = document.getElementsByClassName("hiddnbox");
@@ -168,7 +237,7 @@ export default function Heder() {
   };
 
   var l = 0;
-  const lead = () => {
+  const arror01 = () => {
     if (l === 0) {
       const lead = document.getElementsByClassName("hiddnbox");
       lead[0].style.display = "block";
@@ -183,7 +252,7 @@ export default function Heder() {
   };
 
   var s = 0;
-  const setting = () => {
+  const arror02 = () => {
     if (s === 0) {
       const setting = document.getElementsByClassName("hiddnbox2");
       setting[0].style.display = "block";
@@ -195,6 +264,18 @@ export default function Heder() {
       sessionStorage.setItem("SettingViwe", "Close");
       s = s - 1;
     }
+  };
+  const lead = () => {
+    sessionStorage.setItem("leadViwe", "Open");
+    sessionStorage.setItem("SettingViwe", "Close");
+    sessionStorage.setItem("pageView", "Leads");
+    navigate("/Leads");
+  };
+  const setting = () => {
+    sessionStorage.setItem("SettingViwe", "Open");
+    sessionStorage.setItem("leadViwe", "Close");
+    sessionStorage.setItem("pageView", "Setting");
+    navigate("/Setting_profile");
   };
 
   const d1w = document.getElementsByClassName("d1");
@@ -209,6 +290,8 @@ export default function Heder() {
   const d10w = document.getElementsByClassName("d10");
 
   const d1 = () => {
+    sessionStorage.setItem("leadViwe", "Close");
+    sessionStorage.setItem("SettingViwe", "Close");
     sessionStorage.setItem("pageView", "Dashboard");
     navigate("/Dashboard");
   };
@@ -225,10 +308,14 @@ export default function Heder() {
     navigate("/Leads_reject");
   };
   const d5 = () => {
+    sessionStorage.setItem("SettingViwe", "Close");
+    sessionStorage.setItem("leadViwe", "Close");
     sessionStorage.setItem("pageView", "Stock");
     navigate("/Stock");
   };
   const d6 = () => {
+    sessionStorage.setItem("SettingViwe", "Close");
+    sessionStorage.setItem("leadViwe", "Close");
     sessionStorage.setItem("pageView", "Report");
     navigate("/Report");
   };
@@ -248,6 +335,7 @@ export default function Heder() {
     sessionStorage.setItem("pageView", "Setting_link");
     navigate("/Setting_link");
   };
+
   const logout = () => {
     alert("log out");
     sessionStorage.setItem("login", false);
@@ -293,24 +381,24 @@ export default function Heder() {
 
         <div className="row">
           <div className="col-12 hover hover_lead bg_phoneset">
-            <div
-              onClick={lead}
-              className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen"
-            >
+            <div className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen">
               <div className="col-3 end">
-                <img className="diIMG2" src="./images/d1.png" alt="" />
-                <img className="diIMG1" src="./images/d1_white.png" alt="" />
+                <img className="diIMG2 diIMG2_lead" src="./images/d1.png" alt="" />
+                <img className="diIMG1 diIMG1_lead" src="./images/d1_white.png" alt="" />
               </div>
-              <div className="justify-start align-middle col-7 d-flex">
-                <h6 className="mt-1 text_font mr_top_al tx_bold">Leads</h6>
+              <div
+                className="justify-start align-middle col-6 d-flex"
+                onClick={lead}
+              >
+                <h6 className="mt-1 text_font mr_top_al tx_bold tx_lead">Leads</h6>
               </div>
-              <div className="mt-2 col-2">
+              <div className="mt-2 col-3" onClick={arror01}>
                 {/* <img className="mt-1 arrorIMG" src="./images/arror.png" alt="" /> */}
-                <img
+                {/* <img
                   className="mt-1 arrorIMG"
                   src="./images/arror_white.png"
                   alt=""
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -468,26 +556,27 @@ export default function Heder() {
 
         <div className="row">
           <div className="col-12 hover hover_seting bg_phoneset">
-            <div
-              onClick={setting}
-              className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen"
-            >
+            <div className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen">
               <div className="col-3 end">
-                <img className="diIMG2" src="./images/d4.png" alt="" />
-                <img className="diIMG1" src="./images/d4_white.png" alt="" />
+                <img className="diIMG2 diIMG2_setting" src="./images/d4.png" alt="" />
+                <img className="diIMG1 diIMG1_setting" src="./images/d4_white.png" alt="" />
               </div>
-              <div className="justify-start align-middle col-7 d-flex">
-                <h6 className="mt-1 text_font phoneset_text_font mr_top_al tx_bold">
+              <div
+                className="justify-start align-middle col-6 d-flex"
+                onClick={setting}
+              >
+                <h6 className="mt-1 tx_setting text_font phoneset_text_font mr_top_al tx_bold">
                   Settings
                 </h6>
               </div>
-              <div className="col-2">
+              <div className="col-3">
                 {/* <img className="mt-2 arrorIMG" src="./images/arror.png" alt="" /> */}
-                <img
-                  className="mt-3 arrorIMG bb"
+                {/* <img
+                  onClick={arror02}
+                  className="mt-2 arrorIMG bb"
                   src="./images/arror_white.png"
                   alt=""
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -613,9 +702,8 @@ export default function Heder() {
 
       <div className="col-12 poti_fix poti_fix_new">
         <div className="row bg_hed">
-          
           <div className="col-6 indexp cPoin">
-          <img className="logo_new ms-2" src="./images/logo.png" alt="" />
+            <img className="logo_new ms-2" src="./images/logo.png" alt="" />
             <img
               onClick={manu}
               className="mt-1 img_manu cPoin"

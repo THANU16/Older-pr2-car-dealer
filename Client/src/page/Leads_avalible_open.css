@@ -107,7 +107,7 @@
 .add_btn{
     width: 75px;
 height: 30px;
-background: #067237;
+background: #6B7B8C;
 box-shadow: 0px 12.6698px 22.5241px rgba(208, 210, 218, 0.15);
 border-radius: 6px;
 display: flex;
@@ -145,7 +145,7 @@ align-items: center;
 .btn_mail {
     width: 112px;
     height: 30px;
-    background: linear-gradient(90deg, rgba(28, 126, 79, 0.62) 0%, rgba(53, 171, 65, 0.76) 100%);
+    background: linear-gradient(90deg, #859ab1 0%, #4f6072 100%);
     box-shadow: 0px 12.6698px 22.5241px rgba(208, 210, 218, 0.15);
     border-radius: 14.0776px;
     display: flex;
@@ -167,7 +167,7 @@ align-items: center;
 .btn_deal{
     width: 112px;
     height: 30px;
-    background: #067237;
+    background: #6B7B8C;
     box-shadow: 0px 12.6698px 22.5241px rgba(208, 210, 218, 0.15);
     border-radius: 6px;
 }

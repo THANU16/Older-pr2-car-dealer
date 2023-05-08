@@ -108,7 +108,7 @@
 
 }
 .color_ger{
-    color: #37C578;
+    color: #6B7B8C;
     /* position: absolute; */
     margin-left: -10px;
 }
@@ -122,9 +122,9 @@
 }
 .bg_white{
 height: fit-content;
-background: #F4F7FC;
+background: #F7F7F7;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
-border-radius: 8px;
+border-radius: 25px;
 }
 .logo_dash{
     width: 60%;
