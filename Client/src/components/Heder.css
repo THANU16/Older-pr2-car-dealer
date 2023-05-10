@@ -10,11 +10,13 @@
     font-size: 17px;
     color: black;
 }
-.ac{
+
+.ac {
     font-weight: 500;
     color: rgb(99, 99, 99);
 
 }
+
 .bg_nav_left {
     height: 100vh;
     background: #F7F7F7;
@@ -31,9 +33,7 @@
     align-items: center;
     margin-right: -30px !important;
 }
-.logo_new{
-    width: 200px;
-}
+
 .hednameRow {
     /* position: absolute; */
     background-color: #6B7B8C;
@@ -93,7 +93,7 @@
     display: block;
     width: 50%;
     margin-left: 105%;
-  
+
 }
 
 .leftbox {
@@ -115,7 +115,8 @@
 
 
 .hover:hover {
-    background-color: #6B7B8C;;
+    background-color: #6B7B8C;
+    ;
     color: #FFFFFFFF !important;
     /* font-weight: bold; */
     /* margin-top: 5%; */
@@ -156,9 +157,17 @@
     z-index: 300 !important;
 }
 
-.bb{
+.bb {
     margin-top: 10px !important;
- }
+}
+
+.logo_new {
+    width: 100%;
+}
+
+.setnit {
+    width: 30%;
+}
 
 
 
@@ -197,7 +206,8 @@
     .bg_nav_left {
         display: none;
     }
-    .logo_new{
+
+    .logo_new {
         display: none;
         position: absolute;
         visibility: hidden;
@@ -282,24 +292,30 @@
     }
 
     .mobile_cen {
-       margin-left: 55px !important;
+        margin-left: 55px !important;
     }
-    .diIMG1{
+
+    .diIMG1 {
         width: 20px;
     }
-    .diIMG2{
+
+    .diIMG2 {
         width: 20px;
     }
- .phone_re_set{
-    margin-left: -75px !important;
- }
- .re_phone_mini{
-    margin-left: 85px;
- }
- .mr_top_al{
-    margin-top: 3px !important;
- }
- .bb{
-    margin-top: 10px !important;
- }
+
+    .phone_re_set {
+        margin-left: -75px !important;
+    }
+
+    .re_phone_mini {
+        margin-left: 85px;
+    }
+
+    .mr_top_al {
+        margin-top: 3px !important;
+    }
+
+    .bb {
+        margin-top: 10px !important;
+    }
 }

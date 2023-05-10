@@ -90,7 +90,7 @@ export default function Setting_profile() {
       <Heder />
 
 {/* Massege BOX 01 ADD */}
-      <div className="mt-3 mb-5 massege_box col-12 col-md-6 offset-md-4">
+      <div className="mt-5 mb-5 mt_new01 massege_box col-12 col-md-6 offset-md-4">
         <div className="mt-2 mb-2 row ms-2 me-2">
           <div className="col-12">
             <div className="mt-2 row">
@@ -181,7 +181,7 @@ export default function Setting_profile() {
       </div>
 
 {/* Massege BOX 02 EDIT */}
-      <div className="mt-5 mb-5 massege_box2 col-12 col-md-6 offset-md-4">
+      <div className="mt-5 mb-5 mt_new01 massege_box2 col-12 col-md-6 offset-md-4">
         <div className="mt-2 mb-2 row ms-2 me-2">
           <div className="col-12">
             <div className="mt-2 row">

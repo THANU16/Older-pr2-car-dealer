@@ -286,7 +286,7 @@ export default function Setting_customer() {
       </div>
 
       {/* Massege BOX 01 ADD */}
-      <div className="mt-5 massege_box_stock col-12 col-md-6 offset-md-4">
+      <div className="mt-5 mt_new01 massege_box_stock col-12 col-md-6 offset-md-4">
         <div className="mt-2 mb-2 row ms-2 me-2">
           <div className="col-12">
             <div className="mt-2 row">
@@ -362,7 +362,7 @@ export default function Setting_customer() {
           </div>
           <div className="col-2 col-md-6">
             <div className="row">
-              <Dropdown className="me-4">
+              <Dropdown className="me-4" autoClose={false}>
                 <Dropdown.Toggle
                   variant=""
                   id="dropdown-basic"
@@ -370,7 +370,7 @@ export default function Setting_customer() {
                 >
                   <img
                     className="mt-2 mar_le"
-                    src="./images/filter.png"
+                    src="./images/filter.svg"
                     alt=""
                   />
                 </Dropdown.Toggle>

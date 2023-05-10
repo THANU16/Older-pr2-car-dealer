@@ -3,6 +3,8 @@ import { React, useEffect } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+// import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+// import { RxDashboard } from 'react-icons/fa';
 
 export default function Heder() {
   const profiledetile = {
@@ -183,26 +185,23 @@ export default function Heder() {
       text_font10[0].style.font = "bold";
       // leftarrorIMG1_d7[0].style.display = "block";
       // leftarrorIMG2_d7[0].style.display = "none";
+    } else if (pageView === "Leads") {
+      hover_lead[0].style.background = "#6B7B8C";
+      hover_lead[0].style.height = "10%";
+      tx_lead[0].style.color = "#FFFFFF";
+      tx_lead[0].style.font = "bold";
+      diIMG1_lead[0].style.display = "block";
+      diIMG2_lead[0].style.display = "none";
+    } else if (pageView === "Setting") {
+      hover_seting[0].style.background = "#6B7B8C";
+      hover_seting[0].style.height = "10%";
+      tx_setting[0].style.color = "#FFFFFF";
+      tx_setting[0].style.font = "bold";
+      diIMG1_setting[0].style.display = "block";
+      diIMG2_setting[0].style.display = "none";
+      text_font7[0].style.color = "black";
+      text_font7[0].style.font = "bolder";
     }
-   else if (pageView === "Leads") {
-    hover_lead[0].style.background = "#6B7B8C";
-    hover_lead[0].style.height = "10%";
-    tx_lead[0].style.color = "#FFFFFF";
-    tx_lead[0].style.font = "bold";
-    diIMG1_lead[0].style.display = "block";
-    diIMG2_lead[0].style.display = "none";
-
-  }
-  else if (pageView === "Setting") {
-    hover_seting[0].style.background = "#6B7B8C";
-    hover_seting[0].style.height = "10%";
-    tx_setting[0].style.color = "#FFFFFF";
-    tx_setting[0].style.font = "bold";
-    diIMG1_setting[0].style.display = "block";
-    diIMG2_setting[0].style.display = "none";
-    text_font7[0].style.color = "black";
-    text_font7[0].style.font = "bolder";
-  }
 
     if (leadViwe === "Open") {
       const lead = document.getElementsByClassName("hiddnbox");
@@ -360,12 +359,12 @@ export default function Heder() {
                 <div className="justify-center align-middle col-3 d-flex ">
                   <img
                     className="diIMG2 diIMG2_d1"
-                    src="./images/dash.png"
+                    src="./images/dash.svg"
                     alt=""
                   />
                   <img
                     className=" diIMG1 diIMG1_d1"
-                    src="./images/dash_white.png"
+                    src="./images/dash_white.svg"
                     alt=""
                   />
                 </div>
@@ -383,14 +382,24 @@ export default function Heder() {
           <div className="col-12 hover hover_lead bg_phoneset">
             <div className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen">
               <div className="col-3 end">
-                <img className="diIMG2 diIMG2_lead" src="./images/d1.png" alt="" />
-                <img className="diIMG1 diIMG1_lead" src="./images/d1_white.png" alt="" />
+                <img
+                  className="diIMG2 diIMG2_lead"
+                  src="./images/d1_white.svg"
+                  alt=""
+                />
+                <img
+                  className="diIMG1 diIMG1_lead"
+                  src="./images/d1.svg"
+                  alt=""
+                />
               </div>
               <div
                 className="justify-start align-middle col-6 d-flex"
                 onClick={lead}
               >
-                <h6 className="mt-1 text_font mr_top_al tx_bold tx_lead">Leads</h6>
+                <h6 className="mt-1 text_font mr_top_al tx_bold tx_lead">
+                  Leads
+                </h6>
               </div>
               <div className="mt-2 col-3" onClick={arror01}>
                 {/* <img className="mt-1 arrorIMG" src="./images/arror.png" alt="" /> */}
@@ -415,12 +424,12 @@ export default function Heder() {
                   <div className="col-2">
                     <img
                       className="mt-2 leftarrorIMG2 leftarrorIMG2_d1 ms-5"
-                      src="./images/leftAroor.png"
+                      src="./images/leftAroor.svg"
                       alt=""
                     />
                     <img
                       className="mt-2 leftarrorIMG1 leftarrorIMG1_d1 ms-5"
-                      src="./images/leftAroor_white.png"
+                      src="./images/leftAroor_white.svg"
                       alt=""
                     />
                   </div>
@@ -443,12 +452,12 @@ export default function Heder() {
                   <div className="col-2">
                     <img
                       className="mt-2 leftarrorIMG2 leftarrorIMG2_d2 ms-5"
-                      src="./images/leftAroor.png"
+                      src="./images/leftAroor.svg"
                       alt=""
                     />
                     <img
                       className="mt-2 leftarrorIMG1 leftarrorIMG1_d2 ms-5"
-                      src="./images/leftAroor_white.png"
+                      src="./images/leftAroor_white.svg"
                       alt=""
                     />
                   </div>
@@ -471,12 +480,12 @@ export default function Heder() {
                   <div className="col-2">
                     <img
                       className="mt-2 leftarrorIMG2 leftarrorIMG2_d3 ms-5"
-                      src="./images/leftAroor.png"
+                      src="./images/leftAroor.svg"
                       alt=""
                     />
                     <img
                       className="mt-2 leftarrorIMG1 leftarrorIMG1_d3 ms-5"
-                      src="./images/leftAroor_white.png"
+                      src="./images/leftAroor_white.svg"
                       alt=""
                     />
                   </div>
@@ -502,12 +511,12 @@ export default function Heder() {
                     <div className="col-3 end">
                       <img
                         className="diIMG2 diIMG2_d2"
-                        src="./images/d2.png"
+                        src="./images/d2.svg"
                         alt=""
                       />
                       <img
                         className="diIMG1 diIMG1_d2"
-                        src="./images/d2_white.png"
+                        src="./images/d2_white.svg"
                         alt=""
                       />
                     </div>
@@ -532,12 +541,12 @@ export default function Heder() {
                     <div className="col-3 end">
                       <img
                         className="diIMG2 diIMG2_d3"
-                        src="./images/d3.png"
+                        src="./images/d3.svg"
                         alt=""
                       />
                       <img
                         className="diIMG1 diIMG1_d3"
-                        src="./images/d3_white.png"
+                        src="./images/d3_white.svg"
                         alt=""
                       />
                     </div>
@@ -558,8 +567,16 @@ export default function Heder() {
           <div className="col-12 hover hover_seting bg_phoneset">
             <div className="mt-2 mb-2 row cPoin centeraligtn ms-2 me-2 mobile_cen">
               <div className="col-3 end">
-                <img className="diIMG2 diIMG2_setting" src="./images/d4.png" alt="" />
-                <img className="diIMG1 diIMG1_setting" src="./images/d4_white.png" alt="" />
+                <img
+                  className="diIMG2 diIMG2_setting"
+                  src="./images/d4.svg"
+                  alt=""
+                />
+                <img
+                  className="diIMG1 diIMG1_setting"
+                  src="./images/d4_white.svg"
+                  alt=""
+                />
               </div>
               <div
                 className="justify-start align-middle col-6 d-flex"
@@ -593,12 +610,12 @@ export default function Heder() {
                   <div className="col-2">
                     <img
                       className="mt-2 leftarrorIMG2 leftarrorIMG2_d4 ms-5"
-                      src="./images/leftAroor.png"
+                      src="./images/leftAroor.svg"
                       alt=""
                     />
                     <img
                       className="mt-2 leftarrorIMG1 leftarrorIMG1_d4 ms-5"
-                      src="./images/leftAroor_white.png"
+                      src="./images/leftAroor_white.svg"
                       alt=""
                     />
                   </div>
@@ -621,12 +638,12 @@ export default function Heder() {
                   <div className="col-2">
                     <img
                       className="mt-2 leftarrorIMG2 leftarrorIMG2_d5 ms-5"
-                      src="./images/leftAroor.png"
+                      src="./images/leftAroor.svg"
                       alt=""
                     />
                     <img
                       className="mt-2 leftarrorIMG1 leftarrorIMG1_d5 ms-5"
-                      src="./images/leftAroor_white.png"
+                      src="./images/leftAroor_white.svg"
                       alt=""
                     />
                   </div>
@@ -649,12 +666,12 @@ export default function Heder() {
                   <div className="col-2">
                     <img
                       className="mt-2 leftarrorIMG2 leftarrorIMG2_d6 ms-5"
-                      src="./images/leftAroor.png"
+                      src="./images/leftAroor.svg"
                       alt=""
                     />
                     <img
                       className="mt-2 leftarrorIMG1 leftarrorIMG1_d6 ms-5"
-                      src="./images/leftAroor_white.png"
+                      src="./images/leftAroor_white.svg"
                       alt=""
                     />
                   </div>
@@ -677,12 +694,12 @@ export default function Heder() {
                   <div className="col-2">
                     <img
                       className="mt-2 leftarrorIMG2 leftarrorIMG2_d7 ms-5"
-                      src="./images/leftAroor.png"
+                      src="./images/leftAroor.svg"
                       alt=""
                     />
                     <img
                       className="mt-2 leftarrorIMG1 leftarrorIMG1_d7 ms-5"
-                      src="./images/leftAroor_white.png"
+                      src="./images/leftAroor_white.svg"
                       alt=""
                     />
                   </div>
@@ -703,7 +720,9 @@ export default function Heder() {
       <div className="col-12 poti_fix poti_fix_new">
         <div className="row bg_hed">
           <div className="col-6 indexp cPoin">
-            <img className="logo_new ms-2" src="./images/logo.png" alt="" />
+            <div className="row setnit">
+              <img className="logo_new ms-2" src="./images/logo.png" alt="" />
+            </div>
             <img
               onClick={manu}
               className="mt-1 img_manu cPoin"

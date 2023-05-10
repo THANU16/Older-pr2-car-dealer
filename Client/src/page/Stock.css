@@ -7,7 +7,7 @@
 
 .searchBox {
     height: 40px;
-    background: #F7F9FD;
+    background: #F7F7F7;
     border-radius: 52px;
 }
 
@@ -87,7 +87,7 @@
 .size_select{
     width: 150px !important;
     height: 30px !important;
-    background-color: #F4F7FC !important;
+    background-color: #F7F7F7 !important;
 }
 
 .fondsixw {
@@ -99,12 +99,15 @@
     font-weight: bold;
     font-size: 20px;
 }
+.mt_new01{
+    margin-top: 8% !important;
+}
 .center_a_box {
     height: fit-content;
     width: 88%;
     margin-left: 6%;
     margin-right: 6%;
-    background: #F7F9FD;
+    background: #F7F7F7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
 }

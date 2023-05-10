@@ -8,12 +8,16 @@ import { Link } from "react-router-dom";
 
 export default function Dashboard() {
 
+
+  useEffect(() => {
+    settable_title(defult_table_title);
+    settable_dashbord2(defult_table_dashbord2);
+  }, []);
+
   const [table_title, settable_title] = useState([]);
   const [table_dashbord2, settable_dashbord2] = useState([]);
 
-
   const handleSelect = (data, id) => {
-
     var checked = document.getElementById(id);
     var coloumn = document.getElementsByClassName(data);
 
@@ -22,20 +26,15 @@ export default function Dashboard() {
         coloumn[i].style.display = "table-cell";
       }
       checked.defaultChecked = true;
-    }
-    else {
+    } else {
       for (var i = 0; i < coloumn.length; i++) {
         coloumn[i].style.display = "none";
       }
       checked.defaultChecked = false;
     }
+  };
 
-  }
 
-  useEffect(() => {
-    settable_title(defult_table_title);
-    settable_dashbord2(defult_table_dashbord2);
-  }, [])
 
   const dash_detail = {
     lead_month: "125",
@@ -197,7 +196,6 @@ export default function Dashboard() {
   // ];
 
   const defult_table_title = [
-
     {
       title: "",
     },
@@ -280,7 +278,7 @@ export default function Dashboard() {
     {
       title: "Post_Code",
     },
-  ]
+  ];
   const month_list = [
     {
       name: "January",
@@ -430,9 +428,9 @@ export default function Dashboard() {
       p_code: "HG1 5HR",
     },
   ];
+
  
 
-  
   return (
     <div className="bg">
       <Heder />
@@ -455,42 +453,40 @@ export default function Dashboard() {
           </div>
         </div>
 
-        
         <div className="mt-5 mb-5 row">
           <div className="width_set_dash">
             <div className="row margin_du">
               <div className="mt-1 col-12 col-md-4 phone_center">
-                <div className="row bg_white me-1">
-                <Link to="/Leads_avalible">
-                  <div className="mb-4 m col-12">
-                    <div className="row">
-
+                <div className="mt-2 mb-2 row bg_white me-1">
+                  <Link to="/Leads_avalible">
+                    <div className="mb-4 m col-12">
+                      <div className="row">
                         <div className="end_line col-6">
-                        <h1 className="ms-1 fond_num_size">
-                          {dash_detail.lead_month}
-                        </h1>
+                          <h1 className="ms-1 fond_num_size">
+                            {dash_detail.lead_month}
+                          </h1>
                         </div>
-                      
-                      <div className="justify-end col-6 d-flex">
-                        <img
-                          className="mt-3 logo_dash"
-                          src="./images/dash1.png"
-                          alt=""
-                        />
+
+                        <div className="justify-end col-6 d-flex">
+                          <img
+                            className="mt-3 logo_dash"
+                            src="./images/dash1.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="ms-2 col-12 d-flex">
+                          <h3>Leads generated this month</h3>
+                        </div>
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="ms-2 col-12 d-flex">
-                        <h3>Leads generated this month</h3>
-                      </div>
-                    </div>
-                  </div>
                   </Link>
                 </div>
               </div>
-              
+
               <div className="mt-1 col-12 phone_center col-md-4">
-                <div className="row bg_white me-1">
+                <div className="mt-2 mb-2 row bg_white me-1">
                   <div className="mb-4 m col-12">
                     <div className="row">
                       <div className="end_line col-6">
@@ -515,7 +511,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="mt-1 phone_center col-12 col-md-4">
-                <div className="row bg_white me-1">
+                <div className="mt-2 mb-2 row bg_white me-1">
                   <div className="mb-4 m col-12">
                     <div className="row">
                       <div className="end_line col-6">
@@ -563,21 +559,22 @@ export default function Dashboard() {
               </div>
               <div className="justify-start col-4 col-md-1 d-flex">
                 <div className="row margin_set_dash_fil">
-                  <Dropdown className="me-4">
+                  <Dropdown className="me-4" autoClose={false}>
                     <Dropdown.Toggle
+                      // onClick={filterClick}
                       variant=""
                       id="dropdown-basic"
                       className="filterbox ms-4"
+                      
                     >
                       <img
                         className="mt-2 mar_le"
-                        src="./images/filter.png"
+                        src="./images/filter.svg"
                         alt=""
                       />
                     </Dropdown.Toggle>
 
-                    <Dropdown.Menu className="drofdownBox22">
-
+                    <Dropdown.Menu className="drofdownBox22" >
                       <div className="row">
                         <div className="col-8"></div>
                         <div className="col-4 alignCenter">
@@ -596,7 +593,9 @@ export default function Dashboard() {
                                 className='me-2' // prettier-ignore
                                 type="checkbox"
                                 id={filter.id}
-                                onChange={() => handleSelect(filter.filtername, filter.id)}
+                                onChange={() =>
+                                  handleSelect(filter.filtername, filter.id)
+                                }
                                 defaultChecked={true}
                               />
                             </div>
@@ -615,43 +614,79 @@ export default function Dashboard() {
                   <Link to="/Leads_avalible_open">
                     <Table bordered hover className="table with_table">
                       <thead>
-
                         <tr>
                           {table_title.map((title) => (
                             <th className={title.title}>{title.title}</th>
                           ))}
                         </tr>
-
                       </thead>
 
                       <tbody>
                         {table_dashbord2.map((table_dashbord2) => (
                           <tr>
-                            <td >{table_dashbord2.id}</td>
-                            <td className="First_Name">{table_dashbord2.f_name}</td>
-                            <td className="Last_Name">{table_dashbord2.L_name}</td>
+                            <td>{table_dashbord2.id}</td>
+                            <td className="First_Name">
+                              {table_dashbord2.f_name}
+                            </td>
+                            <td className="Last_Name">
+                              {table_dashbord2.L_name}
+                            </td>
                             <td className="Make">{table_dashbord2.Make}</td>
                             <td className="Model">{table_dashbord2.Model}</td>
-                            <td className="Reg_Number">{table_dashbord2.reg_Number}</td>
-                            <td className="Sale_Price">{table_dashbord2.Sa_price}</td>
-                            <td className="Deposit">{table_dashbord2.deposit}</td>
-                            <td lassName="Balance_to_Finance(£)">{table_dashbord2.ba_finance}</td>
-                            <td className="Total_amount_Payable(£)">{table_dashbord2.t_amount}</td>
-                            <td className="Baloon_Payment(£)">{table_dashbord2.Blaoo_payment}</td>
-                            <td className="Monthly_Payment">{table_dashbord2.m_payment}</td>
+                            <td className="Reg_Number">
+                              {table_dashbord2.reg_Number}
+                            </td>
+                            <td className="Sale_Price">
+                              {table_dashbord2.Sa_price}
+                            </td>
+                            <td className="Deposit">
+                              {table_dashbord2.deposit}
+                            </td>
+                            <td lassName="Balance_to_Finance(£)">
+                              {table_dashbord2.ba_finance}
+                            </td>
+                            <td className="Total_amount_Payable(£)">
+                              {table_dashbord2.t_amount}
+                            </td>
+                            <td className="Baloon_Payment(£)">
+                              {table_dashbord2.Blaoo_payment}
+                            </td>
+                            <td className="Monthly_Payment">
+                              {table_dashbord2.m_payment}
+                            </td>
                             <td className="Rate">{table_dashbord2.rate}</td>
-                            <td className="Start_Date">{table_dashbord2.sta_date}</td>
-                            <td className="Month_of_Payment(£)">{table_dashbord2.m_of_payment}</td>
-                            <td className="Settlement_Figure">{table_dashbord2.figure}</td>
-                            <td className="Length_of_Agreement">{table_dashbord2.ageement}</td>
-                            <td className="Interest_Rebate">{table_dashbord2.bebate}</td>
-                            <td className="Valueation">{table_dashbord2.valueation}</td>
+                            <td className="Start_Date">
+                              {table_dashbord2.sta_date}
+                            </td>
+                            <td className="Month_of_Payment(£)">
+                              {table_dashbord2.m_of_payment}
+                            </td>
+                            <td className="Settlement_Figure">
+                              {table_dashbord2.figure}
+                            </td>
+                            <td className="Length_of_Agreement">
+                              {table_dashbord2.ageement}
+                            </td>
+                            <td className="Interest_Rebate">
+                              {table_dashbord2.bebate}
+                            </td>
+                            <td className="Valueation">
+                              {table_dashbord2.valueation}
+                            </td>
                             <td className="Equity">{table_dashbord2.equity}</td>
-                            <td className="Mileage_at_Start">{table_dashbord2.Milege_start}</td>
-                            <td className="Mileage_Now">{table_dashbord2.Milege_now}</td>
-                            <td className="Phone_Number">{table_dashbord2.phone}</td>
+                            <td className="Mileage_at_Start">
+                              {table_dashbord2.Milege_start}
+                            </td>
+                            <td className="Mileage_Now">
+                              {table_dashbord2.Milege_now}
+                            </td>
+                            <td className="Phone_Number">
+                              {table_dashbord2.phone}
+                            </td>
                             <td className="Email">{table_dashbord2.email}</td>
-                            <td className="Post_Code">{table_dashbord2.p_code}</td>
+                            <td className="Post_Code">
+                              {table_dashbord2.p_code}
+                            </td>
                           </tr>
                         ))}
                       </tbody>

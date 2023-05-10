@@ -236,9 +236,9 @@ export default function Leads_reject() {
                     </div>
                     <div className='col-2 col-md-6'>
                         <div className='row'>
-                            <Dropdown className='me-4'>
+                            <Dropdown className='me-4' autoClose={false}>
                                 <Dropdown.Toggle variant="" id="dropdown-basic" className="filterbox ms-4">
-                                    <img className='mt-2 mar_le' src="./images/filter.png" alt="" />
+                                    <img className='mt-2 mar_le' src="./images/filter.svg" alt="" />
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu className='drofdownBox'>

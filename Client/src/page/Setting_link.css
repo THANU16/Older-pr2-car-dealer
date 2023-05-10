@@ -7,7 +7,7 @@
 
 .searchBox {
     height: 40px;
-    background: #F7F9FD;
+    background: #F7F7F7;
     border-radius: 52px;
 }
 
@@ -52,7 +52,7 @@
     height: fit-content;
     left: 0px;
     top: 0px;
-    background: #F5F7FC;
+    background: #F7F7F7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
     overflow: scroll;  
@@ -78,7 +78,7 @@
 .size_select{
     width: 150px !important;
     height: 30px !important;
-    background-color: #F4F7FC !important;
+    background-color: #F7F7F7 !important;
 }
 
 .fondsixw {
@@ -96,7 +96,7 @@
     width: 88%;
     margin-left: 6%;
     margin-right: 6%;
-    background: #F7F9FD;
+    background: #F7F7F7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
 }

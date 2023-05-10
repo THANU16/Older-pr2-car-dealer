@@ -7,7 +7,7 @@
 
 .searchBox {
     height: 40px;
-    background: #F7F9FD;
+    background: #F7F7F7;
     border-radius: 52px;
 }
 
@@ -75,7 +75,7 @@
 .size_select{
     width: 150px !important;
     height: 30px !important;
-    background-color: #F4F7FC !important;
+    background-color: #F7F7F7 !important;
 }
 .fondsixw{
     font-size: 13px !important;

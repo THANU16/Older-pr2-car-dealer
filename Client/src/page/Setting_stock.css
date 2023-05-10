@@ -7,7 +7,7 @@
 
 .searchBox {
     height: 40px;
-    background: #F7F9FD;
+    background: #F7F7F7;
     border-radius: 52px;
 }
 
@@ -86,7 +86,7 @@
 .size_select{
     width: 150px !important;
     height: 30px !important;
-    background-color: #F4F7FC !important;
+    background-color: #F7F7F7 !important;
 }
 .fondsixw {
     font-size: 13px !important;
@@ -97,13 +97,25 @@
     font-weight: bold;
     font-size: 20px;
 }
-
+.mt_new02{
+    margin-top: 5% !important;
+}
+.uplad_btn {
+    width: 165px;
+    height: 38px;
+    background: #F1F1F1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
 .center_a_box {
     height: fit-content;
     width: 88%;
     margin-left: 6%;
     margin-right: 6%;
-    background: #F7F9FD;
+    background: #F7F7F7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
 }

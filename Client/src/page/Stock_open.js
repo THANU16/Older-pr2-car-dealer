@@ -910,7 +910,7 @@ export default function Stock_open() {
                     >
                       <img
                         className="mt-2 mar_le"
-                        src="./images/filter.png"
+                        src="./images/filter.svg"
                         alt=""
                       />
                     </Dropdown.Toggle>

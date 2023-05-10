@@ -94,7 +94,7 @@ export default function Setting_stock() {
       <Heder />
 
       {/* Massege BOX 01 ADD */}
-      <div className="mt-3 massege_box_stock col-12 col-md-6 offset-md-4">
+      <div className="mt-3 mt_new02 massege_box_stock col-12 col-md-6 offset-md-4">
         <div className="mt-2 mb-2 row ms-2 me-2">
           <div className="col-12">
             <div className="mt-2 row">
