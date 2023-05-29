@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "awsautoequityhub",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2023-05-12T22:38:03.839Z"
+}

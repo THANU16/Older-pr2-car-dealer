@@ -1,0 +1,38 @@
+type Leads @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  f_name: String
+  L_name: String
+  Make: String
+  Model: String
+  reg_Number: Int
+  Sa_price: Float
+  deposit: Float
+  ba_finance: Int
+  t_amount: Float
+  Blaoo_payment: Float
+  m_payment: Float
+  rate: Float
+  sta_date: AWSDate
+  m_of_payment: Float
+  figure: Int
+  ageement: Int
+  bebate: Int
+  valueation: Int
+  equity: Float
+  Milege_start: Float
+  Milege_now: Float
+  phone: AWSPhone
+  email: AWSEmail!
+  p_code: String
+  type: String
+  status: Boolean
+}
+
+type Profile @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String
+  email: AWSEmail!
+  user_role: String
+  password: String!
+}
+ 
